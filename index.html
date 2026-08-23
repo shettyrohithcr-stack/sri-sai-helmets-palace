@@ -17,7 +17,36 @@ a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.3px}
-.brand img{width:58px;height:58px;object-fit:contain}
+.brand-mark{
+  width:58px;
+  height:58px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#1747d1,#0b2d8f);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:25px;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(23,71,209,.18);
+}
+
+.brand-text strong{
+  display:block;
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.5px;
+  color:#0a0d14;
+}
+
+.brand-text small{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  color:#1747d1;
+}
 .brand span{font-size:18px}.brand small{display:block;color:var(--blue);font-size:10px;letter-spacing:1.7px}
 nav{display:flex;gap:27px;font-weight:700;font-size:14px}
 nav a:hover{color:var(--blue)}
@@ -76,7 +105,13 @@ footer{background:#080b12;color:#aeb5c3;padding:30px 0}.footer-flex{display:flex
 
 <header>
 <div class="container nav">
-<a class="brand" href="#"><img src="logo.png" alt="Sri Sai Helmets Palace logo"><span>SRI SAI HELMETS PALACE<small>WITH BIKE ACCESSORIES</small></span></a>
+<a class="brand" href="#">
+  <div class="brand-mark">🪖</div>
+  <div class="brand-text">
+    <strong>SRI SAI HELMETS PALACE</strong>
+    <small>WITH BIKE ACCESSORIES</small>
+  </div>
+</a>
 <nav><a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 <a class="cta" href="#contact">Contact Us</a>
 </div>
