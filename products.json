@@ -5,7 +5,8 @@
     "category": "Full Face",
     "image": "smk-stellar.jpg",
     "description": "Sporty full-face helmet.",
-    "active": true
+    "active": true,
+    "stock": "in_stock"
   },
   {
     "name": "MT Thunder 4 SV",
@@ -13,7 +14,8 @@
     "category": "Full Face",
     "image": "mt-thunder.jpg",
     "description": "Premium full-face helmet.",
-    "active": true
+    "active": true,
+    "stock": "in_stock"
   },
   {
     "name": "Axor Apex Hex-2",
@@ -21,7 +23,8 @@
     "category": "Full Face",
     "image": "axor-apex.jpg",
     "description": "Stylish full-face helmet.",
-    "active": true
+    "active": true,
+    "stock": "in_stock"
   },
   {
     "name": "Vega Bolt Bunny",
@@ -29,6 +32,16 @@
     "category": "Full Face",
     "image": "vega-bolt.jpg",
     "description": "Stylish everyday helmet.",
+    "active": true,
+    "stock": "in_stock"
+  },
+  {
+    "name": "Studds Helios",
+    "price": "3286",
+    "category": "Full Face",
+    "image": "products/studds-helios.studds helios-1787483687126.jfif",
+    "description": "ISI certified full face helmet",
+    "stock": "in_stock",
     "active": true
   }
 ]
