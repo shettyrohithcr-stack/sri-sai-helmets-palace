@@ -3,683 +3,815 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sri Sai Helmets Palace</title>
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:#111;
-  background:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#fff;
+    color:#111;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
-.topbar{
-  height:34px;
-  background:#090909;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 8%;
-  font-size:13px;
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    height:34px;
+    background:#080808;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    font-size:12px;
 }
 
-.header{
-  height:84px;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  padding:0 8%;
-  border-bottom:1px solid #ddd;
-  position:relative;
-  z-index:5;
+.top-left,
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    height:84px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    position:relative;
+    z-index:10;
+    border-bottom:1px solid #ddd;
 }
 
 .logo{
-  width:290px;
-  display:flex;
-  align-items:center;
+    width:250px;
+    display:flex;
+    align-items:center;
 }
 
-.logo img{
-  width:205px;
-  height:76px;
-  object-fit:contain;
+.logo-main{
+    font-size:34px;
+    font-weight:900;
+    font-style:italic;
+    color:#075fd1;
+    line-height:32px;
+    letter-spacing:-2px;
 }
 
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:38px;
-  flex:1;
-  font-size:14px;
-  font-weight:700;
-  white-space:nowrap;
+.logo-sub{
+    font-size:13px;
+    font-weight:800;
+    color:#111;
+    letter-spacing:1px;
 }
 
-.nav a:hover{
-  color:#075fd1;
+.logo-line{
+    width:145px;
+    height:4px;
+    background:#075fd1;
+    margin-top:4px;
 }
 
-.icons{
-  display:flex;
-  gap:22px;
-  font-size:24px;
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:34px;
+    font-size:14px;
+    font-weight:700;
 }
+
+nav a{
+    padding:31px 0 27px;
+    border-bottom:3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:#075fd1;
+    border-bottom-color:#075fd1;
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    font-size:23px;
+}
+
+.cart{
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+    top:-9px;
+    right:-10px;
+    background:#075fd1;
+    color:white;
+    border-radius:50%;
+    width:19px;
+    height:19px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+/*
+IMPORTANT:
+hero.jpg already contains the complete hero design.
+So no extra hero text is added here.
+This prevents duplicate "RIDE SAFE / RIDE IN STYLE".
+*/
 
 .hero{
-  min-height:430px;
-  background-image:
-    linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.25)),
-    url("hero.jpg");
-  background-size:cover;
-  background-position:center;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  padding:55px 8%;
+    width:100%;
+    background:#111;
+    overflow:hidden;
 }
 
-.hero-content{
-  max-width:520px;
+.hero img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
-.hero h1{
-  font-size:56px;
-  line-height:.98;
-  font-style:italic;
-  font-weight:900;
-  margin-bottom:22px;
-}
-
-.hero h1 span{
-  color:#0765db;
-}
-
-.hero h2{
-  font-size:25px;
-  line-height:1.25;
-  margin-bottom:18px;
-}
-
-.blue-line{
-  width:48px;
-  height:3px;
-  background:#0765db;
-  margin-bottom:25px;
-}
-
-.features{
-  display:flex;
-  gap:28px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.feature{
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
+/* ================= SECTION TITLE ================= */
 
 .section-title{
-  text-align:center;
-  font-size:21px;
-  margin:12px 0;
-  font-weight:800;
+    text-align:center;
+    font-size:22px;
+    font-weight:800;
+    margin:12px 0 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.section-title:before,
+.section-title:after{
+    content:"";
+    width:55px;
+    height:2px;
+    background:#777;
 }
 
 .section-title span{
-  color:#075fd1;
+    color:#075fd1;
 }
 
-.category-strip{
-  display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:18px;
-  padding:0 8%;
+/* ================= CATEGORY ================= */
+
+/*
+categories.jpg is the complete category strip.
+Do NOT repeat the same image inside 8 cards.
+*/
+
+.category-section{
+    padding:0 8px 5px;
 }
 
-.cat{
-  height:86px;
-  border:1px solid #ddd;
-  border-radius:6px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:#fff;
+.category-image{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
 }
 
-.cat img{
-  width:52px;
-  height:48px;
-  object-fit:contain;
+.category-image img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
-.cat b{
-  font-size:10px;
-  margin-top:5px;
+/* ================= PRODUCTS ================= */
+
+.products-section{
+    padding:0 8px 12px;
 }
 
-.product-strip{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:18px;
-  padding:0 8%;
+.products-image{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
 }
 
-.prod{
-  border:1px solid #ddd;
-  border-radius:6px;
-  padding:8px;
-  background:#fff;
+.products-image img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
-.prod img{
-  width:100%;
-  height:105px;
-  object-fit:contain;
-}
-
-.prod-info{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:5px;
-  margin-top:5px;
-}
-
-.prod-info span{
-  font-size:10px;
-}
-
-.prod-info strong{
-  font-size:13px;
-}
-
-.order{
-  display:block;
-  background:#0866d7;
-  color:#fff;
-  text-align:center;
-  padding:6px;
-  border-radius:4px;
-  margin-top:8px;
-  font-size:9px;
-  font-weight:bold;
-}
+/* ================= SERVICE BAR ================= */
 
 .services{
-  margin-top:10px;
-  background:#090f14;
-  color:#fff;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:15px 8%;
+    background:#0c1116;
+    color:#fff;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:15px 8%;
+    margin-top:8px;
 }
 
 .service{
-  text-align:center;
-  border-right:1px solid #333;
-  padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    border-right:1px solid #333;
+    text-align:left;
 }
 
 .service:last-child{
-  border-right:none;
+    border-right:none;
 }
 
-.service b{
-  display:block;
-  font-size:12px;
+.service-icon{
+    font-size:26px;
+    color:#075fd1;
+}
+
+.service strong{
+    display:block;
+    font-size:13px;
 }
 
 .service small{
-  font-size:10px;
+    color:#ddd;
+    font-size:11px;
 }
 
-.footer{
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1.4fr 1.2fr;
-  gap:35px;
-  padding:25px 8%;
-  background:#fff;
+/* ================= FOOTER ================= */
+
+footer{
+    background:#fff;
+    padding:25px 8% 0;
 }
 
-.footer h3{
-  font-size:14px;
-  margin-bottom:12px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1.3fr 1.2fr;
+    gap:30px;
+    padding-bottom:22px;
 }
 
-.footer p,
-.footer a{
-  font-size:11px;
-  line-height:1.7;
+.footer-box{
+    border-right:1px solid #ddd;
+    padding-right:25px;
 }
 
-.footer img{
-  width:100%;
-  height:100px;
-  object-fit:cover;
+.footer-box:last-child{
+    border-right:none;
+}
+
+.footer-box h3{
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.footer-box p{
+    font-size:12px;
+    line-height:1.7;
+    color:#333;
+}
+
+.quick-links{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    font-size:12px;
+}
+
+.quick-links a:hover{
+    color:#075fd1;
+}
+
+.contact-line{
+    font-size:12px;
+    margin:9px 0;
+}
+
+.map{
+    width:100%;
+    margin-top:5px;
+}
+
+.map img{
+    width:100%;
+    display:block;
 }
 
 .directions{
-  display:block;
-  background:#0966d7;
-  color:#fff;
-  text-align:center;
-  padding:7px;
-  margin-top:5px;
-  border-radius:4px;
-  font-size:11px;
-  font-weight:bold;
+    display:block;
+    background:#075fd1;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    margin-top:8px;
+    border-radius:4px;
+    font-weight:bold;
+    font-size:12px;
 }
+
+/* ================= BOTTOM ================= */
 
 .bottom{
-  background:#090f14;
-  color:#fff;
-  display:flex;
-  justify-content:space-between;
-  padding:12px 8%;
-  font-size:11px;
+    background:#0b1015;
+    color:#fff;
+    min-height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    font-size:11px;
 }
+
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:55px;
-  height:55px;
-  background:#18c65b;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:27px;
-  z-index:10;
+    position:fixed;
+    right:22px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#20c763;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    z-index:100;
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
 }
 
+.whatsapp:hover{
+    transform:scale(1.06);
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:900px){
-  .topbar{
-    padding:0 3%;
-    font-size:10px;
-  }
 
-  .header{
-    padding:0 3%;
-  }
+    .top-bar{
+        padding:0 15px;
+        font-size:10px;
+    }
 
-  .logo{
-    width:180px;
-  }
+    .top-right{
+        display:none;
+    }
 
-  .logo img{
-    width:160px;
-  }
+    header{
+        height:auto;
+        min-height:70px;
+        padding:10px 15px;
+        flex-wrap:wrap;
+    }
 
-  .nav{
-    gap:12px;
-    font-size:11px;
-  }
+    .logo{
+        width:auto;
+    }
 
-  .category-strip{
-    grid-template-columns:repeat(4,1fr);
-    padding:0 3%;
-  }
+    .logo-main{
+        font-size:27px;
+    }
 
-  .product-strip{
-    grid-template-columns:repeat(3,1fr);
-    padding:0 3%;
-  }
+    .logo-sub{
+        font-size:10px;
+    }
 
-  .services{
-    grid-template-columns:repeat(2,1fr);
-    padding:15px 3%;
-  }
+    nav{
+        order:3;
+        width:100%;
+        overflow-x:auto;
+        justify-content:flex-start;
+        gap:22px;
+        font-size:12px;
+    }
 
-  .footer{
-    grid-template-columns:repeat(2,1fr);
-    padding:25px 3%;
-  }
+    nav a{
+        padding:12px 0;
+        white-space:nowrap;
+    }
+
+    .header-icons{
+        font-size:19px;
+        gap:13px;
+    }
+
+    .section-title{
+        font-size:18px;
+    }
+
+    .section-title:before,
+    .section-title:after{
+        width:30px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        padding:15px;
+    }
+
+    .service{
+        border-right:none;
+        justify-content:flex-start;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .footer-box{
+        border-right:none;
+        border-bottom:1px solid #ddd;
+        padding-bottom:15px;
+        padding-right:0;
+    }
+
+    .bottom{
+        padding:12px 15px;
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+
+    .whatsapp{
+        width:52px;
+        height:52px;
+        right:15px;
+        bottom:15px;
+    }
 }
 
 @media(max-width:600px){
-  .topbar{
-    display:none;
-  }
 
-  .header{
-    height:auto;
-    padding:10px 15px;
-    flex-wrap:wrap;
-  }
+    .top-bar{
+        display:none;
+    }
 
-  .logo{
-    width:100%;
-    justify-content:center;
-  }
+    .hero img{
+        width:100%;
+    }
 
-  .nav{
-    width:100%;
-    overflow-x:auto;
-    justify-content:flex-start;
-    padding:10px 0;
-  }
+    .services{
+        grid-template-columns:1fr;
+    }
 
-  .icons{
-    display:none;
-  }
-
-  .hero{
-    min-height:420px;
-    padding:40px 20px;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero h2{
-    font-size:20px;
-  }
-
-  .features{
-    flex-wrap:wrap;
-    gap:12px;
-  }
-
-  .category-strip{
-    grid-template-columns:repeat(2,1fr);
-    padding:0 15px;
-  }
-
-  .product-strip{
-    grid-template-columns:repeat(2,1fr);
-    padding:0 15px;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  .service{
-    border-right:none;
-    border-bottom:1px solid #333;
-    padding:12px;
-  }
-
-  .footer{
-    grid-template-columns:1fr;
-    padding:25px 15px;
-  }
-
-  .bottom{
-    flex-direction:column;
-    gap:5px;
-    text-align:center;
-  }
+    .section-title{
+        margin:10px 0;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <span>📍 #2 Ramakrishna Nagar, Kanakapura Main Road, Near Metro Pillar No 70, Bengaluru - 560078</span>
-  <span>📞 9900730653 | 9972220447</span>
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="top-left">
+        <span>📍 #2 Ramakrishna Nagar, Kanakapura Main Road, Near Metro Pillar No 70, Bengaluru - 560078</span>
+    </div>
+
+    <div class="top-right">
+        <span>☎ 9900730653</span>
+        <span>|</span>
+        <span>9972220447</span>
+        <span>●</span>
+        <span>●</span>
+        <span>●</span>
+    </div>
+
 </div>
 
-<header class="header">
 
-  <div class="logo">
-    <img src="logo.png" alt="Sri Sai Helmets Palace">
-  </div>
+<!-- ================= HEADER ================= -->
 
-  <nav class="nav">
-    <a href="#">HOME</a>
-    <a href="#helmets">HELMETS</a>
-    <a href="#accessories">BIKE ACCESSORIES</a>
-    <a href="#riding">RIDING GEARS</a>
-    <a href="#offers">OFFERS</a>
-    <a href="#about">ABOUT US</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+<header>
 
-  <div class="icons">
-    🔍 🛒
-  </div>
+    <a href="#" class="logo">
+
+        <div>
+
+            <div class="logo-main">
+                SRI SAI
+            </div>
+
+            <div class="logo-sub">
+                HELMETS PALACE
+            </div>
+
+            <div class="logo-line"></div>
+
+        </div>
+
+    </a>
+
+
+    <nav>
+
+        <a href="#" class="active">HOME</a>
+
+        <a href="#helmets">HELMETS</a>
+
+        <a href="#accessories">BIKE ACCESSORIES</a>
+
+        <a href="#riding">RIDING GEARS</a>
+
+        <a href="#offers">OFFERS</a>
+
+        <a href="#about">ABOUT US</a>
+
+        <a href="#contact">CONTACT</a>
+
+    </nav>
+
+
+    <div class="header-icons">
+
+        <span>⌕</span>
+
+        <span class="cart">
+            🛒
+            <span class="cart-count">0</span>
+        </span>
+
+    </div>
 
 </header>
 
+
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
-  <div class="hero-content">
-
-    <h1>
-      RIDE SAFE<br>
-      <span>RIDE IN STYLE</span>
-    </h1>
-
-    <h2>
-      PREMIUM HELMETS &<br>
-      BIKE ACCESSORIES
-    </h2>
-
-    <div class="blue-line"></div>
-
-    <div class="features">
-      <div class="feature">🛡️ 100% Genuine<br>Products</div>
-      <div class="feature">🏅 Best Quality<br>Assured</div>
-      <div class="feature">🚚 Fast Delivery<br>Available</div>
-      <div class="feature">🎧 Customer<br>Support</div>
-    </div>
-
-  </div>
+    <img src="hero.jpg" alt="Sri Sai Helmets Palace">
 
 </section>
 
-<h2 class="section-title">
-  ── SHOP BY <span>CATEGORY</span> ──
+
+<!-- ================= CATEGORY TITLE ================= -->
+
+<h2 class="section-title" id="helmets">
+    SHOP BY <span>CATEGORY</span>
 </h2>
 
-<section class="category-strip" id="helmets">
 
-  <div class="cat">
-    <img src="categories.jpg" alt="Helmets">
-    <b>HELMETS</b>
-  </div>
+<!-- ================= CATEGORY IMAGE ================= -->
 
-  <div class="cat">
-    <img src="categories.jpg" alt="Riding Jackets">
-    <b>RIDING JACKETS</b>
-  </div>
+<section class="category-section">
 
-  <div class="cat">
-    <img src="categories.jpg" alt="Riding Gloves">
-    <b>RIDING GLOVES</b>
-  </div>
+    <div class="category-image">
 
-  <div class="cat">
-    <img src="categories.jpg" alt="Riding Boots">
-    <b>RIDING BOOTS</b>
-  </div>
+        <img
+            src="categories.jpg"
+            alt="Shop by Category"
+        >
 
-  <div class="cat">
-    <img src="categories.jpg" alt="Bike Accessories">
-    <b>BIKE ACCESSORIES</b>
-  </div>
-
-  <div class="cat">
-    <img src="categories.jpg" alt="Luggage">
-    <b>LUGGAGE & BAGS</b>
-  </div>
-
-  <div class="cat">
-    <img src="categories.jpg" alt="Care">
-    <b>CARE & MAINTENANCE</b>
-  </div>
-
-  <div class="cat">
-    <img src="categories.jpg" alt="Helmet Accessories">
-    <b>HELMET ACCESSORIES</b>
-  </div>
+    </div>
 
 </section>
+
+
+<!-- ================= PRODUCTS TITLE ================= -->
 
 <h2 class="section-title" id="accessories">
-  ── FEATURED <span>PRODUCTS</span> ──
+    FEATURED <span>PRODUCTS</span>
 </h2>
 
-<section class="product-strip">
 
-  <div class="prod">
-    <img src="products.jpg" alt="AXOR Apex Hex-2">
-    <div class="prod-info">
-      <span>AXOR Apex Hex-2</span>
-      <strong>₹4,950</strong>
-    </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
+<!-- ================= PRODUCTS IMAGE ================= -->
 
-  <div class="prod">
-    <img src="products.jpg" alt="SMK Stellar Sports">
-    <div class="prod-info">
-      <span>SMK Stellar Sports</span>
-      <strong>₹3,950</strong>
-    </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
+<section class="products-section">
 
-  <div class="prod">
-    <img src="products.jpg" alt="MT Thunder 4 SV">
-    <div class="prod-info">
-      <span>MT Thunder 4 SV</span>
-      <strong>₹5,450</strong>
-    </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
+    <div class="products-image">
 
-  <div class="prod">
-    <img src="products.jpg" alt="Rynox Air GT Gloves">
-    <div class="prod-info">
-      <span>Rynox Air GT Gloves</span>
-      <strong>₹2,650</strong>
-    </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
+        <img
+            src="products.jpg"
+            alt="Featured Products"
+        >
 
-  <div class="prod">
-    <img src="products.jpg" alt="Sarkkart Bluetooth">
-    <div class="prod-info">
-      <span>Sarkkart Bluetooth</span>
-      <strong>₹2,950</strong>
     </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
-
-  <div class="prod">
-    <img src="products.jpg" alt="HJG 4 LED Fog Light">
-    <div class="prod-info">
-      <span>HJG 4 LED Fog Light</span>
-      <strong>₹1,850</strong>
-    </div>
-    <a class="order" href="https://wa.me/919900730653">◉ ORDER ON WHATSAPP</a>
-  </div>
 
 </section>
 
-<section class="services" id="riding">
 
-  <div class="service">
-    🚚
-    <b>FREE SHIPPING</b>
-    <small>On orders above ₹999</small>
-  </div>
+<!-- ================= SERVICES ================= -->
 
-  <div class="service">
-    ↩️
-    <b>EASY RETURNS</b>
-    <small>7 days return policy</small>
-  </div>
+<section class="services">
 
-  <div class="service">
-    💳
-    <b>SECURE PAYMENT</b>
-    <small>100% secure payments</small>
-  </div>
+    <div class="service">
 
-  <div class="service">
-    🎧
-    <b>SUPPORT</b>
-    <small>Call or WhatsApp us</small>
-  </div>
+        <div class="service-icon">🚚</div>
+
+        <div>
+            <strong>FREE SHIPPING</strong>
+            <small>On orders above ₹999</small>
+        </div>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="service-icon">↩</div>
+
+        <div>
+            <strong>EASY RETURNS</strong>
+            <small>7 days return policy</small>
+        </div>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="service-icon">▣</div>
+
+        <div>
+            <strong>SECURE PAYMENT</strong>
+            <small>100% secure payments</small>
+        </div>
+
+    </div>
+
+
+    <div class="service">
+
+        <div class="service-icon">♧</div>
+
+        <div>
+            <strong>SUPPORT</strong>
+            <small>Call or WhatsApp us</small>
+        </div>
+
+    </div>
 
 </section>
 
-<footer class="footer" id="about">
 
-  <div>
-    <h3>ABOUT US</h3>
-    <p>
-      Sri Sai Helmets Palace is your one-stop destination
-      for premium helmets, riding gear and bike accessories.
-      We provide 100% genuine products with the best quality
-      and affordable prices.
-    </p>
-  </div>
+<!-- ================= FOOTER ================= -->
 
-  <div>
-    <h3>QUICK LINKS</h3>
-    <p>
-      <a href="#">Home</a><br>
-      <a href="#helmets">Helmets</a><br>
-      <a href="#accessories">Bike Accessories</a><br>
-      <a href="#riding">Riding Gears</a><br>
-      <a href="#offers">Offers</a><br>
-      <a href="#about">About Us</a><br>
-      <a href="#contact">Contact Us</a>
-    </p>
-  </div>
+<footer id="about">
 
-  <div id="contact">
-    <h3>CONTACT US</h3>
-    <p>
-      📍 #2 Ramakrishna Nagar, Kanakapura Main Road,<br>
-      Near Metro Pillar No 70, Bengaluru - 560078.
-    </p>
-    <p>📞 9900730653 | 9972220447</p>
-    <p>🟢 9900730653</p>
-    <p>✉ srisaihelmetspalace@gmail.com</p>
-  </div>
+    <div class="footer-grid">
 
-  <div>
-    <h3>STORE LOCATION</h3>
-    <img src="footer-map.jpg" alt="Store Location">
-    <a class="directions" href="https://www.google.com/maps/search/?api=1&query=Sri+Sai+Helmets+Palace+Bengaluru">
-      GET DIRECTIONS
-    </a>
-  </div>
+
+        <!-- ABOUT -->
+
+        <div class="footer-box">
+
+            <h3>ABOUT US</h3>
+
+            <p>
+                Sri Sai Helmets Palace is your one-stop destination
+                for premium helmets, riding gear and bike accessories.
+                We provide 100% genuine products with the best quality
+                and affordable prices.
+            </p>
+
+            <p style="margin-top:12px;">
+                ● &nbsp; ● &nbsp; ●
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-box">
+
+            <h3>QUICK LINKS</h3>
+
+            <div class="quick-links">
+
+                <a href="#">Home</a>
+                <a href="#offers">Offers</a>
+
+                <a href="#helmets">Helmets</a>
+                <a href="#about">About Us</a>
+
+                <a href="#accessories">Bike Accessories</a>
+                <a href="#contact">Contact Us</a>
+
+                <a href="#riding">Riding Gears</a>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-box" id="contact">
+
+            <h3>CONTACT US</h3>
+
+            <div class="contact-line">
+                📍 #2 Ramakrishna Nagar, Kanakapura Main Road,
+                Near Metro Pillar No 70, Bengaluru - 560078.
+            </div>
+
+            <div class="contact-line">
+                ☎ 9900730653 &nbsp; | &nbsp; 9972220447
+            </div>
+
+            <div class="contact-line">
+                🟢 9900730653
+            </div>
+
+            <div class="contact-line">
+                ✉ srisaihelmetsplace@gmail.com
+            </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="footer-box">
+
+            <h3>STORE LOCATION</h3>
+
+            <div class="map">
+
+                <img
+                    src="footer-map.jpg"
+                    alt="Sri Sai Helmets Palace Store Location"
+                >
+
+            </div>
+
+            <a
+                class="directions"
+                href="https://www.google.com/maps/search/?api=1&query=Sri+Sai+Helmets+Palace+Bengaluru"
+                target="_blank"
+            >
+                GET DIRECTIONS
+            </a>
+
+        </div>
+
+    </div>
 
 </footer>
 
+
+<!-- ================= BOTTOM ================= -->
+
 <div class="bottom">
-  <span>© 2024 Sri Sai Helmets Palace. All Rights Reserved.</span>
-  <span>Designed with ❤️ for Riders</span>
+
+    <span>
+        © 2024 Sri Sai Helmets Palace. All Rights Reserved.
+    </span>
+
+    <span>
+        Designed with ❤️ for Riders
+    </span>
+
 </div>
 
-<a class="whatsapp" href="https://wa.me/919900730653">◉</a>
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919900730653"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+>
+    ☎
+</a>
+
 
 </body>
 </html>
