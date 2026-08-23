@@ -612,14 +612,117 @@ footer{
 
 <section class="products-section">
 
-    <div class="products-image">
+  <div class="product-grid" id="productGrid">
 
-        <img
-            src="products.jpg"
-            alt="Featured Products"
-        >
+    <p>Loading products...</p>
 
-    </div>
+</div>
+
+<style>
+.product-grid{
+    max-width:1200px;
+    margin:20px auto;
+    padding:10px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
+}
+
+.product-card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:6px;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:10px;
+}
+
+.product-card img{
+    width:100%;
+    height:150px;
+    object-fit:contain;
+    display:block;
+}
+
+.product-card h3{
+    font-size:13px;
+    margin:8px 4px;
+}
+
+.product-price{
+    font-size:16px;
+    font-weight:bold;
+    margin:6px;
+}
+
+.product-order{
+    display:block;
+    margin:8px;
+    padding:7px;
+    background:#075fd1;
+    color:white;
+    border-radius:4px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+@media(max-width:1000px){
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style>
+
+<script>
+fetch("products.json")
+.then(response => response.json())
+.then(products => {
+
+    const grid = document.getElementById("productGrid");
+
+    grid.innerHTML = "";
+
+    products.forEach(product => {
+
+        const card = document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+
+            <h3>${product.name}</h3>
+
+            <div class="product-price">
+                ₹${product.price}
+            </div>
+
+            <a
+                class="product-order"
+                href="https://wa.me/919900730653?text=I%20want%20to%20order%20${encodeURIComponent(product.name)}"
+                target="_blank">
+                ORDER ON WHATSAPP
+            </a>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+})
+.catch(error => {
+
+    document.getElementById("productGrid").innerHTML =
+        "<p>Products could not be loaded.</p>";
+
+});
+</script>
 
 </section>
 
