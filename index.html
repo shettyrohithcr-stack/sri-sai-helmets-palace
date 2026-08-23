@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Sai Helmets Palace | With Bike Accessories</title>
+<meta name="description" content="Sri Sai Helmets Palace – Helmets, bike accessories and riding gear.">
+<style>
+:root{--blue:#1747d1;--blue2:#0b2d8f;--ink:#0a0d14;--muted:#5f6675;--line:#e7eaf0;--bg:#fff;--soft:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.top{background:var(--ink);color:#fff;font-size:13px;padding:9px 0}
+.top .container{display:flex;justify-content:space-between;gap:20px}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.3px}
+.brand img{width:58px;height:58px;object-fit:contain}
+.brand span{font-size:18px}.brand small{display:block;color:var(--blue);font-size:10px;letter-spacing:1.7px}
+nav{display:flex;gap:27px;font-weight:700;font-size:14px}
+nav a:hover{color:var(--blue)}
+.cta{background:var(--blue);color:#fff;padding:12px 18px;border-radius:8px;font-weight:800}
+.hero{background:linear-gradient(135deg,#f7f9ff 0%,#fff 55%,#eef3ff 100%);padding:76px 0 68px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.badge{display:inline-flex;background:#eaf0ff;color:var(--blue2);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:clamp(42px,5vw,70px);line-height:.98;margin:18px 0}
+h1 span{color:var(--blue)}
+.hero p{font-size:18px;color:var(--muted);max-width:570px}
+.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:9px;font-weight:900;border:1px solid var(--ink)}
+.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn.light{background:#fff}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 22px 60px #0a0d1418}
+.hero-card img{width:100%;display:block;max-height:390px;object-fit:contain}
+.stats{margin-top:30px;display:flex;gap:28px;flex-wrap:wrap}
+.stat b{font-size:25px}.stat span{display:block;color:var(--muted);font-size:12px}
+section{padding:76px 0}
+.section-head{text-align:center;margin-bottom:35px}
+.section-head h2{font-size:38px;margin-bottom:8px}
+.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #0a0d1412}
+.icon{width:52px;height:52px;border-radius:14px;background:#eaf0ff;color:var(--blue);display:grid;place-items:center;font-size:26px;margin-bottom:18px}
+.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.products{background:var(--soft)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.product .pic{height:220px;background:#f2f4f8;display:grid;place-items:center;font-size:80px}
+.product .info{padding:20px}
+.product .tag{color:var(--blue);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+.product h3{margin:6px 0}.product p{color:var(--muted);font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-box{background:var(--ink);color:#fff;border-radius:24px;padding:38px}
+.about-box h2{font-size:40px;line-height:1.05;margin:12px 0}
+.about-box p{color:#cbd0db}
+.list{margin-top:24px;display:grid;gap:12px}.list div{display:flex;gap:10px}.check{color:#6f9cff;font-weight:900}
+.contact{background:var(--blue);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.contact h2{font-size:42px;line-height:1.05}.contact p{color:#dce5ff;margin-top:12px}
+.contact-box{background:#fff;color:var(--ink);border-radius:18px;padding:28px}
+.contact-row{padding:13px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}
+footer{background:#080b12;color:#aeb5c3;padding:30px 0}.footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:900}
+@media(max-width:900px){nav{display:none}.hero-grid,.about,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.top{display:none}.nav{height:68px}.brand img{width:48px;height:48px}.brand span{font-size:15px}section{padding:55px 0}.hero{padding:52px 0}.cards,.product-grid{grid-template-columns:1fr}h1{font-size:44px}.hero p{font-size:16px}}
+
+.product .pic img{width:100%;height:220px;object-fit:contain;display:block;background:#f2f4f8}
+.product-note{background:#eef3ff;border:1px solid #d8e2ff;color:#31415f;padding:12px 16px;border-radius:10px;margin:0 auto 20px;max-width:900px;text-align:center;font-size:13px}.price{font-size:21px;font-weight:900;color:var(--blue);margin:10px 0 4px}
+.order-btn{display:block;margin-top:14px;text-align:center;background:#159447;color:#fff;padding:11px 12px;border-radius:8px;font-weight:900;font-size:13px}
+</style>
+</head>
+<body>
+<div class="top"><div class="container"><span>🏍️ Premium Helmets & Bike Accessories</span><span>📞 Call / WhatsApp: +91 9900730653</span></div></div>
+
+<header>
+<div class="container nav">
+<a class="brand" href="#"><img src="logo.png" alt="Sri Sai Helmets Palace logo"><span>SRI SAI HELMETS PALACE<small>WITH BIKE ACCESSORIES</small></span></a>
+<nav><a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<a class="cta" href="#contact">Contact Us</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="badge">Ride Safe • Ride Smart</div>
+<h1>Your Ride.<br><span>Your Style.</span><br>Your Safety.</h1>
+<p>Welcome to Sri Sai Helmets Palace — your destination for helmets, riding gear and quality bike accessories.</p>
+<div class="buttons"><a class="btn primary" href="#products">Explore Products</a><a class="btn light" href="https://www.google.com/maps/search/?api=1&query=#2+Ramakrishna+Nagar%2C+Kanakapura+Main+Road%2C+Near+Metro+Pillar+No+70%2C+Bengaluru+-+560078" target="_blank" rel="noopener">Get Directions</a></div>
+<div class="stats"><div class="stat"><b>100+</b><span>Products</span></div><div class="stat"><b>Quality</b><span>Riding Gear</span></div><div class="stat"><b>Trusted</b><span>Local Service</span></div></div>
+</div>
+<div class="hero-card"><img src="logo.png" alt="Sri Sai Helmets Palace"></div>
+</div>
+</section>
+
+<section id="categories">
+<div class="container">
+<div class="section-head"><h2>Everything for Your Ride</h2><p>Essential gear and accessories in one place.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🪖</div><h3>Helmets</h3><p>Full-face, open-face and stylish helmets for everyday riding.</p></div>
+<div class="card"><div class="icon">🧤</div><h3>Riding Gear</h3><p>Gloves, jackets and protective gear for safer rides.</p></div>
+<div class="card"><div class="icon">💡</div><h3>Bike Accessories</h3><p>Lights, mounts, utility accessories and more.</p></div>
+<div class="card"><div class="icon">🔧</div><h3>Bike Essentials</h3><p>Useful riding and maintenance products for your bike.</p></div>
+</div>
+</div>
+</section>
+
+<section class="products" id="products">
+<div class="container">
+<div class="section-head"><h2>Helmets & Prices</h2><p>Helmet photos and prices are shown below. Tap “Order on WhatsApp” to enquire directly.</p></div>
+<div class="product-note">Prices shown are sample/display prices. Confirm your shop’s final price and stock before publishing.</div><div class="product-note">Reference prices are based on current online brand listings; your final shop price and stock should be confirmed before publishing.</div><div class="product-grid">
+<div class="product">
+  <div class="pic"><img src="smk-stellar.jpg" alt="SMK Stellar Sports"></div>
+  <div class="info">
+    <span class="tag">Full Face Helmet</span>
+    <h3>SMK Stellar Sports</h3>
+    <div class="price">₹3,950</div>
+    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20SMK%20Stellar%20Sports%20for%20₹3,950.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+  </div>
+</div>
+<div class="product">
+  <div class="pic"><img src="mt-thunder.jpg" alt="MT Thunder 4 SV"></div>
+  <div class="info">
+    <span class="tag">Full Face Helmet</span>
+    <h3>MT Thunder 4 SV</h3>
+    <div class="price">₹5,450</div>
+    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20MT%20Thunder%204%20SV%20for%20₹5,450.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+  </div>
+</div>
+<div class="product">
+  <div class="pic"><img src="axor-apex.jpg" alt="Axor Apex Hex-2"></div>
+  <div class="info">
+    <span class="tag">Full Face Helmet</span>
+    <h3>Axor Apex Hex-2</h3>
+    <div class="price">₹4,950</div>
+    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20Axor%20Apex%20Hex-2%20for%20₹4,950.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+  </div>
+</div>
+<div class="product">
+  <div class="pic"><img src="vega-bolt.jpg" alt="Vega Bolt Bunny"></div>
+  <div class="info">
+    <span class="tag">Full Face Helmet</span>
+    <h3>Vega Bolt Bunny</h3>
+    <div class="price">₹2,050</div>
+    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20Vega%20Bolt%20Bunny%20for%20₹2,050.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+  </div>
+</div></div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div>
+<div class="badge">About Sri Sai</div>
+<h2 style="font-size:42px;margin:15px 0">Built for riders who care about safety and style.</h2>
+<p style="color:var(--muted);font-size:17px">Sri Sai Helmets Palace brings helmets and bike accessories together so riders can find the essentials they need without the hassle.</p>
+<div class="list"><div><span class="check">✓</span> Wide range of riding essentials</div><div><span class="check">✓</span> Friendly local service</div><div><span class="check">✓</span> Quality-focused product selection</div></div>
+</div>
+<div class="about-box"><div class="badge">Why Choose Us</div><h2>Ride with confidence.</h2><p>From your helmet to everyday bike accessories, we help you gear up for the road.</p></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+<div><div class="badge" style="background:#fff;color:var(--blue)">Visit Us</div><h2 style="margin-top:14px">Ready to gear up?</h2><p>Call, WhatsApp or visit the shop to check availability and latest products.</p></div>
+<div class="contact-box">
+<div class="contact-row"><b>📞 Phone</b><br>+91 9972220447</div>
+<div class="contact-row"><b>💬 WhatsApp</b><br>+91 XXXXX XXXXX</div>
+<div class="contact-row"><b>📍 Shop Location</b><br>#2 Ramakrishna Nagar, Kanakapura Main Road, Near Metro Pillar No 70, Bengaluru - 560078</div>
+<div class="contact-row"><b>🕘 Opening Hours</b><br>Mon – Sun: 9:00 AM – 9:00 PM</div>
+<div style="padding-top:18px">
+<a class="btn primary" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace%2C%20I%20would%20like%20to%20know%20about%20your%20products." target="_blank" rel="noopener" style="display:block;text-align:center">💬 WhatsApp Us</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-flex"><div><div class="footer-brand">SRI SAI HELMETS PALACE</div><div>WITH BIKE ACCESSORIES</div></div><div>© 2026 Sri Sai Helmets Palace. All rights reserved.</div></div></footer>
+</body>
+</html>
