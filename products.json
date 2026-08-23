@@ -43,5 +43,14 @@
     "description": "ISI certified full face helmet",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor Apex",
+    "price": "4789",
+    "category": "Full Face",
+    "image": "products/axor-apex.axor apex-1787484092443.jfif",
+    "description": "",
+    "stock": "in_stock",
+    "active": true
   }
 ]
