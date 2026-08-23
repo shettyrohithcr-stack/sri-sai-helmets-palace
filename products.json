@@ -1,0 +1,34 @@
+[
+  {
+    "name": "SMK Stellar Sports",
+    "price": "3950",
+    "category": "Full Face",
+    "image": "smk-stellar.jpg",
+    "description": "Sporty full-face helmet.",
+    "active": true
+  },
+  {
+    "name": "MT Thunder 4 SV",
+    "price": "5450",
+    "category": "Full Face",
+    "image": "mt-thunder.jpg",
+    "description": "Premium full-face helmet.",
+    "active": true
+  },
+  {
+    "name": "Axor Apex Hex-2",
+    "price": "4950",
+    "category": "Full Face",
+    "image": "axor-apex.jpg",
+    "description": "Stylish full-face helmet.",
+    "active": true
+  },
+  {
+    "name": "Vega Bolt Bunny",
+    "price": "2050",
+    "category": "Full Face",
+    "image": "vega-bolt.jpg",
+    "description": "Stylish everyday helmet.",
+    "active": true
+  }
+]

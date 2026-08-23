@@ -69,7 +69,7 @@ footer{background:#080b12;color:#aeb5c3;padding:30px 0}.footer-flex{display:flex
 .product .pic img{width:100%;height:220px;object-fit:contain;display:block;background:#f2f4f8}
 .product-note{background:#eef3ff;border:1px solid #d8e2ff;color:#31415f;padding:12px 16px;border-radius:10px;margin:0 auto 20px;max-width:900px;text-align:center;font-size:13px}.price{font-size:21px;font-weight:900;color:var(--blue);margin:10px 0 4px}
 .order-btn{display:block;margin-top:14px;text-align:center;background:#159447;color:#fff;padding:11px 12px;border-radius:8px;font-weight:900;font-size:13px}
-</style>
+.product .pic img{width:100%;height:220px;object-fit:contain;background:#f2f4f8}.price{font-size:21px;font-weight:900;color:var(--blue);margin:10px 0}.order-btn{display:block;margin-top:14px;text-align:center;background:#159447;color:white;padding:11px;border-radius:8px;font-weight:900}</style>
 </head>
 <body>
 <div class="top"><div class="container"><span>🏍️ Premium Helmets & Bike Accessories</span><span>📞 Call / WhatsApp: +91 9900730653</span></div></div>
@@ -111,43 +111,7 @@ footer{background:#080b12;color:#aeb5c3;padding:30px 0}.footer-flex{display:flex
 <section class="products" id="products">
 <div class="container">
 <div class="section-head"><h2>Helmets & Prices</h2><p>Helmet photos and prices are shown below. Tap “Order on WhatsApp” to enquire directly.</p></div>
-<div class="product-note">Prices shown are sample/display prices. Confirm your shop’s final price and stock before publishing.</div><div class="product-note">Reference prices are based on current online brand listings; your final shop price and stock should be confirmed before publishing.</div><div class="product-grid">
-<div class="product">
-  <div class="pic"><img src="smk-stellar.jpg" alt="SMK Stellar Sports"></div>
-  <div class="info">
-    <span class="tag">Full Face Helmet</span>
-    <h3>SMK Stellar Sports</h3>
-    <div class="price">₹3,950</div>
-    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20SMK%20Stellar%20Sports%20for%20₹3,950.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
-  </div>
-</div>
-<div class="product">
-  <div class="pic"><img src="mt-thunder.jpg" alt="MT Thunder 4 SV"></div>
-  <div class="info">
-    <span class="tag">Full Face Helmet</span>
-    <h3>MT Thunder 4 SV</h3>
-    <div class="price">₹5,450</div>
-    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20MT%20Thunder%204%20SV%20for%20₹5,450.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
-  </div>
-</div>
-<div class="product">
-  <div class="pic"><img src="axor-apex.jpg" alt="Axor Apex Hex-2"></div>
-  <div class="info">
-    <span class="tag">Full Face Helmet</span>
-    <h3>Axor Apex Hex-2</h3>
-    <div class="price">₹4,950</div>
-    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20Axor%20Apex%20Hex-2%20for%20₹4,950.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
-  </div>
-</div>
-<div class="product">
-  <div class="pic"><img src="vega-bolt.jpg" alt="Vega Bolt Bunny"></div>
-  <div class="info">
-    <span class="tag">Full Face Helmet</span>
-    <h3>Vega Bolt Bunny</h3>
-    <div class="price">₹2,050</div>
-    <a class="order-btn" href="https://wa.me/919900730653?text=Hello%20Sri%20Sai%20Helmets%20Palace,%20I%20want%20Vega%20Bolt%20Bunny%20for%20₹2,050.%20Please%20confirm%20availability." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
-  </div>
-</div></div>
+<div class="product-note">Prices shown are sample/display prices. Confirm your shop’s final price and stock before publishing.</div><div class="product-note">Reference prices are based on current online brand listings; your final shop price and stock should be confirmed before publishing.</div><div id="product-grid" class="product-grid"><div class="product"><div class="pic">🪖</div><div class="info"><h3>Loading helmets…</h3></div></div></div>
 </div>
 </section>
 
@@ -180,5 +144,8 @@ footer{background:#080b12;color:#aeb5c3;padding:30px 0}.footer-flex{display:flex
 </main>
 
 <footer><div class="container footer-flex"><div><div class="footer-brand">SRI SAI HELMETS PALACE</div><div>WITH BIKE ACCESSORIES</div></div><div>© 2026 Sri Sai Helmets Palace. All rights reserved.</div></div></footer>
-</body>
+<script>
+function esc2(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+fetch('products.json?'+Date.now()).then(r=>r.json()).then(ps=>{document.getElementById('product-grid').innerHTML=ps.filter(p=>p.active!==false).map(p=>'<div class="product"><div class="pic"><img src="'+p.image+'" alt="'+esc2(p.name)+'"></div><div class="info"><span class="tag">'+esc2(p.category)+'</span><h3>'+esc2(p.name)+'</h3><div class="price">₹'+esc2(p.price)+'</div><span style="display:inline-block;padding:5px 8px;border-radius:6px;font-size:11px;font-weight:900;background:'+(p.stock==='in_stock'?'#e8f7ee':p.stock==='out_of_stock'?'#fff0f0':'#fff7df')+';color:'+(p.stock==='in_stock'?'#0b6b36':p.stock==='out_of_stock'?'#a21b1b':'#8a5a00')+'">'+(p.stock==='in_stock'?'✅ In Stock':p.stock==='out_of_stock'?'❌ Out of Stock':'🕒 Coming Soon')+'</span><p>'+esc2(p.description)+'</p>(p.stock==='out_of_stock'?'<span class="order-btn" style="background:#9aa3af;cursor:not-allowed">❌ Out of Stock</span>':'<a class="order-btn" target="_blank" href="https://wa.me/919900730653?text='+encodeURIComponent('Hello Sri Sai Helmets Palace, I want '+p.name+' for ₹'+p.price+'. Please confirm availability.')+'">💬 Order on WhatsApp</a>')</div></div>').join('')})
+</script><a href="admin-github.html" style="position:fixed;right:12px;bottom:12px;background:#0b1b2c;color:#fff;padding:8px 11px;border-radius:7px;font:700 11px Arial;text-decoration:none;opacity:.75">Admin</a></body>
 </html>

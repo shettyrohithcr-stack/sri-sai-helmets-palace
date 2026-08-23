@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sri Sai Helmets Palace — GitHub Admin</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#101828}
+.top{background:#fff;border-bottom:1px solid #e4e7ec;padding:16px 24px;display:flex;justify-content:space-between;gap:12px;align-items:center;position:sticky;top:0;z-index:5}.brand{font-weight:900}.brand small{display:block;color:#1761d1;font-size:10px;letter-spacing:1.5px;margin-top:3px}
+.wrap{max-width:1050px;margin:auto;padding:28px 18px}.panel{background:#fff;border:1px solid #e2e7ef;border-radius:14px;padding:22px;margin-bottom:18px}.panel h2{margin:0 0 14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{margin:12px 0}.row label{display:block;font-weight:800;font-size:13px;margin-bottom:6px}.row input,.row select{width:100%;padding:11px;border:1px solid #cfd6e2;border-radius:8px;font:inherit}.btn{border:0;border-radius:8px;padding:11px 17px;font-weight:900;cursor:pointer}.blue{background:#1461e8;color:#fff}.green{background:#159447;color:#fff}.gray{background:#e9edf3}.danger{background:#d92d2d;color:#fff}.status{padding:12px;border-radius:9px;background:#f1f5f9;margin-top:14px;white-space:pre-wrap}.status.ok{background:#e8f7ee;color:#0b6b36}.status.err{background:#fff0f0;color:#9c1c1c}.preview{width:180px;height:180px;object-fit:contain;background:#f2f4f7;border-radius:10px;display:none;margin-top:10px}.help{color:#667085;font-size:13px;line-height:1.5}.list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{border:1px solid #e2e7ef;border-radius:10px;padding:10px;background:#fff}.card img{width:100%;height:140px;object-fit:contain;background:#f4f5f7;border-radius:7px}.price{font-weight:900;color:#145bd8;font-size:18px;margin-top:5px}.stock{display:inline-block;padding:5px 8px;border-radius:6px;font-size:11px;font-weight:900;margin-top:7px}.stock.in{background:#e8f7ee;color:#0b6b36}.stock.out{background:#fff0f0;color:#a21b1b}.stock.soon{background:#fff7df;color:#8a5a00}.tag{font-size:10px;color:#667085;font-weight:800;text-transform:uppercase}
+@media(max-width:800px){.grid,.list{grid-template-columns:1fr}.top{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="brand">SRI SAI HELMETS PALACE <small>WITH BIKE ACCESSORIES</small></div>
+  <div>📞 9900730653 &nbsp;|&nbsp; 9972220447</div>
+</div>
+
+<div class="wrap">
+  <div class="panel">
+    <h2>🔐 GitHub Connection</h2>
+    <div class="grid">
+      <div class="row"><label>GitHub username</label><input id="owner" value="shettyrohithcr-stack"></div>
+      <div class="row"><label>Repository</label><input id="repo" value="sri-sai-helmets-palace"></div>
+    </div>
+    <div class="row">
+      <label>GitHub Fine-grained Personal Access Token</label>
+      <input id="token" type="password" placeholder="Paste your token here">
+      <div class="help">The token is used only in this browser session and is not written into the website files. Create a fine-grained token with access only to this repository and <b>Contents: Read and write</b>.</div>
+    </div>
+    <button class="btn blue" onclick="connect()">Test GitHub Connection</button>
+    <div id="connection" class="status">Not connected.</div>
+  </div>
+
+  <div class="panel">
+    <h2>➕ Add Product</h2>
+    <div class="grid">
+      <div>
+        <div class="row"><label>Product name</label><input id="name" placeholder="e.g. Vega Crux"></div>
+        <div class="row"><label>Price (₹)</label><input id="price" type="number" placeholder="2500"></div>
+        <div class="row"><label>Category</label><select id="category"><option>Full Face</option><option>Open Face</option><option>Modular</option><option>Kids</option><option>Riding Gear</option><option>Bike Accessories</option></select></div>
+        <div class="row"><label>Description</label><input id="description" placeholder="Short product description"></div>
+<div class="row"><label>Stock Status</label><select id="stock"><option value="in_stock">✅ In Stock</option><option value="out_of_stock">❌ Out of Stock</option><option value="coming_soon">🕒 Coming Soon</option></select></div>
+        <div class="row"><label>Product photo</label><input id="photo" type="file" accept="image/*" onchange="previewPhoto(event)"></div>
+        <img id="preview" class="preview">
+      </div>
+      <div>
+        <div class="help" style="background:#eef4ff;border:1px solid #d5e2ff;padding:15px;border-radius:10px">
+          <b>What happens when you click Publish?</b><br><br>
+          1. The product photo is uploaded to your GitHub repository.<br>
+          2. <code>products.json</code> is updated automatically.<br>
+          3. GitHub Pages rebuilds your website.<br>
+          4. The new product appears on your live website with an Order on WhatsApp button.
+        </div>
+        <button class="btn green" style="width:100%;margin-top:18px" onclick="publishProduct()">🚀 Publish Product to GitHub</button>
+        <div id="status" class="status">Ready.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>🪖 Current Products</h2>
+    <div id="products" class="list"></div>
+  </div>
+</div>
+
+<script>
+let products=[];
+let connected=false;
+let editIndex=-1;
+
+const $=id=>document.getElementById(id);
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function headers(){return {'Accept':'application/vnd.github+json','Authorization':'Bearer '+$('token').value.trim(),'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'}}
+
+async function api(path,opts={}){
+  const r=await fetch('https://api.github.com'+path,{...opts,headers:{...headers(),...(opts.headers||{})}});
+  const data=await r.json().catch(()=>({}));
+  if(!r.ok) throw new Error(data.message||('GitHub API error '+r.status));
+  return data;
+}
+
+async function connect(){
+  $('connection').className='status'; $('connection').textContent='Connecting…';
+  try{
+    if(!$('token').value.trim()) throw new Error('Paste your GitHub token first.');
+    const d=await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim()));
+    connected=true;
+    $('connection').className='status ok';
+    $('connection').textContent='Connected to '+d.full_name+' ✓';
+    await loadProducts();
+  }catch(e){connected=false;$('connection').className='status err';$('connection').textContent='Connection failed: '+e.message}
+}
+
+async function getFile(path){
+  try{return await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/'+path+'?ref=main')}
+  catch(e){if(e.message.includes('Not Found'))return null;throw e}
+}
+function decodeContent(s){
+  return decodeURIComponent(escape(atob(s.replace(/\n/g,''))));
+}
+function encodeContent(s){
+  return btoa(unescape(encodeURIComponent(s)));
+}
+async function loadProducts(){
+  const f=await getFile('products.json');
+  products=f?JSON.parse(decodeContent(f.content)):[]; products=products.map(p=>({...p,stock:p.stock||'in_stock'})); render();
+}
+function render(){
+  $('products').innerHTML=products.length?products.map((p,i)=>`<div class="card"><img src="${esc(p.image)}" onerror="this.style.opacity=.25"><span class="tag">${esc(p.category)}</span><div><b>${esc(p.name)}</b></div><div class="price">₹${esc(p.price)}</div><span class="stock ${p.stock==='in_stock'?'in':p.stock==='out_of_stock'?'out':'soon'}">${p.stock==='in_stock'?'✅ In Stock':p.stock==='out_of_stock'?'❌ Out of Stock':'🕒 Coming Soon'}</span><div style="display:flex;gap:6px;margin-top:10px"><button class="btn blue" onclick="editProduct(${i})">✏️ Edit</button><button class="btn danger" onclick="deleteProduct(${i})">🗑️ Delete</button></div></div>`).join(''):'<div class="help">No products found.</div>';
+}
+function previewPhoto(e){
+  const f=e.target.files[0]; if(!f)return;
+  const u=URL.createObjectURL(f); $('preview').src=u; $('preview').style.display='block';
+}
+function safeFileName(n){
+  return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.'+n.split('.').pop().toLowerCase();
+}
+
+function editProduct(i){
+  const p=products[i]; editIndex=i;
+  $('name').value=p.name||''; $('price').value=p.price||''; $('category').value=p.category||'Full Face';
+  $('description').value=p.description||''; $('stock').value=p.stock||'in_stock';
+  $('photo').value=''; $('preview').style.display='none';
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelector('h2').textContent='✏️ Edit Product';
+}
+async function updateProductOnGithub(i){
+  const existing=await getFile('products.json');
+  const body={message:'Update product: '+products[i].name,content:encodeContent(JSON.stringify(products,null,2)),branch:'main'};
+  if(existing) body.sha=existing.sha;
+  await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/products.json',{method:'PUT',body:JSON.stringify(body)});
+}
+async function deleteProduct(i){
+  const p=products[i];
+  if(!confirm('Delete '+p.name+' from the website?')) return;
+  const st=$('status'); st.className='status'; st.textContent='Deleting…';
+  try{
+    if(!connected) await connect();
+    if(!connected) throw new Error('Connect to GitHub first.');
+    products.splice(i,1);
+    await updateProductOnGithub(i);
+    st.className='status ok'; st.textContent='Deleted successfully ✓\\nThe product was removed from products.json. GitHub Pages will update shortly.';
+    render();
+  }catch(e){st.className='status err';st.textContent='Delete failed: '+e.message}
+}
+async function publishProduct(){
+  const st=$('status'); st.className='status'; st.textContent='Publishing…';
+  try{
+    if(editIndex>=0 && !$('photo').files[0]){
+      if(!connected) await connect();
+      if(!connected) throw new Error('Connect to GitHub first.');
+      products[editIndex].name=$('name').value.trim();
+      products[editIndex].price=$('price').value.trim();
+      products[editIndex].category=$('category').value;
+      products[editIndex].description=$('description').value.trim();
+      products[editIndex].stock=$('stock').value;
+      await updateProductOnGithub(editIndex);
+      st.className='status ok'; st.textContent='Product updated successfully ✓';
+      render(); editIndex=-1; $('name').value=''; $('price').value=''; $('description').value=''; $('photo').value=''; $('preview').style.display='none'; $('stock').value='in_stock';
+      return;
+    }
+    if(!connected) await connect();
+    if(!connected) throw new Error('Connect to GitHub first.');
+    const file=$('photo').files[0];
+    const name=$('name').value.trim(), price=$('price').value.trim(), category=$('category').value, desc=$('description').value.trim();
+    if(!file||!name||!price) throw new Error('Enter product name, price and choose a photo.');
+    if(file.size>8*1024*1024) throw new Error('Please use an image smaller than 8 MB.');
+    const ext=(file.name.split('.').pop()||'jpg').toLowerCase();
+    const filename=safeFileName(name)+'-'+Date.now()+'.'+ext;
+    const path='products/'+filename;
+
+    const bytes=new Uint8Array(await file.arrayBuffer());
+    let binary=''; const chunk=0x8000;
+    for(let i=0;i<bytes.length;i+=chunk) binary+=String.fromCharCode(...bytes.subarray(i,i+chunk));
+    await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/'+path,{
+      method:'PUT',body:JSON.stringify({message:'Add product image: '+name,content:btoa(binary),branch:'main'})
+    });
+
+    const product={name,price,category,image:path,description:desc,stock:$('stock').value,active:true};
+    products.push(product);
+
+    const existing=await getFile('products.json');
+    const body={message:'Add product: '+name,content:encodeContent(JSON.stringify(products,null,2)),branch:'main'};
+    if(existing) body.sha=existing.sha;
+    await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/products.json',{method:'PUT',body:JSON.stringify(body)});
+
+    st.className='status ok';
+    st.textContent='Published successfully ✓\\nPhoto and products.json were saved to GitHub. GitHub Pages may take a few minutes to update.';
+    render();
+    $('name').value='';$('price').value='';$('description').value='';$('photo').value='';$('preview').style.display='none';$('stock').value='in_stock';
+  }catch(e){st.className='status err';st.textContent='Publish failed: '+e.message}
+}
+</script>
+</body></html>
