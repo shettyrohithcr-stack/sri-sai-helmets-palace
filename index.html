@@ -584,12 +584,56 @@ footer{
 
 
 <!-- ================= HERO ================= -->
-
 <section class="hero">
+  <div class="hero-slider">
 
-    <img src="hero.jpg" alt="Sri Sai Helmets Palace">
+    <img src="hero.jpg" class="hero-slide active" alt="Sri Sai Helmets Palace">
+    <img src="hero2.jpeg" class="hero-slide" alt="Sri Sai Helmets Palace">
+    <img src="hero3.jpeg" class="hero-slide" alt="Sri Sai Helmets Palace">
 
+  </div>
 </section>
+
+<style>
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  position: relative;
+}
+</style>
+
+<script>
+const heroSlides = document.querySelectorAll(".hero-slide");
+let heroIndex = 0;
+
+setInterval(() => {
+  heroSlides[heroIndex].classList.remove("active");
+
+  heroIndex++;
+
+  if (heroIndex >= heroSlides.length) {
+    heroIndex = 0;
+  }
+
+  heroSlides[heroIndex].classList.add("active");
+}, 5000);
+</script>
 
 
 <!-- ================= CATEGORY TITLE ================= -->
