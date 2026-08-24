@@ -61,14 +61,5 @@
     "description": "",
     "stock": "in_stock",
     "active": true
-  },
-  {
-    "name": "Axor dual spoiler",
-    "price": "7289",
-    "category": "Full Face",
-    "image": "products/axor-dual-spoiler.axor dual spoiler-1787498945975.jfif",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
   }
 ]
