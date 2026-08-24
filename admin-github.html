@@ -97,10 +97,17 @@ if (!st) {
 st.className = 'status';
 st.textContent = 'Connecting...';
   try{
-    const token = $('#token').value.trim();
-    const owner = $('#owner').value.trim();
-    const repo = $('#repo').value.trim();
+   const tokenEl = document.getElementById('token');
+const ownerEl = document.getElementById('owner');
+const repoEl = document.getElementById('repo');
 
+if (!tokenEl || !ownerEl || !repoEl) {
+  throw new Error('Token, username or repository field not found.');
+}
+
+const token = tokenEl.value.trim();
+const owner = ownerEl.value.trim();
+const repo = repoEl.value.trim();
     if(!token){
       throw new Error('Paste your GitHub token first.');
     }
