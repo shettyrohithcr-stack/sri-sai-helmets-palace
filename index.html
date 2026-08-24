@@ -603,20 +603,96 @@ footer{
 
 <!-- ================= PRODUCTS IMAGE ================= -->
 
-<section class="products-section">
-<div class="product-grid" id="productGrid">
-    <p>Loading products...</p>
+<!-- ================= PRODUCT SEARCH & FILTER ================= -->
+
+<div class="product-tools">
+
+    <div class="product-search">
+        🔍
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="Search helmets..."
+            autocomplete="off"
+        >
+    </div>
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+    </select>
+
 </div>
 
+
+<div class="product-grid" id="productGrid">
+
+    <p class="loading-products">Loading products...</p>
+
+</div>
+
+
 <style>
+
+/* ================= PRODUCT TOOLS ================= */
+
+.product-tools{
+    max-width:1200px;
+    margin:20px auto 10px;
+    padding:0 15px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-search{
+    width:100%;
+    max-width:600px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 16px;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.product-search input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:transparent;
+}
+
+#categoryFilter{
+    height:48px;
+    min-width:180px;
+    padding:0 14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#fff;
+    font-size:14px;
+    outline:none;
+    cursor:pointer;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
 .product-grid{
     max-width:1200px;
     margin:20px auto;
-    padding:15px;
+    padding:10px 15px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
+
+
+/* ================= PRODUCT CARD ================= */
 
 .product-card{
     background:#fff;
@@ -625,127 +701,357 @@ footer{
     overflow:hidden;
     text-align:center;
     padding-bottom:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    transition:.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    transition:.3s ease;
 }
 
 .product-card:hover{
     transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.14);
+}
+
+
+/* ================= PRODUCT IMAGE ================= */
+
+.product-image-box{
+    width:100%;
+    height:220px;
+    background:#f8f8f8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
 .product-card img{
     width:100%;
-    height:210px;
+    height:100%;
     object-fit:contain;
     padding:12px;
-    background:#f8f8f8;
+    transition:.3s ease;
+}
+
+.product-card:hover img{
+    transform:scale(1.05);
+}
+
+
+/* ================= PRODUCT INFO ================= */
+
+.product-category{
+    display:inline-block;
+    margin-top:12px;
+    padding:4px 9px;
+    background:#eef5ff;
+    color:#075fd1;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
 }
 
 .product-card h3{
     font-size:16px;
-    margin:14px 8px 8px;
+    margin:10px 8px 5px;
     color:#111;
+    min-height:38px;
 }
 
 .product-price{
-    font-size:18px;
+    font-size:19px;
     font-weight:700;
-    margin:8px;
+    color:#111;
+    margin:8px 0 12px;
 }
+
+
+/* ================= WHATSAPP BUTTON ================= */
 
 .product-order{
     display:inline-block;
-    margin-top:10px;
-    padding:10px 18px;
+    margin:0 12px;
+    padding:10px 14px;
+    width:calc(100% - 24px);
+    box-sizing:border-box;
     background:#075fd1;
     color:white;
-    border-radius:6px;
-    font-size:13px;
+    border-radius:7px;
+    font-size:12px;
     font-weight:700;
     text-decoration:none;
-    transition:.3s;
+    transition:.3s ease;
 }
 
 .product-order:hover{
-    background:#003f91;
-    transform:scale(1.04);
+    background:#004bb0;
+    transform:scale(1.02);
 }
 
+
+/* ================= NO PRODUCTS ================= */
+
+.no-products{
+    grid-column:1/-1;
+    text-align:center;
+    padding:40px 10px;
+    color:#777;
+    font-size:16px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:1000px){
+
     .product-grid{
         grid-template-columns:repeat(3,1fr);
     }
+
 }
 
 @media(max-width:700px){
+
+    .product-tools{
+        flex-direction:column;
+    }
+
+    .product-search{
+        max-width:none;
+    }
+
+    #categoryFilter{
+        width:100%;
+    }
+
     .product-grid{
         grid-template-columns:repeat(2,1fr);
         gap:12px;
+        padding:10px;
     }
 
-    .product-card img{
-        height:160px;
+    .product-image-box{
+        height:180px;
     }
+
 }
 
 @media(max-width:450px){
+
     .product-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
     }
+
+    .product-image-box{
+        height:150px;
+    }
+
+    .product-card h3{
+        font-size:13px;
+    }
+
+    .product-price{
+        font-size:16px;
+    }
+
+    .product-order{
+        font-size:10px;
+        padding:9px 5px;
+    }
+
 }
+
 </style>
 
+
 <script>
-fetch("products.json?v=2")
+
+let allProducts = [];
+
+
+/* ================= LOAD PRODUCTS ================= */
+
+fetch("products.json?v=3")
 .then(response => response.json())
 .then(products => {
 
-    const grid = document.getElementById("productGrid");
+    allProducts = products.filter(product => product.active !== false);
 
-    grid.innerHTML = "";
+    createCategoryOptions(allProducts);
 
-    products.forEach(product => {
-
-        if(product.active === false) return;
-
-        const card = document.createElement("div");
-
-        card.className = "product-card";
-
-        card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-
-            <h3>${product.name}</h3>
-
-            <div class="product-price">
-                ₹${product.price}
-            </div>
-
-            <a
-                class="product-order"
-                href="https://wa.me/919900730653?text=I%20want%20to%20order%20${encodeURIComponent(product.name)}"
-                target="_blank">
-                ORDER ON WHATSAPP
-            </a>
-        `;
-
-        grid.appendChild(card);
-
-    });
+    displayProducts(allProducts);
 
 })
 .catch(error => {
 
     document.getElementById("productGrid").innerHTML =
-        "<p>Products could not be loaded.</p>";
+        '<p class="no-products">Products could not be loaded.</p>';
 
 });
+
+
+/* ================= CATEGORY OPTIONS ================= */
+
+function createCategoryOptions(products){
+
+    const categoryFilter =
+        document.getElementById("categoryFilter");
+
+    const categories = [
+        ...new Set(
+            products
+            .map(product => product.category)
+            .filter(category => category)
+        )
+    ];
+
+    categories.forEach(category => {
+
+        const option = document.createElement("option");
+
+        option.value = category;
+        option.textContent = category;
+
+        categoryFilter.appendChild(option);
+
+    });
+
+}
+
+
+/* ================= DISPLAY PRODUCTS ================= */
+
+function displayProducts(products){
+
+    const grid =
+        document.getElementById("productGrid");
+
+    grid.innerHTML = "";
+
+
+    if(products.length === 0){
+
+        grid.innerHTML =
+            '<p class="no-products">No products found.</p>';
+
+        return;
+
+    }
+
+
+    products.forEach(product => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "product-card";
+
+
+        const whatsappMessage =
+            `I want to order ${product.name} - ₹${product.price}`;
+
+
+        card.innerHTML = `
+
+            <div class="product-image-box">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <span class="product-category">
+                ${product.category || "Helmet"}
+            </span>
+
+
+            <h3>
+                ${product.name}
+            </h3>
+
+
+            <div class="product-price">
+                ₹${product.price}
+            </div>
+
+
+            <a
+                class="product-order"
+                href="https://wa.me/919900730653?text=${encodeURIComponent(whatsappMessage)}"
+                target="_blank"
+            >
+                ORDER ON WHATSAPP
+            </a>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* ================= SEARCH ================= */
+
+document
+.getElementById("productSearch")
+.addEventListener("input", filterProducts);
+
+
+/* ================= CATEGORY FILTER ================= */
+
+document
+.getElementById("categoryFilter")
+.addEventListener("change", filterProducts);
+
+
+/* ================= FILTER PRODUCTS ================= */
+
+function filterProducts(){
+
+    const searchText =
+        document
+        .getElementById("productSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const selectedCategory =
+        document
+        .getElementById("categoryFilter")
+        .value;
+
+
+    const filteredProducts =
+        allProducts.filter(product => {
+
+            const matchesSearch =
+                product.name
+                .toLowerCase()
+                .includes(searchText);
+
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                product.category === selectedCategory;
+
+
+            return matchesSearch && matchesCategory;
+
+        });
+
+
+    displayProducts(filteredProducts);
+
+}
+
 </script>
-
-
-
-</section>
 
 
 <!-- ================= SERVICES ================= -->
