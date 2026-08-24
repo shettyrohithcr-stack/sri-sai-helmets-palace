@@ -87,15 +87,63 @@ async function api(path,opts={}){
 }
 
 async function connect(){
-  $('connection').className='status'; $('connection').textContent='Connecting…';
-  try{
-    if(!$('token').value.trim()) throw new Error('Paste your GitHub token first.');
-    const d=await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim()));
-    connected=true;
-    $('connection').className='status ok';
-    $('connection').textContent='Connected to '+d.full_name+' ✓';
+  const box = $('connection');
+
+  box.className = 'status';
+  box.textContent = 'Connecting to GitHub...';
+
+  try {
+    const owner = $('owner').value.trim();
+    const repo = $('repo').value.trim();
+    const token = $('token').value.trim();
+
+    if (!owner) {
+      throw new Error('GitHub username is missing.');
+    }
+
+    if (!repo) {
+      throw new Error('Repository name is missing.');
+    }
+
+    if (!token) {
+      throw new Error('Please paste your GitHub token.');
+    }
+
+    const response = await fetch(
+      'https://api.github.com/repos/' +
+      encodeURIComponent(owner) +
+      '/' +
+      encodeURIComponent(repo),
+      {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': 'Bearer ' + token,
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.message || 'GitHub connection failed. Error ' + response.status
+      );
+    }
+
+    connected = true;
+
+    box.className = 'status ok';
+    box.textContent = 'Connected to ' + data.full_name + ' ✓';
+
     await loadProducts();
-  }catch(e){connected=false;$('connection').className='status err';$('connection').textContent='Connection failed: '+e.message}
+
+  } catch (error) {
+    connected = false;
+    box.className = 'status err';
+    box.textContent = 'Connection failed: ' + error.message;
+  }
 }
 
 async function getFile(path){
