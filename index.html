@@ -606,16 +606,21 @@ footer{
 }
 
 .hero-slide {
-  display: none !important;
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  object-fit: contain !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero-slide.active {
-  display: block !important;
+    opacity: 1;
+    position: relative;
 }
 </style>
 
