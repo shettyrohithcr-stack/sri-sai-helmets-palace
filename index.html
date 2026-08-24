@@ -600,25 +600,26 @@ footer{
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: #fff;
 }
 
 .hero-slider {
+  position: relative;
   width: 100%;
-  display: grid;
   overflow: hidden;
 }
 
 .hero-slide {
-  grid-area: 1 / 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  display: none !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
 }
 
 .hero-slide.active {
-  opacity: 1;
+  display: block !important;
 }
 </style>
 
@@ -626,7 +627,7 @@ footer{
 const heroSlides = document.querySelectorAll(".hero-slide");
 let heroIndex = 0;
 
-setInterval(() => {
+setInterval(function () {
   heroSlides[heroIndex].classList.remove("active");
 
   heroIndex++;
