@@ -1024,12 +1024,16 @@ function displayProducts(products){
 
             <div class="product-image-box">
 
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                    loading="lazy"
-                >
-
+               <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+  ${(product.images && product.images.length ? product.images : [product.image]).map(img => `
+    <img
+      src="${img}"
+      alt="${product.name}"
+      loading="lazy"
+      style="width:100px;height:100px;object-fit:contain;background:#f4f4f4;border-radius:8px;"
+    >
+  `).join('')}
+</div>
             </div>
 
 
