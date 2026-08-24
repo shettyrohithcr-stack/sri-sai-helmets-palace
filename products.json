@@ -61,5 +61,21 @@
     "description": "",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird ing16",
+    "price": "5249",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ing16.steelbird ing16-1787577904646-99t5u.jpeg",
+      "products/steelbird-ing16.steelbird ing16-1787577907565-y9y7h.jpeg",
+      "products/steelbird-ing16.steelbird ing16-1787577909734-8t4xs.jpeg",
+      "products/steelbird-ing16.steelbird ing16-1787577912459-eikzy.jpeg",
+      "products/steelbird-ing16.steelbird ing16-1787577914418-8lyn6.jpeg"
+    ],
+    "image": "products/steelbird-ing16.steelbird ing16-1787577904646-99t5u.jpeg",
+    "description": "",
+    "stock": "in_stock",
+    "active": true
   }
 ]
