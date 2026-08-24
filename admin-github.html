@@ -87,16 +87,57 @@ async function api(path,opts={}){
 }
 
 async function connect(){
-  const box = $('connection');
+  const st = $('#connection');
 
-  box.className = 'status';
-  box.textContent = 'Connecting to GitHub...';
+  st.className = 'status';
+  st.textContent = 'Connecting...';
 
-  try {
-    const owner = $('owner').value.trim();
-    const repo = $('repo').value.trim();
-    const token = $('token').value.trim();
+  try{
+    const token = $('#token').value.trim();
+    const owner = $('#owner').value.trim();
+    const repo = $('#repo').value.trim();
 
+    if(!token){
+      throw new Error('Paste your GitHub token first.');
+    }
+
+    if(!owner || !repo){
+      throw new Error('Enter GitHub username and repository name.');
+    }
+
+    const response = await fetch(
+      `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`,
+      {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': `Bearer ${token}`,
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+      throw new Error(
+        data.message || `GitHub API error (${response.status})`
+      );
+    }
+
+    connected = true;
+
+    st.className = 'status ok';
+    st.textContent = `Connected to ${data.full_name} ✓`;
+
+    await loadProducts();
+
+  }catch(e){
+    connected = false;
+    st.className = 'status err';
+    st.textContent = `Connection failed: ${e.message}`;
+  }
+}
     if (!owner) {
       throw new Error('GitHub username is missing.');
     }
