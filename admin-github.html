@@ -210,11 +210,9 @@ async function updateProductOnGithub(i, messageName='Product'){
     }
   );
 }
-  if(existing) body.sha=existing.sha;
-  await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/products.json',{method:'PUT',body:JSON.stringify(body)});
-}
 async function deleteProduct(i){
   const p=products[i];
+
   if(!confirm('Delete '+p.name+' from the website?')) return;
   const st=$('status'); st.className='status'; st.textContent='Deleting…';
   try{
