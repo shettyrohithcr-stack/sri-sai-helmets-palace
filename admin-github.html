@@ -29,7 +29,87 @@
       <input id="token" type="password" placeholder="Paste your token here">
       <div class="help">The token is used only in this browser session and is not written into the website files. Create a fine-grained token with access only to this repository and <b>Contents: Read and write</b>.</div>
     </div>
-    <button class="btn blue" onclick="connect()">Test GitHub Connection</button>
+    # GitHub Connection Button Fix
+
+```html
+<button type="button" class="btn blue" id="testConnectionBtn">
+  Test GitHub Connection
+</button>
+```
+
+ನಂತರ ನಿಮ್ಮ `</script>` ಗೆ **just before** ಈ code ಹಾಕಿ:
+
+```javascript
+document.getElementById('testConnectionBtn').addEventListener('click', function () {
+  connect();
+});
+```
+
+ಮತ್ತೆ ನಿಮ್ಮ existing `connect()` function ಅನ್ನು ಈ version ನಿಂದ replace ಮಾಡಿ:
+
+```javascript
+async function connect() {
+  const st = $('connection');
+
+  st.className = 'status';
+  st.textContent = 'Connecting to GitHub...';
+
+  try {
+    const token = $('token').value.trim();
+    const owner = $('owner').value.trim();
+    const repo = $('repo').value.trim();
+
+    if (!token) {
+      throw new Error('GitHub token is empty.');
+    }
+
+    if (!owner) {
+      throw new Error('GitHub username is empty.');
+    }
+
+    if (!repo) {
+      throw new Error('Repository name is empty.');
+    }
+
+    const response = await fetch(
+      'https://api.github.com/repos/' +
+      encodeURIComponent(owner) +
+      '/' +
+      encodeURIComponent(repo),
+      {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': 'Bearer ' + token,
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.message || 'GitHub API error: ' + response.status
+      );
+    }
+
+    connected = true;
+
+    st.className = 'status ok';
+    st.textContent = 'Connected to ' + data.full_name + ' ✓';
+
+    await loadProducts();
+
+  } catch (e) {
+    connected = false;
+    st.className = 'status err';
+    st.textContent = 'Connection failed: ' + e.message;
+    console.error('GitHub connection error:', e);
+  }
+}
+```
+
     <div id="connection" class="status">Not connected.</div>
   </div>
 
