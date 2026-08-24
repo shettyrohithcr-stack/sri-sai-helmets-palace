@@ -604,59 +604,72 @@ footer{
 <!-- ================= PRODUCTS IMAGE ================= -->
 
 <section class="products-section">
-
-  <div class="product-grid" id="productGrid">
-
+<div class="product-grid" id="productGrid">
     <p>Loading products...</p>
-
 </div>
 
 <style>
 .product-grid{
     max-width:1200px;
     margin:20px auto;
-    padding:10px;
+    padding:15px;
     display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:12px;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .product-card{
     background:#fff;
-    border:1px solid #ddd;
-    border-radius:6px;
+    border:1px solid #e5e5e5;
+    border-radius:14px;
     overflow:hidden;
     text-align:center;
-    padding-bottom:10px;
+    padding-bottom:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .product-card img{
     width:100%;
-    height:150px;
+    height:210px;
     object-fit:contain;
-    display:block;
+    padding:12px;
+    background:#f8f8f8;
 }
 
 .product-card h3{
-    font-size:13px;
-    margin:8px 4px;
+    font-size:16px;
+    margin:14px 8px 8px;
+    color:#111;
 }
 
 .product-price{
-    font-size:16px;
-    font-weight:bold;
-    margin:6px;
+    font-size:18px;
+    font-weight:700;
+    margin:8px;
 }
 
 .product-order{
-    display:block;
-    margin:8px;
-    padding:7px;
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
     background:#075fd1;
     color:white;
-    border-radius:4px;
-    font-size:11px;
-    font-weight:bold;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.product-order:hover{
+    background:#003f91;
+    transform:scale(1.04);
 }
 
 @media(max-width:1000px){
@@ -665,12 +678,24 @@ footer{
     }
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
     .product-grid{
         grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .product-card img{
+        height:160px;
+    }
+}
+
+@media(max-width:450px){
+    .product-grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
+
 <script>
 fetch("products.json?v=2")
 .then(response => response.json())
@@ -681,6 +706,8 @@ fetch("products.json?v=2")
     grid.innerHTML = "";
 
     products.forEach(product => {
+
+        if(product.active === false) return;
 
         const card = document.createElement("div");
 
@@ -715,6 +742,8 @@ fetch("products.json?v=2")
 
 });
 </script>
+
+
 
 </section>
 
