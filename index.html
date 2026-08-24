@@ -1153,9 +1153,10 @@ function filterProducts(){
 
 }
 function changeProductImage(productId, direction) {
-  const product = products.find(p =>
-    (p.id || p.name.replace(/\s+/g, '-')) === productId
-  );
+  const product = products.find(p => {
+    const id = p.id || p.name.replace(/\s+/g, '-');
+    return id === productId;
+  });
 
   if (!product) return;
 
@@ -1169,21 +1170,22 @@ function changeProductImage(productId, direction) {
     window.productImageIndexes = {};
   }
 
-  if (window.productImageIndexes[productId] === undefined) {
-    window.productImageIndexes[productId] = 0;
-  }
-
-  let index = window.productImageIndexes[productId];
+  let index = window.productImageIndexes[productId] || 0;
 
   index += direction;
 
-  if (index < 0) index = images.length - 1;
-  if (index >= images.length) index = 0;
+  if (index < 0) {
+    index = images.length - 1;
+  }
+
+  if (index >= images.length) {
+    index = 0;
+  }
 
   window.productImageIndexes[productId] = index;
 
   const imageElement = document.getElementById(
-    `product-image-${productId}`
+    'product-image-' + productId
   );
 
   if (imageElement) {
