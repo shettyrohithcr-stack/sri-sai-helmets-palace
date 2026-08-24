@@ -138,55 +138,6 @@ async function connect(){
     st.textContent = `Connection failed: ${e.message}`;
   }
 }
-    if (!owner) {
-      throw new Error('GitHub username is missing.');
-    }
-
-    if (!repo) {
-      throw new Error('Repository name is missing.');
-    }
-
-    if (!token) {
-      throw new Error('Please paste your GitHub token.');
-    }
-
-    const response = await fetch(
-      'https://api.github.com/repos/' +
-      encodeURIComponent(owner) +
-      '/' +
-      encodeURIComponent(repo),
-      {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/vnd.github+json',
-          'Authorization': 'Bearer ' + token,
-          'X-GitHub-Api-Version': '2022-11-28'
-        }
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(
-        data.message || 'GitHub connection failed. Error ' + response.status
-      );
-    }
-
-    connected = true;
-
-    box.className = 'status ok';
-    box.textContent = 'Connected to ' + data.full_name + ' ✓';
-
-    await loadProducts();
-
-  } catch (error) {
-    connected = false;
-    box.className = 'status err';
-    box.textContent = 'Connection failed: ' + error.message;
-  }
-}
-
 async function getFile(path){
   try{return await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/'+path+'?ref=main')}
   catch(e){if(e.message.includes('Not Found'))return null;throw e}
