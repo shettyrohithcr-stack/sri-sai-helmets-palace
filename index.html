@@ -157,12 +157,33 @@ This prevents duplicate "RIDE SAFE / RIDE IN STYLE".
     overflow:hidden;
 }
 
+.hero{
+    width:100%;
+    overflow:hidden;
+    background:#111;
+}
+
 .hero img{
     display:block;
     width:100%;
     height:auto;
+    animation: heroMove 8s ease-in-out infinite alternate;
+    transform-origin:center center;
 }
 
+@keyframes heroMove{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.04);
+    }
+
+    100%{
+        transform:scale(1.08);
+    }
+}
 /* ================= SECTION TITLE ================= */
 
 .section-title{
