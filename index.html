@@ -595,26 +595,30 @@ footer{
 </section>
 
 <style>
-.hero-slider {
-  position: relative;
+.hero {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  display: grid;
   overflow: hidden;
 }
 
 .hero-slide {
+  grid-area: 1 / 1;
   display: block;
   width: 100%;
   height: auto;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: opacity 0.8s ease-in-out;
 }
 
 .hero-slide.active {
   opacity: 1;
-  position: relative;
 }
 </style>
 
@@ -634,7 +638,6 @@ setInterval(() => {
   heroSlides[heroIndex].classList.add("active");
 }, 5000);
 </script>
-
 
 <!-- ================= CATEGORY TITLE ================= -->
 
