@@ -87,11 +87,15 @@ async function api(path,opts={}){
 }
 
 async function connect(){
-  const st = $('#connection');
+  const st = document.getElementById('connection');
 
-  st.className = 'status';
-  st.textContent = 'Connecting...';
+if (!st) {
+  console.error('Connection box not found');
+  return;
+}
 
+st.className = 'status';
+st.textContent = 'Connecting...';
   try{
     const token = $('#token').value.trim();
     const owner = $('#owner').value.trim();
