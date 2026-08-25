@@ -141,5 +141,21 @@
     "description": "Size [ S,M,L,XL, XXl]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor Apex white and red",
+    "price": "4699",
+    "category": "Open Face",
+    "images": [
+      "products/axor-apex-white-and-red.axor apex white and red-1787663138394-vgor2.jpg",
+      "products/axor-apex-white-and-red.axor apex white and red-1787663141393-lwl3x.jpg",
+      "products/axor-apex-white-and-red.axor apex white and red-1787663144568-ovxas.jpg",
+      "products/axor-apex-white-and-red.axor apex white and red-1787663146557-ykz7g.jpg",
+      "products/axor-apex-white-and-red.axor apex white and red-1787663148753-g8vhb.jpg"
+    ],
+    "image": "products/axor-apex-white-and-red.axor apex white and red-1787663138394-vgor2.jpg",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
