@@ -235,5 +235,21 @@
     "description": "Size [M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Studd Helios",
+    "price": "3498",
+    "category": "Full Face",
+    "images": [
+      "products/studd-helios.studd helios-1787664149662-ae3r9.webp",
+      "products/studd-helios.studd helios-1787664153089-r8ec9.webp",
+      "products/studd-helios.studd helios-1787664155201-vbd3z.webp",
+      "products/studd-helios.studd helios-1787664157473-6j8mp.webp",
+      "products/studd-helios.studd helios-1787664159834-qlk42.webp"
+    ],
+    "image": "products/studd-helios.studd helios-1787664149662-ae3r9.webp",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
