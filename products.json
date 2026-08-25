@@ -301,38 +301,6 @@
     "active": true
   },
   {
-    "name": "Studds Helios",
-    "price": "3799",
-    "category": "Full Face",
-    "images": [
-      "products/studds-helios.studds helios-1787664793357-dcunj.jpg",
-      "products/studds-helios.studds helios-1787664795314-s3mna.webp",
-      "products/studds-helios.studds helios-1787664797082-pi6pj.webp",
-      "products/studds-helios.studds helios-1787664799101-1fecp.webp",
-      "products/studds-helios.studds helios-1787664801792-8prda.webp"
-    ],
-    "image": "products/studds-helios.studds helios-1787664793357-dcunj.jpg",
-    "description": "Size [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Studds Helios Batman blue and black",
-    "price": "3749",
-    "category": "Full Face",
-    "images": [
-      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666066053-jqapi.jpg",
-      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666068956-77sv7.jpg",
-      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666071016-yr9m0.jpg",
-      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666073257-jprv8.jpg",
-      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666075956-ktwie.jpg"
-    ],
-    "image": "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666066053-jqapi.jpg",
-    "description": "Size [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Studds Helios Batman red and black",
     "price": "3799",
     "category": "Full Face",
@@ -344,6 +312,22 @@
       "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666406827-ulxgf.webp"
     ],
     "image": "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666396771-i9iy5.jpg",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Studds Helios plain black",
+    "price": "3099",
+    "category": "Full Face",
+    "images": [
+      "products/studds-helios-plain-black.studds helios plain black-1787666457643-cgx89.webp",
+      "products/studds-helios-plain-black.studds helios plain black-1787666460411-02f3y.webp",
+      "products/studds-helios-plain-black.studds helios plain black-1787666464410-am7ub.webp",
+      "products/studds-helios-plain-black.studds helios plain black-1787666474153-iu785.webp",
+      "products/studds-helios-plain-black.studds helios plain black-1787666476485-0kj6w.webp"
+    ],
+    "image": "products/studds-helios-plain-black.studds helios plain black-1787666457643-cgx89.webp",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
