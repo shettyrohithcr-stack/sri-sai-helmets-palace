@@ -36,47 +36,6 @@
     "stock": "in_stock"
   },
   {
-    "name": "Axor Apex",
-    "price": "4789",
-    "category": "Full Face",
-    "image": "products/axor-apex.axor apex-1787484092443.jfif",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Steelbird ing16",
-    "price": "5249",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ing16.steelbird ing16-1787577904646-99t5u.jpeg",
-      "products/steelbird-ing16.steelbird ing16-1787577907565-y9y7h.jpeg",
-      "products/steelbird-ing16.steelbird ing16-1787577909734-8t4xs.jpeg",
-      "products/steelbird-ing16.steelbird ing16-1787577912459-eikzy.jpeg",
-      "products/steelbird-ing16.steelbird ing16-1787577914418-8lyn6.jpeg"
-    ],
-    "image": "products/steelbird-ing16.steelbird ing16-1787577904646-99t5u.jpeg",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Axor dual spoiler black colour",
-    "price": "7199",
-    "category": "Full Face",
-    "images": [
-      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662557370-bqdk1.jpg",
-      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662559787-11qb1.jpg",
-      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662562024-ya3kf.jpg",
-      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662563868-g495p.jpg",
-      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662566393-vbfmm.jpg"
-    ],
-    "image": "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662557370-bqdk1.jpg",
-    "description": "Size [M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Axor Apex white and red",
     "price": "4699",
     "category": "Open Face",
