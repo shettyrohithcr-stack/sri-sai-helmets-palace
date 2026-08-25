@@ -306,5 +306,20 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Studds Helios black and neon",
+    "price": "3286",
+    "category": "Full Face",
+    "images": [
+      "products/studds-helios-black-and-neon.studds helios black and neon-1787666938078-7rcuy.webp",
+      "products/studds-helios-black-and-neon.studds helios black and neon-1787666940655-15h57.webp",
+      "products/studds-helios-black-and-neon.studds helios black and neon-1787666943104-uj9ar.webp",
+      "products/studds-helios-black-and-neon.studds helios black and neon-1787666945400-mwlvh.webp"
+    ],
+    "image": "products/studds-helios-black-and-neon.studds helios black and neon-1787666938078-7rcuy.webp",
+    "description": "ISI certified full face helmet",
+    "stock": "in_stock",
+    "active": true
   }
 ]
