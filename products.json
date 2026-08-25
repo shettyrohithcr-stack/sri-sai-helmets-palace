@@ -150,22 +150,6 @@
     "active": true
   },
   {
-    "name": "Axor Apex",
-    "price": "4899",
-    "category": "Open Face",
-    "images": [
-      "products/axor-apex.axor apex-1787663274968-65u7s.jpg",
-      "products/axor-apex.axor apex-1787663277530-pmsnt.jpg",
-      "products/axor-apex.axor apex-1787663279728-zzt5c.jpg",
-      "products/axor-apex.axor apex-1787663281929-icyo6.jpg",
-      "products/axor-apex.axor apex-1787663284188-fcewl.jpg"
-    ],
-    "image": "products/axor-apex.axor apex-1787663274968-65u7s.jpg",
-    "description": "Size [S,M,L, XL, XXL",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Axor Apex pline black",
     "price": "4589",
     "category": "Full Face",
@@ -336,6 +320,22 @@
     ],
     "image": "products/axor-apex-red-and-black.axor apex red and black-1787667100050-zmu0z.jpg",
     "description": "Size [S,M,L, XL, XXL",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Axor Apex gold head",
+    "price": "4786",
+    "category": "Open Face",
+    "images": [
+      "products/axor-apex-gold-head.axor apex gold head-1787667171458-or17q.png",
+      "products/axor-apex-gold-head.axor apex gold head-1787667175588-91yrp.png",
+      "products/axor-apex-gold-head.axor apex gold head-1787667178859-4wmt4.png",
+      "products/axor-apex-gold-head.axor apex gold head-1787667182206-plepm.png",
+      "products/axor-apex-gold-head.axor apex gold head-1787667186051-ropmp.png"
+    ],
+    "image": "products/axor-apex-gold-head.axor apex gold head-1787667171458-or17q.png",
+    "description": "Size [ S,M,L,XL, XXl]",
     "stock": "in_stock",
     "active": true
   }
