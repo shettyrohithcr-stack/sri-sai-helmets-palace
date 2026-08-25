@@ -189,5 +189,21 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor Apex pline black",
+    "price": "4589",
+    "category": "Full Face",
+    "images": [
+      "products/axor-apex-pline-black.axor apex pline black-1787663637686-1whqn.jpg",
+      "products/axor-apex-pline-black.axor apex pline black-1787663640030-9vy7o.jpg",
+      "products/axor-apex-pline-black.axor apex pline black-1787663642663-2y8yy.jpg",
+      "products/axor-apex-pline-black.axor apex pline black-1787663644802-sozdw.jpg",
+      "products/axor-apex-pline-black.axor apex pline black-1787663647000-e5gb5.jpg"
+    ],
+    "image": "products/axor-apex-pline-black.axor apex pline black-1787663637686-1whqn.jpg",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
