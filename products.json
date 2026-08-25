@@ -86,22 +86,6 @@
     "active": true
   },
   {
-    "name": "Axor dual spoiler",
-    "price": "7452",
-    "category": "Full Face",
-    "images": [
-      "products/axor-dual-spoiler.axor dual spoiler-1787662199049-895s4.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662201267-xeitl.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662203019-3cu68.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662205228-43e95.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662208140-ytyve.jpg"
-    ],
-    "image": "products/axor-dual-spoiler.axor dual spoiler-1787662199049-895s4.jpg",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Axor dual spoiler black colour",
     "price": "7199",
     "category": "Full Face",
@@ -335,6 +319,22 @@
       "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667272381-pt6lq.jpg"
     ],
     "image": "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667260234-6riw6.jpg",
+    "description": "",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Axor dual spoiler Gry and red",
+    "price": "7289",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667373380-810pg.jpg",
+      "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667375933-e97rr.jpg",
+      "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667378366-6p3sa.jpg",
+      "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667380542-6sgud.jpg",
+      "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667383174-wojlq.jpg"
+    ],
+    "image": "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667373380-810pg.jpg",
     "description": "",
     "stock": "in_stock",
     "active": true
