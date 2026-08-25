@@ -45,15 +45,6 @@
     "active": true
   },
   {
-    "name": "Axor dual spoiler",
-    "price": "7289",
-    "category": "Full Face",
-    "image": "products/axor-dual-spoiler.axor dual spoiler-1787498698654.jfif",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Steelbird ing16",
     "price": "5249",
     "category": "Full Face",
@@ -65,22 +56,6 @@
       "products/steelbird-ing16.steelbird ing16-1787577914418-8lyn6.jpeg"
     ],
     "image": "products/steelbird-ing16.steelbird ing16-1787577904646-99t5u.jpeg",
-    "description": "",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Axor dual spoiler",
-    "price": "7289",
-    "category": "Full Face",
-    "images": [
-      "products/axor-dual-spoiler.axor dual spoiler-1787662040399-9vx9g.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662042728-7bw05.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662045101-u1jcm.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662047742-l354t.jpg",
-      "products/axor-dual-spoiler.axor dual spoiler-1787662049779-9818y.jpg"
-    ],
-    "image": "products/axor-dual-spoiler.axor dual spoiler-1787662040399-9vx9g.jpg",
     "description": "",
     "stock": "in_stock",
     "active": true
@@ -319,6 +294,22 @@
       "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667383174-wojlq.jpg"
     ],
     "image": "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667373380-810pg.jpg",
+    "description": "",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Axor Apex gold snek",
+    "price": "4789",
+    "category": "Full Face",
+    "images": [
+      "products/axor-apex-gold-snek.axor apex gold snek-1787667862793-pnhb5.webp",
+      "products/axor-apex-gold-snek.axor apex gold snek-1787667865245-zz54g.webp",
+      "products/axor-apex-gold-snek.axor apex gold snek-1787667867322-w9w53.webp",
+      "products/axor-apex-gold-snek.axor apex gold snek-1787667869258-jqxia.webp",
+      "products/axor-apex-gold-snek.axor apex gold snek-1787667871234-0xfgw.webp"
+    ],
+    "image": "products/axor-apex-gold-snek.axor apex gold snek-1787667862793-pnhb5.webp",
     "description": "",
     "stock": "in_stock",
     "active": true
