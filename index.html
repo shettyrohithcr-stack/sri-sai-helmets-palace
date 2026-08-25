@@ -1153,7 +1153,7 @@ function filterProducts(){
 
 }
 function changeProductImage(productId, direction) {
- const product = window.products?.find(p => {
+const product = allProducts.find(p => {
     const id = p.id || p.name.replace(/\s+/g, '-');
     return id === productId;
   });
