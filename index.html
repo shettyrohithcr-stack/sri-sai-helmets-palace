@@ -1194,35 +1194,43 @@ const product = allProducts.find(p => {
   }
 }
 </script>
-<!-- FULLSCREEN IMAGE VIEWER -->
+```html
+<!-- PREMIUM FULLSCREEN IMAGE VIEWER -->
 <div id="fullscreenViewer" style="
     display:none;
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,0.96);
+    background:rgba(0,0,0,0.97);
     z-index:99999;
     align-items:center;
     justify-content:center;
+    flex-direction:column;
+    opacity:0;
+    transition:opacity .25s ease;
 ">
 
+    <!-- CLOSE BUTTON -->
     <button onclick="closeFullscreenImage()" style="
         position:absolute;
-        top:20px;
-        right:25px;
+        top:18px;
+        right:20px;
         width:48px;
         height:48px;
         border:0;
         border-radius:50%;
         background:white;
-        color:black;
+        color:#111;
         font-size:30px;
+        font-weight:bold;
         cursor:pointer;
-        z-index:3;
+        z-index:10;
     ">×</button>
 
+
+    <!-- PREVIOUS -->
     <button onclick="fullscreenPrev()" style="
         position:absolute;
-        left:20px;
+        left:18px;
         top:50%;
         transform:translateY(-50%);
         width:55px;
@@ -1230,23 +1238,35 @@ const product = allProducts.find(p => {
         border:0;
         border-radius:50%;
         background:white;
-        color:black;
-        font-size:38px;
+        color:#111;
+        font-size:40px;
         cursor:pointer;
-        z-index:3;
+        z-index:10;
     ">‹</button>
 
-    <img id="fullscreenImage" src="" style="
-        max-width:90vw;
-        max-height:90vh;
-        width:auto;
-        height:auto;
-        object-fit:contain;
-    ">
 
+    <!-- MAIN IMAGE -->
+    <img id="fullscreenImage"
+         src=""
+         alt=""
+         onclick="toggleImageZoom()"
+         style="
+            max-width:88vw;
+            max-height:78vh;
+            width:auto;
+            height:auto;
+            object-fit:contain;
+            border-radius:8px;
+            cursor:zoom-in;
+            transition:transform .3s ease;
+            user-select:none;
+         ">
+
+
+    <!-- NEXT -->
     <button onclick="fullscreenNext()" style="
         position:absolute;
-        right:20px;
+        right:18px;
         top:50%;
         transform:translateY(-50%);
         width:55px;
@@ -1254,13 +1274,373 @@ const product = allProducts.find(p => {
         border:0;
         border-radius:50%;
         background:white;
-        color:black;
-        font-size:38px;
+        color:#111;
+        font-size:40px;
         cursor:pointer;
-        z-index:3;
+        z-index:10;
     ">›</button>
 
+
+    <!-- PRODUCT NAME -->
+    <div id="fullscreenProductName" style="
+        color:white;
+        font-size:20px;
+        font-weight:700;
+        margin-top:12px;
+        text-align:center;
+    "></div>
+
+
+    <!-- THUMBNAILS -->
+    <div id="fullscreenThumbnails" style="
+        display:flex;
+        gap:8px;
+        margin-top:12px;
+        max-width:90vw;
+        overflow-x:auto;
+        padding:5px;
+    "></div>
+
 </div>
+
+
+<script>
+
+let fullscreenProduct = null;
+let fullscreenIndex = 0;
+let fullscreenZoomed = false;
+
+
+/* OPEN FULLSCREEN */
+function openFullscreenImage(productId) {
+
+    const product = allProducts.find(p => {
+
+        const id = String(
+            p.id || p.name.replace(/\s+/g, '-')
+        );
+
+        return id === String(productId);
+    });
+
+    if (!product) {
+        console.log("Product not found:", productId);
+        return;
+    }
+
+    fullscreenProduct = product;
+
+    const images =
+        product.images && product.images.length
+        ? product.images
+        : [product.image];
+
+    if (!window.productImageIndexes) {
+        window.productImageIndexes = {};
+    }
+
+    fullscreenIndex =
+        window.productImageIndexes[productId] || 0;
+
+    if (fullscreenIndex >= images.length) {
+        fullscreenIndex = 0;
+    }
+
+    fullscreenZoomed = false;
+
+    updateFullscreenImage();
+
+    const viewer =
+        document.getElementById("fullscreenViewer");
+
+    viewer.style.display = "flex";
+
+    setTimeout(() => {
+        viewer.style.opacity = "1";
+    }, 10);
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* UPDATE IMAGE */
+function updateFullscreenImage() {
+
+    if (!fullscreenProduct) return;
+
+    const images =
+        fullscreenProduct.images &&
+        fullscreenProduct.images.length
+        ? fullscreenProduct.images
+        : [fullscreenProduct.image];
+
+    const image =
+        document.getElementById("fullscreenImage");
+
+    image.src = images[fullscreenIndex];
+
+    image.alt = fullscreenProduct.name || "";
+
+    image.style.transform = "scale(1)";
+    image.style.cursor = "zoom-in";
+
+    fullscreenZoomed = false;
+
+    document.getElementById(
+        "fullscreenProductName"
+    ).textContent =
+        fullscreenProduct.name || "";
+
+    createFullscreenThumbnails(images);
+}
+
+
+/* NEXT IMAGE */
+function fullscreenNext() {
+
+    if (!fullscreenProduct) return;
+
+    const images =
+        fullscreenProduct.images &&
+        fullscreenProduct.images.length
+        ? fullscreenProduct.images
+        : [fullscreenProduct.image];
+
+    fullscreenIndex++;
+
+    if (fullscreenIndex >= images.length) {
+        fullscreenIndex = 0;
+    }
+
+    if (!window.productImageIndexes) {
+        window.productImageIndexes = {};
+    }
+
+    window.productImageIndexes[
+        fullscreenProduct.id ||
+        fullscreenProduct.name.replace(/\s+/g, '-')
+    ] = fullscreenIndex;
+
+    updateFullscreenImage();
+}
+
+
+/* PREVIOUS IMAGE */
+function fullscreenPrev() {
+
+    if (!fullscreenProduct) return;
+
+    const images =
+        fullscreenProduct.images &&
+        fullscreenProduct.images.length
+        ? fullscreenProduct.images
+        : [fullscreenProduct.image];
+
+    fullscreenIndex--;
+
+    if (fullscreenIndex < 0) {
+        fullscreenIndex = images.length - 1;
+    }
+
+    if (!window.productImageIndexes) {
+        window.productImageIndexes = {};
+    }
+
+    window.productImageIndexes[
+        fullscreenProduct.id ||
+        fullscreenProduct.name.replace(/\s+/g, '-')
+    ] = fullscreenIndex;
+
+    updateFullscreenImage();
+}
+
+
+/* THUMBNAILS */
+function createFullscreenThumbnails(images) {
+
+    const box =
+        document.getElementById(
+            "fullscreenThumbnails"
+        );
+
+    box.innerHTML = "";
+
+    if (images.length <= 1) {
+        box.style.display = "none";
+        return;
+    }
+
+    box.style.display = "flex";
+
+    images.forEach((src, index) => {
+
+        const thumb =
+            document.createElement("img");
+
+        thumb.src = src;
+
+        thumb.style.width = "60px";
+        thumb.style.height = "60px";
+        thumb.style.objectFit = "cover";
+        thumb.style.borderRadius = "7px";
+        thumb.style.cursor = "pointer";
+
+        thumb.style.border =
+            index === fullscreenIndex
+            ? "3px solid white"
+            : "2px solid rgba(255,255,255,.3)";
+
+        thumb.onclick = function() {
+
+            fullscreenIndex = index;
+
+            updateFullscreenImage();
+        };
+
+        box.appendChild(thumb);
+    });
+}
+
+
+/* ZOOM IMAGE */
+function toggleImageZoom() {
+
+    const image =
+        document.getElementById(
+            "fullscreenImage"
+        );
+
+    fullscreenZoomed = !fullscreenZoomed;
+
+    if (fullscreenZoomed) {
+
+        image.style.transform =
+            "scale(1.7)";
+
+        image.style.cursor =
+            "zoom-out";
+
+    } else {
+
+        image.style.transform =
+            "scale(1)";
+
+        image.style.cursor =
+            "zoom-in";
+    }
+}
+
+
+/* CLOSE */
+function closeFullscreenImage() {
+
+    const viewer =
+        document.getElementById(
+            "fullscreenViewer"
+        );
+
+    viewer.style.opacity = "0";
+
+    setTimeout(() => {
+
+        viewer.style.display = "none";
+
+    }, 250);
+
+    document.body.style.overflow = "";
+
+    fullscreenProduct = null;
+    fullscreenZoomed = false;
+}
+
+
+/* ESC + KEYBOARD ARROWS */
+document.addEventListener(
+    "keydown",
+    function(e) {
+
+        const viewer =
+            document.getElementById(
+                "fullscreenViewer"
+            );
+
+        if (!viewer ||
+            viewer.style.display !== "flex") {
+            return;
+        }
+
+        if (e.key === "Escape") {
+            closeFullscreenImage();
+        }
+
+        if (e.key === "ArrowRight") {
+            fullscreenNext();
+        }
+
+        if (e.key === "ArrowLeft") {
+            fullscreenPrev();
+        }
+    }
+);
+
+
+/* MOBILE SWIPE */
+let touchStartX = 0;
+
+document.addEventListener(
+    "touchstart",
+    function(e) {
+
+        const viewer =
+            document.getElementById(
+                "fullscreenViewer"
+            );
+
+        if (!viewer ||
+            viewer.style.display !== "flex") {
+            return;
+        }
+
+        touchStartX =
+            e.touches[0].clientX;
+    }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(e) {
+
+        const viewer =
+            document.getElementById(
+                "fullscreenViewer"
+            );
+
+        if (!viewer ||
+            viewer.style.display !== "flex") {
+            return;
+        }
+
+        const touchEndX =
+            e.changedTouches[0].clientX;
+
+        const difference =
+            touchEndX - touchStartX;
+
+        if (Math.abs(difference) < 50) {
+            return;
+        }
+
+        if (difference < 0) {
+            fullscreenNext();
+        } else {
+            fullscreenPrev();
+        }
+    }
+);
+
+</script>
+```
 
 <script>
 let fullscreenProduct = null;
