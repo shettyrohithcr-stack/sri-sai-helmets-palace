@@ -173,5 +173,21 @@
     "description": "Size [S,M,L, XL, XXL",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor Apex",
+    "price": "4999",
+    "category": "Full Face",
+    "images": [
+      "products/axor-apex.axor apex-1787663485280-u3ghz.png",
+      "products/axor-apex.axor apex-1787663493682-tzmkz.png",
+      "products/axor-apex.axor apex-1787663498600-bdylw.png",
+      "products/axor-apex.axor apex-1787663502760-tpf4r.png",
+      "products/axor-apex.axor apex-1787663506801-963d0.png"
+    ],
+    "image": "products/axor-apex.axor apex-1787663485280-u3ghz.png",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
