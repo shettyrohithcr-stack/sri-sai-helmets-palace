@@ -109,5 +109,21 @@
     "description": "",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor dual spoiler black colour",
+    "price": "7199",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662557370-bqdk1.jpg",
+      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662559787-11qb1.jpg",
+      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662562024-ya3kf.jpg",
+      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662563868-g495p.jpg",
+      "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662566393-vbfmm.jpg"
+    ],
+    "image": "products/axor-dual-spoiler-black-colour.axor dual spoiler black colour-1787662557370-bqdk1.jpg",
+    "description": "Size [M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
