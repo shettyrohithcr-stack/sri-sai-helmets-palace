@@ -315,5 +315,21 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Studds Helios",
+    "price": "3749",
+    "category": "Full Face",
+    "images": [
+      "products/studds-helios.studds helios-1787664992736-t1p83.jpg",
+      "products/studds-helios.studds helios-1787664997227-dyic5.jpg",
+      "products/studds-helios.studds helios-1787665000582-qv64b.jpg",
+      "products/studds-helios.studds helios-1787665004751-8crth.jpg",
+      "products/studds-helios.studds helios-1787665007637-7blvh.jpg"
+    ],
+    "image": "products/studds-helios.studds helios-1787664992736-t1p83.jpg",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
