@@ -118,22 +118,6 @@
     "active": true
   },
   {
-    "name": "Axor Apex",
-    "price": "4786",
-    "category": "Open Face",
-    "images": [
-      "products/axor-apex.axor apex-1787662868897-29wz1.png",
-      "products/axor-apex.axor apex-1787662877934-55tnc.png",
-      "products/axor-apex.axor apex-1787662881869-lxc71.png",
-      "products/axor-apex.axor apex-1787662885145-4mkl8.png",
-      "products/axor-apex.axor apex-1787662889022-ak5up.png"
-    ],
-    "image": "products/axor-apex.axor apex-1787662868897-29wz1.png",
-    "description": "Size [ S,M,L,XL, XXl]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Axor Apex white and red",
     "price": "4699",
     "category": "Open Face",
@@ -336,6 +320,22 @@
     ],
     "image": "products/axor-apex-gold-head.axor apex gold head-1787667171458-or17q.png",
     "description": "Size [ S,M,L,XL, XXl]",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Axor dual spoiler white and blue",
+    "price": "7452",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667260234-6riw6.jpg",
+      "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667262846-lsaif.jpg",
+      "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667265707-bwxbh.jpg",
+      "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667268870-k71dw.jpg",
+      "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667272381-pt6lq.jpg"
+    ],
+    "image": "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667260234-6riw6.jpg",
+    "description": "",
     "stock": "in_stock",
     "active": true
   }
