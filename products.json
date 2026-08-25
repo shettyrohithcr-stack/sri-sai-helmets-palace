@@ -157,5 +157,21 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor Apex",
+    "price": "4899",
+    "category": "Open Face",
+    "images": [
+      "products/axor-apex.axor apex-1787663274968-65u7s.jpg",
+      "products/axor-apex.axor apex-1787663277530-pmsnt.jpg",
+      "products/axor-apex.axor apex-1787663279728-zzt5c.jpg",
+      "products/axor-apex.axor apex-1787663281929-icyo6.jpg",
+      "products/axor-apex.axor apex-1787663284188-fcewl.jpg"
+    ],
+    "image": "products/axor-apex.axor apex-1787663274968-65u7s.jpg",
+    "description": "Size [S,M,L, XL, XXL",
+    "stock": "in_stock",
+    "active": true
   }
 ]
