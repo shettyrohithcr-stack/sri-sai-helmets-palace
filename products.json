@@ -347,5 +347,21 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Studds Helios Batman blue and black",
+    "price": "3749",
+    "category": "Full Face",
+    "images": [
+      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666066053-jqapi.jpg",
+      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666068956-77sv7.jpg",
+      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666071016-yr9m0.jpg",
+      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666073257-jprv8.jpg",
+      "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666075956-ktwie.jpg"
+    ],
+    "image": "products/studds-helios-batman-blue-and-black.studds helios batman blue and black-1787666066053-jqapi.jpg",
+    "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
