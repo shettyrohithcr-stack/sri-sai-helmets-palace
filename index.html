@@ -1685,12 +1685,6 @@ document.addEventListener(
 
 </script>
 
-<script>
-let fullscreenProduct = null;
-let fullscreenIndex = 0;
-
-function openFullscreenImage(productId) {
-
     const product = allProducts.find(p => {
         const id = p.id || p.name.replace(/\s+/g, '-');
         return id === productId;
