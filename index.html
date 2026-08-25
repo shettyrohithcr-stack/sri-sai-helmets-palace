@@ -1026,14 +1026,15 @@ function displayProducts(products){
 
               <div class="product-slider" style="position:relative;width:100%;height:380px;display:flex;align-items:center;justify-content:center;background:#f7f7f7;border-radius:10px;overflow:hidden;">
 
-  <img
+ <img
     id="product-image-${product.id || product.name.replace(/\s+/g,'-')}"
-    src="${(product.images && product.images.length ? product.images[0] : product.image)}"
+    src="${product.images && product.images.length ? product.images[0] : product.image}"
     alt="${product.name}"
+    onclick="openFullscreenImage('${product.id || product.name.replace(/\s+/g,'-')}')"
     loading="lazy"
-    style="width:100%;height:100%;object-fit:contain;"
-  >
-
+    onclick="openFullscreenImage('${product.id || product.name.replace(/\s+/g,'-')}')"
+    style="width:100%;height:100%;object-fit:contain;cursor:zoom-in;"
+>
   ${
     (product.images && product.images.length > 1)
     ? `
@@ -1193,7 +1194,144 @@ const product = allProducts.find(p => {
   }
 }
 </script>
+<!-- FULLSCREEN IMAGE VIEWER -->
+<div id="fullscreenViewer" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.96);
+    z-index:99999;
+    align-items:center;
+    justify-content:center;
+">
 
+    <button onclick="closeFullscreenImage()" style="
+        position:absolute;
+        top:20px;
+        right:25px;
+        width:48px;
+        height:48px;
+        border:0;
+        border-radius:50%;
+        background:white;
+        color:black;
+        font-size:30px;
+        cursor:pointer;
+        z-index:3;
+    ">×</button>
+
+    <button onclick="fullscreenPrev()" style="
+        position:absolute;
+        left:20px;
+        top:50%;
+        transform:translateY(-50%);
+        width:55px;
+        height:55px;
+        border:0;
+        border-radius:50%;
+        background:white;
+        color:black;
+        font-size:38px;
+        cursor:pointer;
+        z-index:3;
+    ">‹</button>
+
+    <img id="fullscreenImage" src="" style="
+        max-width:90vw;
+        max-height:90vh;
+        width:auto;
+        height:auto;
+        object-fit:contain;
+    ">
+
+    <button onclick="fullscreenNext()" style="
+        position:absolute;
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+        width:55px;
+        height:55px;
+        border:0;
+        border-radius:50%;
+        background:white;
+        color:black;
+        font-size:38px;
+        cursor:pointer;
+        z-index:3;
+    ">›</button>
+
+</div>
+
+<script>
+let fullscreenProduct = null;
+let fullscreenIndex = 0;
+
+function openFullscreenImage(productId) {
+
+    const product = allProducts.find(p => {
+        const id = p.id || p.name.replace(/\s+/g, '-');
+        return id === productId;
+    });
+
+    if (!product) return;
+
+    fullscreenProduct = product;
+
+    const images = product.images && product.images.length
+        ? product.images
+        : [product.image];
+
+    fullscreenIndex =
+        window.productImageIndexes?.[productId] || 0;
+
+    document.getElementById("fullscreenImage").src =
+        images[fullscreenIndex];
+
+    document.getElementById("fullscreenViewer").style.display = "flex";
+}
+
+function closeFullscreenImage() {
+    document.getElementById("fullscreenViewer").style.display = "none";
+}
+
+function fullscreenNext() {
+
+    if (!fullscreenProduct) return;
+
+    const images = fullscreenProduct.images &&
+                   fullscreenProduct.images.length
+        ? fullscreenProduct.images
+        : [fullscreenProduct.image];
+
+    fullscreenIndex++;
+
+    if (fullscreenIndex >= images.length) {
+        fullscreenIndex = 0;
+    }
+
+    document.getElementById("fullscreenImage").src =
+        images[fullscreenIndex];
+}
+
+function fullscreenPrev() {
+
+    if (!fullscreenProduct) return;
+
+    const images = fullscreenProduct.images &&
+                   fullscreenProduct.images.length
+        ? fullscreenProduct.images
+        : [fullscreenProduct.image];
+
+    fullscreenIndex--;
+
+    if (fullscreenIndex < 0) {
+        fullscreenIndex = images.length - 1;
+    }
+
+    document.getElementById("fullscreenImage").src =
+        images[fullscreenIndex];
+}
+</script>
 
 <!-- ================= SERVICES ================= -->
 
