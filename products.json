@@ -222,21 +222,6 @@
     "active": true
   },
   {
-    "name": "Studds Helios",
-    "price": "3196",
-    "category": "Full Face",
-    "images": [
-      "products/studds-helios.studds helios-1787664009639-g08dz.webp",
-      "products/studds-helios.studds helios-1787664013023-u88m2.webp",
-      "products/studds-helios.studds helios-1787664015276-j9ahu.webp",
-      "products/studds-helios.studds helios-1787664017460-zjcgc.webp"
-    ],
-    "image": "products/studds-helios.studds helios-1787664009639-g08dz.webp",
-    "description": "Size [M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Studd Helios",
     "price": "3498",
     "category": "Full Face",
@@ -313,6 +298,21 @@
     ],
     "image": "products/studds-helios-white-and-black.studds helios white and black-1787666609042-5095f.webp",
     "description": "Size [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Studds Helios white and red",
+    "price": "3196",
+    "category": "Full Face",
+    "images": [
+      "products/studds-helios-white-and-red.studds helios white and red-1787666657736-ulasm.webp",
+      "products/studds-helios-white-and-red.studds helios white and red-1787666660905-i1957.webp",
+      "products/studds-helios-white-and-red.studds helios white and red-1787666663299-hl77y.webp",
+      "products/studds-helios-white-and-red.studds helios white and red-1787666665852-5bx1s.webp"
+    ],
+    "image": "products/studds-helios-white-and-red.studds helios white and red-1787666657736-ulasm.webp",
+    "description": "Size [M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
   }
