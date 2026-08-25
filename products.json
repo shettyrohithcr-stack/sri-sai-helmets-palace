@@ -93,5 +93,21 @@
     "description": "",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Axor dual spoiler",
+    "price": "7452",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler.axor dual spoiler-1787662199049-895s4.jpg",
+      "products/axor-dual-spoiler.axor dual spoiler-1787662201267-xeitl.jpg",
+      "products/axor-dual-spoiler.axor dual spoiler-1787662203019-3cu68.jpg",
+      "products/axor-dual-spoiler.axor dual spoiler-1787662205228-43e95.jpg",
+      "products/axor-dual-spoiler.axor dual spoiler-1787662208140-ytyve.jpg"
+    ],
+    "image": "products/axor-dual-spoiler.axor dual spoiler-1787662199049-895s4.jpg",
+    "description": "",
+    "stock": "in_stock",
+    "active": true
   }
 ]
