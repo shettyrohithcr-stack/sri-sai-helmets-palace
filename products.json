@@ -342,22 +342,6 @@
     "price": "5226",
     "category": "Full Face",
     "images": [
-      "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725021286-nrslq.png",
-      "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725024612-xbrsu.png",
-      "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725027812-a0vs5.png",
-      "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725030741-pb1oi.png",
-      "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725034056-nvb1k.jpg"
-    ],
-    "image": "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725021286-nrslq.png",
-    "description": "Sizes [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Steelbird IGN 16  METAL BLUE WITH RED ORANGE",
-    "price": "5226",
-    "category": "Full Face",
-    "images": [
       "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725042378-ak3ap.png",
       "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725046706-3esbq.png",
       "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725051023-bypaa.png",
@@ -366,6 +350,22 @@
     ],
     "image": "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725042378-ak3ap.png",
     "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Steelbird IGN 16",
+    "price": "5599",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16.steelbird ign 16-1787726225797-cusrw.png",
+      "products/steelbird-ign-16.steelbird ign 16-1787726229423-9tjv2.png",
+      "products/steelbird-ign-16.steelbird ign 16-1787726232615-scx20.png",
+      "products/steelbird-ign-16.steelbird ign 16-1787726235818-sbwrf.png",
+      "products/steelbird-ign-16.steelbird ign 16-1787726238828-u4she.jpg"
+    ],
+    "image": "products/steelbird-ign-16.steelbird ign 16-1787726225797-cusrw.png",
+    "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
   }
