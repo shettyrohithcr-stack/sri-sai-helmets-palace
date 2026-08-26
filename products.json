@@ -496,5 +496,21 @@
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird IGN 16 FLUO RED WITH RED GREY",
+    "price": "5199",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725194454-2kuq2.png",
+      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725197418-ykf3o.png",
+      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725200622-q5okk.png",
+      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725205236-937ur.png",
+      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725212004-5s6wa.jpg"
+    ],
+    "image": "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725194454-2kuq2.png",
+    "description": "Size [S,M,L, XL, ]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
