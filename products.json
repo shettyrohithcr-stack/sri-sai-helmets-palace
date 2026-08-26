@@ -352,5 +352,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird ING 16 NAVY BLUE WITH WHITE GREY",
+    "price": "5659",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724340791-j1l6o.png",
+      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724345984-b2ime.png",
+      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724359822-okahd.png",
+      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724371180-ox3vr.png",
+      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724390613-6hqhj.jpg"
+    ],
+    "image": "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724340791-j1l6o.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
