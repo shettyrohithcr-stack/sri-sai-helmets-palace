@@ -384,5 +384,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird IGN 16 NAVY BLUE WITH WHITE GREY",
+    "price": "5659",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724791164-hxp10.png",
+      "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724796368-gl1dq.png",
+      "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724802700-trv2d.png",
+      "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724808303-sjt1f.png",
+      "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724816456-zflck.jpg"
+    ],
+    "image": "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724791164-hxp10.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
