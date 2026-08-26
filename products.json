@@ -416,5 +416,37 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird IGN 16  WARM GREY WITH RED ORANGE",
+    "price": "5489",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724912853-turc4.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724916339-jd6qd.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724920607-3f3mo.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724924123-yuxtu.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724928129-2mmf6.jpg"
+    ],
+    "image": "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724912853-turc4.png",
+    "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
+  },
+  {
+    "name": "Steelbird IGN 16  WARM GREY WITH RED ORANGE",
+    "price": "5489",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724964909-ikw4x.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724968607-5v4i5.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724972449-ha6hf.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724976161-k6w6o.png",
+      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724979333-ycmi9.jpg"
+    ],
+    "image": "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724964909-ikw4x.png",
+    "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
