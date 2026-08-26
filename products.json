@@ -274,38 +274,6 @@
     "active": true
   },
   {
-    "name": "Steelbird ING 16  WARM GREY WITH RED ORANGE",
-    "price": "5489",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724091310-y7k70.png",
-      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724095291-d71uk.png",
-      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724099705-2scl1.png",
-      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724103578-nlgwy.png",
-      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724107337-e6szt.jpg"
-    ],
-    "image": "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724091310-y7k70.png",
-    "description": "Sizes [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Steelbird ING 16 NAVY BLUE WITH WHITE GREY",
-    "price": "5659",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724340791-j1l6o.png",
-      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724345984-b2ime.png",
-      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724359822-okahd.png",
-      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724371180-ox3vr.png",
-      "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724390613-6hqhj.jpg"
-    ],
-    "image": "products/steelbird-ing-16-navy-blue-with-white-grey.steelbird ing 16 navy blue with white grey-1787724340791-j1l6o.png",
-    "description": "Sizes [S,M,L, XL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Steelbird IGN 16  BLACK WITH WHITE BLUE",
     "price": "5759",
     "category": "Full Face",
@@ -430,22 +398,6 @@
     ],
     "image": "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725101200-fcbbm.png",
     "description": "Sizes [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Steelbird IGN 16 FLUO RED WITH RED GREY",
-    "price": "5199",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725194454-2kuq2.png",
-      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725197418-ykf3o.png",
-      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725200622-q5okk.png",
-      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725205236-937ur.png",
-      "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725212004-5s6wa.jpg"
-    ],
-    "image": "products/steelbird-ign-16-fluo-red-with-red-grey.steelbird ign 16 fluo red with red grey-1787725194454-2kuq2.png",
-    "description": "Size [S,M,L, XL, ]",
     "stock": "in_stock",
     "active": true
   }
