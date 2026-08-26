@@ -304,5 +304,21 @@
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird ING 16  METAL BLUE WITH RED ORANGE",
+    "price": "5226",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723927057-3m8hp.png",
+      "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723931763-h30xl.png",
+      "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723936802-n0u9h.png",
+      "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723944844-2yc42.png",
+      "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723949290-qn1we.jpg"
+    ],
+    "image": "products/steelbird-ing-16-metal-blue-with-red-orange.steelbird ing 16  metal blue with red orange-1787723927057-3m8hp.png",
+    "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
