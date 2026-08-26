@@ -338,22 +338,6 @@
     "active": true
   },
   {
-    "name": "Steelbird IGN 16  WARM GREY WITH RED ORANGE",
-    "price": "5489",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724964909-ikw4x.png",
-      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724968607-5v4i5.png",
-      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724972449-ha6hf.png",
-      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724976161-k6w6o.png",
-      "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724979333-ycmi9.jpg"
-    ],
-    "image": "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724964909-ikw4x.png",
-    "description": "Sizes [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
     "name": "Steelbird IGN 16  METAL BLUE WITH RED ORANGE",
     "price": "5226",
     "category": "Full Face",
@@ -381,22 +365,6 @@
       "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725058771-howek.jpg"
     ],
     "image": "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725042378-ak3ap.png",
-    "description": "Sizes [S,M,L, XL, XXL]",
-    "stock": "in_stock",
-    "active": true
-  },
-  {
-    "name": "Steelbird IGN 16 GREY WITH GREY WHITE",
-    "price": "5356",
-    "category": "Full Face",
-    "images": [
-      "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725101200-fcbbm.png",
-      "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725106058-w798f.png",
-      "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725131142-0f87e.png",
-      "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725142820-ho4ps.png",
-      "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725146380-ry607.jpg"
-    ],
-    "image": "products/steelbird-ign-16-grey-with-grey-white.steelbird ign 16 grey with grey white-1787725101200-fcbbm.png",
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
