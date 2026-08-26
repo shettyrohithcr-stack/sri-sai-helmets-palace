@@ -320,5 +320,21 @@
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird ING 16  WARM GREY WITH RED ORANGE",
+    "price": "5489",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724091310-y7k70.png",
+      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724095291-d71uk.png",
+      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724099705-2scl1.png",
+      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724103578-nlgwy.png",
+      "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724107337-e6szt.jpg"
+    ],
+    "image": "products/steelbird-ing-16-warm-grey-with-red-orange.steelbird ing 16  warm grey with red orange-1787724091310-y7k70.png",
+    "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
