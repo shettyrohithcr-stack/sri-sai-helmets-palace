@@ -288,5 +288,21 @@
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird ing16 GREY WITH GREY WHITE",
+    "price": "5356",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723792426-ttt8e.png",
+      "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723796625-19d7n.png",
+      "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723800470-lexr7.png",
+      "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723803935-6csoz.png",
+      "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723807658-29zkw.jpg"
+    ],
+    "image": "products/steelbird-ing16-grey-with-grey-white.steelbird ing16 grey with grey white-1787723792426-ttt8e.png",
+    "description": "Sizes [S,M,L, XL, XXL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
