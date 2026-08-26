@@ -400,5 +400,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "Steelbird IGN 16 TITANIUM GREY WITH ORANGE RED",
+    "price": "5242",
+    "category": "Full Face",
+    "images": [
+      "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724867331-0lkli.png",
+      "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724870614-1ow3m.png",
+      "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724873907-4mtwi.png",
+      "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724877016-2lwyf.png",
+      "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724880290-447f1.jpg"
+    ],
+    "image": "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724867331-0lkli.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
