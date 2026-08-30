@@ -624,5 +624,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER BLACK AND WHITE",
+    "price": "2196",
+    "category": "Modular",
+    "images": [
+      "products/studds-trooper-black-and-white.studds trooper black and white-1788077997705-e3070.webp",
+      "products/studds-trooper-black-and-white.studds trooper black and white-1788078000096-fyprn.webp",
+      "products/studds-trooper-black-and-white.studds trooper black and white-1788078002156-kolm3.webp",
+      "products/studds-trooper-black-and-white.studds trooper black and white-1788078004368-8daii.webp",
+      "products/studds-trooper-black-and-white.studds trooper black and white-1788078005874-4c0nk.webp"
+    ],
+    "image": "products/studds-trooper-black-and-white.studds trooper black and white-1788077997705-e3070.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
