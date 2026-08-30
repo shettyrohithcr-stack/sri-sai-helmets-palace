@@ -368,5 +368,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK Stellar G L 153",
+    "price": "4299",
+    "category": "Full Face",
+    "images": [
+      "products/smk-stellar-g-l-153.smk stellar g l 153-1788074236768-94w1s.webp",
+      "products/smk-stellar-g-l-153.smk stellar g l 153-1788074238866-g2gfb.webp",
+      "products/smk-stellar-g-l-153.smk stellar g l 153-1788074241317-w6t04.webp",
+      "products/smk-stellar-g-l-153.smk stellar g l 153-1788074243302-cubhj.webp",
+      "products/smk-stellar-g-l-153.smk stellar g l 153-1788074245125-x7vdp.webp"
+    ],
+    "image": "products/smk-stellar-g-l-153.smk stellar g l 153-1788074236768-94w1s.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
