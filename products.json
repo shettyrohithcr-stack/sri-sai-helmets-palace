@@ -512,5 +512,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK STELLAR MA 266",
+    "price": "3946",
+    "category": "Full Face",
+    "images": [
+      "products/smk-stellar-ma-266.smk stellar ma 266-1788075559272-jzzhe.webp",
+      "products/smk-stellar-ma-266.smk stellar ma 266-1788075561755-he7qt.webp",
+      "products/smk-stellar-ma-266.smk stellar ma 266-1788075563766-1ff3y.webp",
+      "products/smk-stellar-ma-266.smk stellar ma 266-1788075565584-57qma.webp",
+      "products/smk-stellar-ma-266.smk stellar ma 266-1788075567441-tb8hg.webp"
+    ],
+    "image": "products/smk-stellar-ma-266.smk stellar ma 266-1788075559272-jzzhe.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
