@@ -672,5 +672,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR KYLO WHITE RED",
+    "price": "3156",
+    "category": "Open Face",
+    "images": [
+      "products/axor-kylo-white-red.axor kylo white red-1788079090513-96io4.png",
+      "products/axor-kylo-white-red.axor kylo white red-1788079094086-3873y.png",
+      "products/axor-kylo-white-red.axor kylo white red-1788079097046-w6wze.png",
+      "products/axor-kylo-white-red.axor kylo white red-1788079100561-9e6ys.png",
+      "products/axor-kylo-white-red.axor kylo white red-1788079104101-ylkoo.png"
+    ],
+    "image": "products/axor-kylo-white-red.axor kylo white red-1788079090513-96io4.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
