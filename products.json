@@ -608,5 +608,21 @@
     "description": "Sizes [S,M,L, XL ]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER BLACK AND ORENGE",
+    "price": "2159",
+    "category": "Full Face",
+    "images": [
+      "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077833101-z2guj.webp",
+      "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077835040-g20zo.webp",
+      "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077837660-k0xyx.webp",
+      "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077839616-x1gm8.webp",
+      "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077841653-ojivi.webp"
+    ],
+    "image": "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077833101-z2guj.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
