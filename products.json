@@ -576,5 +576,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER BLACK AND BLUE GLASSY",
+    "price": "2066",
+    "category": "Full Face",
+    "images": [
+      "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077360458-pw2dd.webp",
+      "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077362720-sjbff.webp",
+      "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077364835-lmrx3.webp",
+      "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077366713-ugx4v.webp",
+      "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077369238-i9rps.webp"
+    ],
+    "image": "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077360458-pw2dd.webp",
+    "description": "Sizes [M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
