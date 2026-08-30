@@ -592,5 +592,21 @@
     "description": "Sizes [M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER BLACK AND GREEN",
+    "price": "2089",
+    "category": "Full Face",
+    "images": [
+      "products/studds-trooper-black-and-green.studds trooper black and green-1788077613238-9d8qq.webp",
+      "products/studds-trooper-black-and-green.studds trooper black and green-1788077616365-7wun0.webp",
+      "products/studds-trooper-black-and-green.studds trooper black and green-1788077619240-3rh6e.webp",
+      "products/studds-trooper-black-and-green.studds trooper black and green-1788077621484-mpp8s.webp",
+      "products/studds-trooper-black-and-green.studds trooper black and green-1788077623751-px1jz.webp"
+    ],
+    "image": "products/studds-trooper-black-and-green.studds trooper black and green-1788077613238-9d8qq.webp",
+    "description": "Sizes [S,M,L, XL ]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
