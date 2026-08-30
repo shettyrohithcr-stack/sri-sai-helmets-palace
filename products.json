@@ -544,5 +544,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK TYPHOON RIVAL GL 254C",
+    "price": "4765",
+    "category": "Full Face",
+    "images": [
+      "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076353153-alroi.webp",
+      "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076355452-334h7.png",
+      "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076357695-mrts7.png",
+      "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076360237-qbugy.png",
+      "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076362446-g3wev.png"
+    ],
+    "image": "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076353153-alroi.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
