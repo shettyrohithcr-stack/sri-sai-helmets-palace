@@ -656,5 +656,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER GLOSSY BLACK",
+    "price": "1999",
+    "category": "Modular",
+    "images": [
+      "products/studds-trooper-glossy-black.studds trooper glossy black-1788078371099-e1mif.webp",
+      "products/studds-trooper-glossy-black.studds trooper glossy black-1788078373339-hymid.webp",
+      "products/studds-trooper-glossy-black.studds trooper glossy black-1788078375253-fqw5e.webp",
+      "products/studds-trooper-glossy-black.studds trooper glossy black-1788078377226-bidwp.webp",
+      "products/studds-trooper-glossy-black.studds trooper glossy black-1788078379258-n24s4.webp"
+    ],
+    "image": "products/studds-trooper-glossy-black.studds trooper glossy black-1788078371099-e1mif.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
