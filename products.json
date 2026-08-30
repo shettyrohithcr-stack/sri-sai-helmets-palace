@@ -496,5 +496,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK STELLAR GL 256",
+    "price": "3986",
+    "category": "Full Face",
+    "images": [
+      "products/smk-stellar-gl-256.smk stellar gl 256-1788075461962-46j23.webp",
+      "products/smk-stellar-gl-256.smk stellar gl 256-1788075464403-zne41.png",
+      "products/smk-stellar-gl-256.smk stellar gl 256-1788075468243-mj30v.png",
+      "products/smk-stellar-gl-256.smk stellar gl 256-1788075471600-tpnbv.png",
+      "products/smk-stellar-gl-256.smk stellar gl 256-1788075474335-q1buj.png"
+    ],
+    "image": "products/smk-stellar-gl-256.smk stellar gl 256-1788075461962-46j23.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
