@@ -685,5 +685,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR DUAL SPOILER BLACK AND GREEN",
+    "price": "7369",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082578316-qtls1.webp",
+      "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082580079-up6x4.webp",
+      "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082581837-5oofd.webp",
+      "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082583290-dc32j.webp",
+      "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082585040-8470u.webp"
+    ],
+    "image": "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082578316-qtls1.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
