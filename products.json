@@ -1,14 +1,5 @@
 [
   {
-    "name": "SMK Stellar Sports",
-    "price": "3950",
-    "category": "Full Face",
-    "image": "smk-stellar.jpg",
-    "description": "Sporty full-face helmet.",
-    "active": true,
-    "stock": "in_stock"
-  },
-  {
     "name": "MT Thunder 4 SV",
     "price": "5450",
     "category": "Full Face",
