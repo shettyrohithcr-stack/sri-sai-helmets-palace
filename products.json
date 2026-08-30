@@ -528,5 +528,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK TYPHOON RIVAL MA 266",
+    "price": "4865",
+    "category": "Full Face",
+    "images": [
+      "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076039171-990bj.webp",
+      "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076041384-g8x63.webp",
+      "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076043421-eoe6m.webp",
+      "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076045653-d3tsh.webp",
+      "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076047429-ndl21.webp"
+    ],
+    "image": "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076039171-990bj.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
