@@ -704,5 +704,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR KYLO GREEN NEON YELLOW",
+    "price": "3256",
+    "category": "Open Face",
+    "images": [
+      "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079292687-qbi5u.png",
+      "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079295766-no98g.png",
+      "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079299472-8fftj.png",
+      "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079302641-qz6an.png",
+      "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079305556-gw2pl.png"
+    ],
+    "image": "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079292687-qbi5u.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
