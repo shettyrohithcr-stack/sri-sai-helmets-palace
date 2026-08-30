@@ -688,5 +688,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR KYLO GRAY BLUE",
+    "price": "2999",
+    "category": "Open Face",
+    "images": [
+      "products/axor-kylo-gray-blue.axor kylo gray blue-1788079194513-ir1rb.png",
+      "products/axor-kylo-gray-blue.axor kylo gray blue-1788079197554-hm42y.png",
+      "products/axor-kylo-gray-blue.axor kylo gray blue-1788079200985-200yi.png",
+      "products/axor-kylo-gray-blue.axor kylo gray blue-1788079204414-q41pi.png",
+      "products/axor-kylo-gray-blue.axor kylo gray blue-1788079208227-kzdtg.png"
+    ],
+    "image": "products/axor-kylo-gray-blue.axor kylo gray blue-1788079194513-ir1rb.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
