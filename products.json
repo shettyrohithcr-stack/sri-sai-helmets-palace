@@ -448,5 +448,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "SMK STELLAR GL 213",
+    "price": "4089",
+    "category": "Full Face",
+    "images": [
+      "products/smk-stellar-gl-213.smk stellar gl 213-1788075182210-9rrxd.webp",
+      "products/smk-stellar-gl-213.smk stellar gl 213-1788075184283-tedjc.webp",
+      "products/smk-stellar-gl-213.smk stellar gl 213-1788075186006-392xw.webp",
+      "products/smk-stellar-gl-213.smk stellar gl 213-1788075188085-o9qbn.webp",
+      "products/smk-stellar-gl-213.smk stellar gl 213-1788075190011-axbyp.webp"
+    ],
+    "image": "products/smk-stellar-gl-213.smk stellar gl 213-1788075182210-9rrxd.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
