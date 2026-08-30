@@ -669,5 +669,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR DUAL SPOILER GLOSSY BLACK",
+    "price": "6999",
+    "category": "Full Face",
+    "images": [
+      "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082252618-v6nbz.jpg",
+      "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082254853-av6ro.jpg",
+      "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082258025-yzfo9.jpg",
+      "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082260110-adamn.jpg",
+      "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082262501-u6w1u.jpg"
+    ],
+    "image": "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082252618-v6nbz.jpg",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
