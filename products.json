@@ -640,5 +640,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "STUDDS TROOPER BLACK AND NEON YELLOW",
+    "price": "2296",
+    "category": "Modular",
+    "images": [
+      "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078091883-db6lc.webp",
+      "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078094507-oo1ks.webp",
+      "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078096277-w4gw6.webp",
+      "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078098135-tqdr8.webp",
+      "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078100240-ts7xg.webp"
+    ],
+    "image": "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078091883-db6lc.webp",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
