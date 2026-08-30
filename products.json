@@ -720,5 +720,21 @@
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
     "active": true
+  },
+  {
+    "name": "AXOR KYLO GLOSSY BLACK",
+    "price": "2959",
+    "category": "Open Face",
+    "images": [
+      "products/axor-kylo-glossy-black.axor kylo glossy black-1788079403177-evjvh.png",
+      "products/axor-kylo-glossy-black.axor kylo glossy black-1788079406280-82v6y.png",
+      "products/axor-kylo-glossy-black.axor kylo glossy black-1788079409416-2imc0.png",
+      "products/axor-kylo-glossy-black.axor kylo glossy black-1788079412842-qeesf.png",
+      "products/axor-kylo-glossy-black.axor kylo glossy black-1788079416629-dn9ye.png"
+    ],
+    "image": "products/axor-kylo-glossy-black.axor kylo glossy black-1788079403177-evjvh.png",
+    "description": "Sizes [S,M,L, XL]",
+    "stock": "in_stock",
+    "active": true
   }
 ]
