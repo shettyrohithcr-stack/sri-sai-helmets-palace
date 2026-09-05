@@ -2576,6 +2576,7 @@ updateCart();
 
     buttons.forEach((button, index) => {
       button.textContent = index < rating ? "★" : "☆";
+        button.style.color = index < rating ? "gold" : "#777";
     });
   };
 
