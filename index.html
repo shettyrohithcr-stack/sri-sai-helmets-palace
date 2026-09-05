@@ -826,13 +826,39 @@ setInterval(function () {
     min-height:38px;
 }
 
-.product-price{
-    font-size:19px;
-    font-weight:700;
-    color:#111;
-    margin:8px 0 12px;
+/* ================= PREMIUM OFFER PRICE ================= */
+
+.product-price-box{
+    margin:10px 8px 14px;
+    padding:10px 8px;
+    background:linear-gradient(135deg,#fff7e6,#fff);
+    border:1px solid #ffd98a;
+    border-radius:10px;
+    text-align:center;
 }
 
+.offer-label{
+    font-size:10px;
+    font-weight:800;
+    color:#e65100;
+    letter-spacing:1px;
+    margin-bottom:3px;
+}
+
+.offer-price{
+    font-size:23px;
+    font-weight:900;
+    color:#075fd1;
+    line-height:1.2;
+}
+
+.offer-text{
+    font-size:10px;
+    font-weight:700;
+    color:#555;
+    margin-top:3px;
+    letter-spacing:.5px;
+}
 
 /* ================= WHATSAPP BUTTON ================= */
 
@@ -919,9 +945,9 @@ setInterval(function () {
         font-size:13px;
     }
 
-    .product-price{
-        font-size:16px;
-    }
+   .offer-price{
+    font-size:19px;
+}
 
     .product-order{
         font-size:10px;
@@ -1108,9 +1134,17 @@ function displayProducts(products){
             </h3>
 
 
-            <div class="product-price">
-                ₹${product.price}
-            </div>
+           <div class="product-price-box">
+    <div class="offer-label">SPECIAL OFFER</div>
+
+    <div class="offer-price">
+        ₹${Number(product.price).toLocaleString("en-IN")}
+    </div>
+
+    <div class="offer-text">
+        OFFER PRICE
+    </div>
+</div>
 
 
            <div class="product-actions">
