@@ -2513,5 +2513,162 @@ function checkoutWhatsApp(){
 updateCart();
 
 </script>
+    <!-- CUSTOMER REVIEWS -->
+<section id="reviews" style="padding:50px 20px;max-width:1100px;margin:auto;">
+  <h2 style="text-align:center;">⭐ CUSTOMER REVIEWS</h2>
+
+  <div style="max-width:600px;margin:25px auto;">
+    <input id="reviewName" type="text" placeholder="Your Name"
+      style="width:100%;padding:14px;margin-bottom:12px;">
+
+    <div id="reviewStars" style="font-size:30px;margin-bottom:12px;">
+      <button type="button" onclick="setRating(1)">☆</button>
+      <button type="button" onclick="setRating(2)">☆</button>
+      <button type="button" onclick="setRating(3)">☆</button>
+      <button type="button" onclick="setRating(4)">☆</button>
+      <button type="button" onclick="setRating(5)">☆</button>
+    </div>
+
+    <textarea id="reviewMessage" placeholder="Write your review..."
+      style="width:100%;height:120px;padding:14px;"></textarea>
+
+    <button type="button" onclick="submitReview()"
+      style="margin-top:12px;padding:14px 25px;">
+      SUBMIT REVIEW
+    </button>
+
+    <p id="reviewStatus"></p>
+  </div>
+
+  <div id="reviewsList"></div>
+</section>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDyUlga1sJgO8Pd3kg_nZW2AEqon7Sec_Q",
+    authDomain: "sri-sai-stock-management.firebaseapp.com",
+    projectId: "sri-sai-stock-management",
+    storageBucket: "sri-sai-stock-management.firebasestorage.app",
+    messagingSenderId: "1011875932840",
+    appId: "1:1011875932840:web:1b5088d074b00f43bd309d",
+    measurementId: "G-8CE3Y14VRS"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  let selectedRating = 0;
+
+  window.setRating = function(rating) {
+    selectedRating = rating;
+
+    const buttons = document.querySelectorAll("#reviewStars button");
+
+    buttons.forEach((button, index) => {
+      button.textContent = index < rating ? "★" : "☆";
+    });
+  };
+
+  window.submitReview = async function() {
+    const name = document.getElementById("reviewName").value.trim();
+    const message = document.getElementById("reviewMessage").value.trim();
+    const status = document.getElementById("reviewStatus");
+
+    if (!name) {
+      status.textContent = "Please enter your name.";
+      return;
+    }
+
+    if (selectedRating === 0) {
+      status.textContent = "Please select a star rating.";
+      return;
+    }
+
+    if (!message) {
+      status.textContent = "Please write your review.";
+      return;
+    }
+
+    try {
+      status.textContent = "Submitting review...";
+
+      await addDoc(collection(db, "reviews"), {
+        name: name,
+        rating: selectedRating,
+        message: message,
+        createdAt: serverTimestamp()
+      });
+
+      document.getElementById("reviewName").value = "";
+      document.getElementById("reviewMessage").value = "";
+      setRating(0);
+
+      status.textContent = "Thank you! Your review has been submitted. ⭐";
+
+      loadReviews();
+
+    } catch (error) {
+      console.error(error);
+      status.textContent = "Review submit failed. Please try again.";
+    }
+  };
+
+  async function loadReviews() {
+    const list = document.getElementById("reviewsList");
+
+    try {
+      const q = query(
+        collection(db, "reviews"),
+        orderBy("createdAt", "desc")
+      );
+
+      const snapshot = await getDocs(q);
+
+      list.innerHTML = "";
+
+      snapshot.forEach((doc) => {
+        const review = doc.data();
+
+        if (review.name === "Setup") return;
+
+        const card = document.createElement("div");
+
+        card.style.cssText =
+          "background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px;margin:15px 0;box-shadow:0 2px 8px rgba(0,0,0,.08);";
+
+        const name = document.createElement("h3");
+        name.textContent = review.name;
+
+        const stars = document.createElement("div");
+        stars.textContent = "★".repeat(review.rating || 0);
+        stars.style.fontSize = "22px";
+
+        const message = document.createElement("p");
+        message.textContent = review.message;
+
+        card.appendChild(name);
+        card.appendChild(stars);
+        card.appendChild(message);
+
+        list.appendChild(card);
+      });
+
+    } catch (error) {
+      console.error("Error loading reviews:", error);
+    }
+  }
+
+  loadReviews();
+</script>
 </body>
 </html>
