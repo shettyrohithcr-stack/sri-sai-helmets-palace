@@ -18,8 +18,9 @@
   },
   {
     "name": "Studd Helios",
-    "price": "3498",
-    "category": "Full Face",
+"price": "3498",
+"mrp": "3649",
+"category": "Full Face",
     "images": [
       "products/studd-helios.studd helios-1787664149662-ae3r9.webp",
       "products/studd-helios.studd helios-1787664153089-r8ec9.webp",
