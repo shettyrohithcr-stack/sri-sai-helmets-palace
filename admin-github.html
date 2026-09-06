@@ -3,375 +3,1903 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Sri Sai Helmets Palace — GitHub Admin</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#101828}
-.top{background:#fff;border-bottom:1px solid #e4e7ec;padding:16px 24px;display:flex;justify-content:space-between;gap:12px;align-items:center;position:sticky;top:0;z-index:5}.brand{font-weight:900}.brand small{display:block;color:#1761d1;font-size:10px;letter-spacing:1.5px;margin-top:3px}
-.wrap{max-width:1050px;margin:auto;padding:28px 18px}.panel{background:#fff;border:1px solid #e2e7ef;border-radius:14px;padding:22px;margin-bottom:18px}.panel h2{margin:0 0 14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{margin:12px 0}.row label{display:block;font-weight:800;font-size:13px;margin-bottom:6px}.row input,.row select{width:100%;padding:11px;border:1px solid #cfd6e2;border-radius:8px;font:inherit}.btn{border:0;border-radius:8px;padding:11px 17px;font-weight:900;cursor:pointer}.blue{background:#1461e8;color:#fff}.green{background:#159447;color:#fff}.gray{background:#e9edf3}.danger{background:#d92d2d;color:#fff}.status{padding:12px;border-radius:9px;background:#f1f5f9;margin-top:14px;white-space:pre-wrap}.status.ok{background:#e8f7ee;color:#0b6b36}.status.err{background:#fff0f0;color:#9c1c1c}.preview{width:180px;height:180px;object-fit:contain;background:#f2f4f7;border-radius:10px;display:none;margin-top:10px}.help{color:#667085;font-size:13px;line-height:1.5}.list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{border:1px solid #e2e7ef;border-radius:10px;padding:10px;background:#fff}.card img{width:100%;height:140px;object-fit:contain;background:#f4f5f7;border-radius:7px}.price{font-weight:900;color:#145bd8;font-size:18px;margin-top:5px}.stock{display:inline-block;padding:5px 8px;border-radius:6px;font-size:11px;font-weight:900;margin-top:7px}.stock.in{background:#e8f7ee;color:#0b6b36}.stock.out{background:#fff0f0;color:#a21b1b}.stock.soon{background:#fff7df;color:#8a5a00}.tag{font-size:10px;color:#667085;font-weight:800;text-transform:uppercase}
-@media(max-width:800px){.grid,.list{grid-template-columns:1fr}.top{flex-direction:column;align-items:flex-start}}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#101828
+}
+
+.top{
+  background:#fff;
+  border-bottom:1px solid #e4e7ec;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:5
+}
+
+.brand{
+  font-weight:900
+}
+
+.brand small{
+  display:block;
+  color:#1761d1;
+  font-size:10px;
+  letter-spacing:1.5px;
+  margin-top:3px
+}
+
+.wrap{
+  max-width:1050px;
+  margin:auto;
+  padding:28px 18px
+}
+
+.panel{
+  background:#fff;
+  border:1px solid #e2e7ef;
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:18px
+}
+
+.panel h2{
+  margin:0 0 14px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px
+}
+
+.row{
+  margin:12px 0
+}
+
+.row label{
+  display:block;
+  font-weight:800;
+  font-size:13px;
+  margin-bottom:6px
+}
+
+.row input,
+.row select{
+  width:100%;
+  padding:11px;
+  border:1px solid #cfd6e2;
+  border-radius:8px;
+  font:inherit
+}
+
+.row input:focus,
+.row select:focus{
+  outline:none;
+  border-color:#1461e8;
+  box-shadow:0 0 0 3px #eaf1ff
+}
+
+.btn{
+  border:0;
+  border-radius:8px;
+  padding:11px 17px;
+  font-weight:900;
+  cursor:pointer
+}
+
+.blue{
+  background:#1461e8;
+  color:#fff
+}
+
+.green{
+  background:#159447;
+  color:#fff
+}
+
+.gray{
+  background:#e9edf3
+}
+
+.danger{
+  background:#d92d2d;
+  color:#fff
+}
+
+.orange{
+  background:#f79009;
+  color:#fff
+}
+
+.status{
+  padding:12px;
+  border-radius:9px;
+  background:#f1f5f9;
+  margin-top:14px;
+  white-space:pre-wrap
+}
+
+.status.ok{
+  background:#e8f7ee;
+  color:#0b6b36
+}
+
+.status.err{
+  background:#fff0f0;
+  color:#9c1c1c
+}
+
+.preview{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  background:#f2f4f7;
+  border-radius:10px;
+  display:none;
+  margin-top:10px
+}
+
+.help{
+  color:#667085;
+  font-size:13px;
+  line-height:1.5
+}
+
+.list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
+
+.card{
+  border:1px solid #e2e7ef;
+  border-radius:10px;
+  padding:10px;
+  background:#fff
+}
+
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:contain;
+  background:#f4f5f7;
+  border-radius:7px
+}
+
+.card-brand{
+  color:#1761d1;
+  font-size:12px;
+  font-weight:900;
+  margin-top:8px
+}
+
+.price-box{
+  background:#fff8e8;
+  border:1px solid #ffe0a3;
+  border-radius:8px;
+  padding:8px;
+  margin-top:8px;
+  text-align:center
+}
+
+.mrp{
+  color:#999;
+  font-size:12px;
+  font-weight:700
+}
+
+.mrp span{
+  text-decoration:line-through;
+  text-decoration-thickness:1.5px
+}
+
+.offer-price{
+  color:#075fd1;
+  font-size:19px;
+  font-weight:900;
+  margin-top:2px
+}
+
+.save{
+  color:#168a35;
+  font-size:11px;
+  font-weight:900;
+  margin-top:2px
+}
+
+.stock{
+  display:inline-block;
+  padding:5px 8px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:900;
+  margin-top:7px
+}
+
+.stock.in{
+  background:#e8f7ee;
+  color:#0b6b36
+}
+
+.stock.out{
+  background:#fff0f0;
+  color:#a21b1b
+}
+
+.stock.soon{
+  background:#fff7df;
+  color:#8a5a00
+}
+
+.tag{
+  font-size:10px;
+  color:#667085;
+  font-weight:800;
+  text-transform:uppercase
+}
+
+.edit-mode{
+  background:#fff7df;
+  border:1px solid #ffd98a;
+  color:#8a5a00;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:15px;
+  font-weight:800
+}
+
+@media(max-width:800px){
+  .grid,
+  .list{
+    grid-template-columns:1fr
+  }
+
+  .top{
+    flex-direction:column;
+    align-items:flex-start
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div class="top">
-  <div class="brand">SRI SAI HELMETS PALACE <small>WITH BIKE ACCESSORIES</small></div>
-  <div>📞 9900730653 &nbsp;|&nbsp; 9972220447</div>
+
+  <div class="brand">
+    SRI SAI HELMETS PALACE
+    <small>WITH BIKE ACCESSORIES</small>
+  </div>
+
+  <div>
+    📞 9900730653 &nbsp;|&nbsp; 9972220447
+  </div>
+
 </div>
+
 
 <div class="wrap">
+
+  <!-- GITHUB CONNECTION -->
+
   <div class="panel">
+
     <h2>🔐 GitHub Connection</h2>
+
     <div class="grid">
-      <div class="row"><label>GitHub username</label><input id="owner" value="shettyrohithcr-stack"></div>
-      <div class="row"><label>Repository</label><input id="repo" value="sri-sai-helmets-palace"></div>
+
+      <div class="row">
+        <label>GitHub username</label>
+        <input
+          id="owner"
+          value="shettyrohithcr-stack"
+        >
+      </div>
+
+      <div class="row">
+        <label>Repository</label>
+        <input
+          id="repo"
+          value="sri-sai-helmets-palace"
+        >
+      </div>
+
     </div>
+
     <div class="row">
-      <label>GitHub Fine-grained Personal Access Token</label>
-      <input id="token" type="password" placeholder="Paste your token here">
-      <div class="help">The token is used only in this browser session and is not written into the website files. Create a fine-grained token with access only to this repository and <b>Contents: Read and write</b>.</div>
+
+      <label>
+        GitHub Fine-grained Personal Access Token
+      </label>
+
+      <input
+        id="token"
+        type="password"
+        placeholder="Paste your token here"
+      >
+
+      <div class="help">
+
+        The token is used only in this browser session and
+        is not written into the website files.
+
+        Create a fine-grained token with access only to this
+        repository and <b>Contents: Read and write</b>.
+
+      </div>
+
     </div>
-<button type="button" class="btn blue" onclick="connect()">Test GitHub Connection</button>
-<div id="connection" class="status">Not connected.</div>
+
+    <button
+      type="button"
+      class="btn blue"
+      onclick="connect()"
+    >
+      Test GitHub Connection
+    </button>
+
+    <div
+      id="connection"
+      class="status"
+    >
+      Not connected.
+    </div>
+
   </div>
 
+
+  <!-- ADD / EDIT PRODUCT -->
+
   <div class="panel">
-    <h2>➕ Add Product</h2>
+
+    <h2 id="formTitle">
+      ➕ Add Product
+    </h2>
+
+    <div
+      id="editNotice"
+      class="edit-mode"
+      style="display:none"
+    >
+      ✏️ You are editing an existing product.
+    </div>
+
+
     <div class="grid">
-      <div>
-        <div class="row"><label>Product name</label><input id="name" placeholder="e.g. Vega Crux"></div>
-        <div class="row"><label>Price (₹)</label><input id="price" type="number" placeholder="2500"></div>
-        <div class="row"><label>Category</label><select id="category"><option>Full Face</option><option>Open Face</option><option>Modular</option><option>Kids</option><option>Riding Gear</option><option>Bike Accessories</option></select></div>
-        <div class="row"><label>Description</label><input id="description" placeholder="Short product description"></div>
-<div class="row"><label>Stock Status</label><select id="stock"><option value="in_stock">✅ In Stock</option><option value="out_of_stock">❌ Out of Stock</option><option value="coming_soon">🕒 Coming Soon</option></select></div>
-       <div class="row">
-  <label>Product photos (multiple)</label>
-  <input id="photo" type="file" accept="image/*" multiple onchange="previewPhotos(event)">
-  <div class="help">You can select 2–5 photos for one product.</div>
-</div>
 
-<div id="previews" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px"></div>
-      </div>
       <div>
-        <div class="help" style="background:#eef4ff;border:1px solid #d5e2ff;padding:15px;border-radius:10px">
-          <b>What happens when you click Publish?</b><br><br>
-          1. The product photo is uploaded to your GitHub repository.<br>
-          2. <code>products.json</code> is updated automatically.<br>
-          3. GitHub Pages rebuilds your website.<br>
-          4. The new product appears on your live website with an Order on WhatsApp button.
+
+        <!-- BRAND -->
+
+        <div class="row">
+
+          <label>
+            Brand / Company
+          </label>
+
+          <input
+            id="brand"
+            placeholder="e.g. AXOR"
+          >
+
         </div>
-        <button class="btn green" style="width:100%;margin-top:18px" onclick="publishProduct()">🚀 Publish Product to GitHub</button>
-        <div id="status" class="status">Ready.</div>
+
+
+        <!-- MODEL -->
+
+        <div class="row">
+
+          <label>
+            Product / Model Name
+          </label>
+
+          <input
+            id="name"
+            placeholder="e.g. Apex Hex-2"
+          >
+
+        </div>
+
+
+        <!-- MRP -->
+
+        <div class="row">
+
+          <label>
+            MRP (₹)
+          </label>
+
+          <input
+            id="mrp"
+            type="number"
+            min="0"
+            placeholder="5499"
+          >
+
+        </div>
+
+
+        <!-- OFFER PRICE -->
+
+        <div class="row">
+
+          <label>
+            Offer Price (₹)
+          </label>
+
+          <input
+            id="price"
+            type="number"
+            min="0"
+            placeholder="4699"
+          >
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="row">
+
+          <label>
+            Category
+          </label>
+
+          <select id="category">
+
+            <option>Full Face</option>
+
+            <option>Open Face</option>
+
+            <option>Modular</option>
+
+            <option>Kids</option>
+
+            <option>Riding Gear</option>
+
+            <option>Bike Accessories</option>
+
+          </select>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="row">
+
+          <label>
+            Description
+          </label>
+
+          <input
+            id="description"
+            placeholder="Short product description"
+          >
+
+        </div>
+
+
+        <!-- STOCK -->
+
+        <div class="row">
+
+          <label>
+            Stock Status
+          </label>
+
+          <select id="stock">
+
+            <option value="in_stock">
+              ✅ In Stock
+            </option>
+
+            <option value="out_of_stock">
+              ❌ Out of Stock
+            </option>
+
+            <option value="coming_soon">
+              🕒 Coming Soon
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- PHOTOS -->
+
+        <div class="row">
+
+          <label>
+            Product photos (multiple)
+          </label>
+
+          <input
+            id="photo"
+            type="file"
+            accept="image/*"
+            multiple
+            onchange="previewPhotos(event)"
+          >
+
+          <div class="help">
+
+            Add 1–5 photos for one product.
+
+            When editing, selecting new photos will replace
+            the old product photos.
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="previews"
+          style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px"
+        ></div>
+
       </div>
+
+
+      <!-- RIGHT SIDE -->
+
+      <div>
+
+        <div
+          class="help"
+          style="
+          background:#eef4ff;
+          border:1px solid #d5e2ff;
+          padding:15px;
+          border-radius:10px
+          "
+        >
+
+          <b>What happens when you Publish?</b>
+
+          <br><br>
+
+          1. Product photos are uploaded to GitHub.
+
+          <br><br>
+
+          2. <code>products.json</code> is updated automatically.
+
+          <br><br>
+
+          3. GitHub Pages rebuilds your website.
+
+          <br><br>
+
+          4. New product appears on your live website.
+
+          <br><br>
+
+          5. MRP, Offer Price and You Save are shown automatically.
+
+        </div>
+
+
+        <button
+          id="publishBtn"
+          class="btn green"
+          style="width:100%;margin-top:18px"
+          onclick="publishProduct()"
+        >
+          🚀 Publish Product to GitHub
+        </button>
+
+
+        <button
+          id="cancelEditBtn"
+          class="btn gray"
+          style="width:100%;margin-top:8px;display:none"
+          onclick="cancelEdit()"
+        >
+          ✖️ Cancel Edit
+        </button>
+
+
+        <div
+          id="status"
+          class="status"
+        >
+          Ready.
+        </div>
+
+      </div>
+
     </div>
+
   </div>
+
+
+  <!-- CURRENT PRODUCTS -->
 
   <div class="panel">
-    <h2>🪖 Current Products</h2>
-    <div id="products" class="list"></div>
+
+    <h2>
+      🪖 Current Products
+    </h2>
+
+    <div
+      id="products"
+      class="list"
+    ></div>
+
   </div>
+
 </div>
+
 
 <script>
-let products=[];
-let connected=false;
-let editIndex=-1;
 
-const $=id=>document.getElementById(id);
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function headers(){return {'Accept':'application/vnd.github+json','Authorization':'Bearer '+$('token').value.trim(),'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'}}
+let products = [];
+
+let connected = false;
+
+let editIndex = -1;
+
+
+const $ = id =>
+  document.getElementById(id);
+
+
+function esc(s){
+
+  return String(s ?? '').replace(
+    /[&<>"']/g,
+    m => ({
+      '&':'&amp;',
+      '<':'&lt;',
+      '>':'&gt;',
+      '"':'&quot;',
+      "'":'&#39;'
+    }[m])
+  );
+
+}
+
+
+function headers(){
+
+  return {
+
+    'Accept':
+      'application/vnd.github+json',
+
+    'Authorization':
+      'Bearer ' + $('token').value.trim(),
+
+    'X-GitHub-Api-Version':
+      '2022-11-28',
+
+    'Content-Type':
+      'application/json'
+
+  };
+
+}
+
 
 async function api(path,opts={}){
-  const r=await fetch('https://api.github.com'+path,{...opts,headers:{...headers(),...(opts.headers||{})}});
-  const data=await r.json().catch(()=>({}));
-  if(!r.ok) throw new Error(data.message||('GitHub API error '+r.status));
-  return data;
-}
 
-async function connect(){
-  const st = document.getElementById('connection');
-
-if (!st) {
-  console.error('Connection box not found');
-  return;
-}
-
-st.className = 'status';
-st.textContent = 'Connecting...';
-  try{
-   const tokenEl = document.getElementById('token');
-const ownerEl = document.getElementById('owner');
-const repoEl = document.getElementById('repo');
-
-if (!tokenEl || !ownerEl || !repoEl) {
-  throw new Error('Token, username or repository field not found.');
-}
-
-const token = tokenEl.value.trim();
-const owner = ownerEl.value.trim();
-const repo = repoEl.value.trim();
-    if(!token){
-      throw new Error('Paste your GitHub token first.');
-    }
-
-    if(!owner || !repo){
-      throw new Error('Enter GitHub username and repository name.');
-    }
-
-    const response = await fetch(
-      `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`,
+  const r =
+    await fetch(
+      'https://api.github.com' + path,
       {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/vnd.github+json',
-          'Authorization': `Bearer ${token}`,
-          'X-GitHub-Api-Version': '2022-11-28'
+        ...opts,
+
+        headers:{
+          ...headers(),
+          ...(opts.headers || {})
         }
+
       }
     );
 
-    const data = await response.json();
+  const data =
+    await r.json().catch(() => ({}));
+
+  if(!r.ok){
+
+    throw new Error(
+      data.message ||
+      ('GitHub API error ' + r.status)
+    );
+
+  }
+
+  return data;
+
+}
+
+
+async function connect(){
+
+  const st =
+    $('connection');
+
+  st.className =
+    'status';
+
+  st.textContent =
+    'Connecting...';
+
+
+  try{
+
+    const token =
+      $('token').value.trim();
+
+    const owner =
+      $('owner').value.trim();
+
+    const repo =
+      $('repo').value.trim();
+
+
+    if(!token){
+
+      throw new Error(
+        'Paste your GitHub token first.'
+      );
+
+    }
+
+
+    if(!owner || !repo){
+
+      throw new Error(
+        'Enter GitHub username and repository name.'
+      );
+
+    }
+
+
+    const response =
+      await fetch(
+        `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`,
+        {
+          method:'GET',
+
+          headers:{
+            'Accept':
+              'application/vnd.github+json',
+
+            'Authorization':
+              `Bearer ${token}`,
+
+            'X-GitHub-Api-Version':
+              '2022-11-28'
+          }
+        }
+      );
+
+
+    const data =
+      await response.json();
+
 
     if(!response.ok){
+
       throw new Error(
-        data.message || `GitHub API error (${response.status})`
+        data.message ||
+        `GitHub API error (${response.status})`
       );
+
     }
+
 
     connected = true;
 
-    st.className = 'status ok';
-    st.textContent = `Connected to ${data.full_name} ✓`;
+
+    st.className =
+      'status ok';
+
+    st.textContent =
+      `Connected to ${data.full_name} ✓`;
+
 
     await loadProducts();
 
+
   }catch(e){
+
     connected = false;
-    st.className = 'status err';
-    st.textContent = `Connection failed: ${e.message}`;
-  }
-}
-async function getFile(path){
-  try{return await api('/repos/'+encodeURIComponent($('owner').value.trim())+'/'+encodeURIComponent($('repo').value.trim())+'/contents/'+path+'?ref=main')}
-  catch(e){if(e.message.includes('Not Found'))return null;throw e}
-}
-function decodeContent(s){
-  return decodeURIComponent(escape(atob(s.replace(/\n/g,''))));
-}
-function encodeContent(s){
-  return btoa(unescape(encodeURIComponent(s)));
-}
-async function loadProducts(){
-  const f=await getFile('products.json');
-  products=f?JSON.parse(decodeContent(f.content)):[]; products=products.map(p=>({...p,stock:p.stock||'in_stock'})); render();
-}
-function render(){
-  $('products').innerHTML=products.length?products.map((p,i)=>`<div class="card"><img src="${esc(p.image)}" onerror="this.style.opacity=.25"><span class="tag">${esc(p.category)}</span><div><b>${esc(p.name)}</b></div><div class="price">₹${esc(p.price)}</div><span class="stock ${p.stock==='in_stock'?'in':p.stock==='out_of_stock'?'out':'soon'}">${p.stock==='in_stock'?'✅ In Stock':p.stock==='out_of_stock'?'❌ Out of Stock':'🕒 Coming Soon'}</span><div style="display:flex;gap:6px;margin-top:10px"><button class="btn blue" onclick="editProduct(${i})">✏️ Edit</button><button class="btn danger" onclick="deleteProduct(${i})">🗑️ Delete</button></div></div>`).join(''):'<div class="help">No products found.</div>';
-}
-function previewPhotos(e){
-  const files=[...e.target.files];
-  const box=$('previews');
-  box.innerHTML='';
 
-  if(files.length>5){
-    e.target.value='';
-    alert('Maximum 5 photos allowed.');
-    return;
-  }
-
-  files.forEach(file=>{
-    const img=document.createElement('img');
-    img.src=URL.createObjectURL(file);
-    img.style.width='120px';
-    img.style.height='120px';
-    img.style.objectFit='contain';
-    img.style.background='#f2f4f7';
-    img.style.borderRadius='10px';
-    box.appendChild(img);
-  });
-}
-function safeFileName(n){
-  return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.'+n.split('.').pop().toLowerCase();
-}
-
-function editProduct(i){
-  const p=products[i]; editIndex=i;
-  $('name').value=p.name||''; $('price').value=p.price||''; $('category').value=p.category||'Full Face';
-  $('description').value=p.description||''; $('stock').value=p.stock||'in_stock';
-  $('photo').value=''; $('preview').style.display='none';
-  window.scrollTo({top:0,behavior:'smooth'});
-  document.querySelector('h2').textContent='✏️ Edit Product';
-}
-async function updateProductOnGithub(i, messageName='Product'){
-  const existing=await getFile('products.json');
-
-  const body={
-    message:'Update product: '+messageName,
-    content:encodeContent(JSON.stringify(products,null,2)),
-    branch:'main'
-  };
-
-  if(existing) body.sha=existing.sha;
-
-  await api(
-    '/repos/'+encodeURIComponent($('owner').value.trim())+
-    '/'+encodeURIComponent($('repo').value.trim())+
-    '/contents/products.json',
-    {
-      method:'PUT',
-      body:JSON.stringify(body)
-    }
-  );
-}
-async function deleteProduct(i){
-  const p=products[i];
-
-  if(!confirm('Delete '+p.name+' from the website?')) return;
-  const st=$('status'); st.className='status'; st.textContent='Deleting…';
-  try{
-    if(!connected) await connect();
-    if(!connected) throw new Error('Connect to GitHub first.');
-    products.splice(i,1);
-    await updateProductOnGithub(i);
-    st.className='status ok'; st.textContent='Deleted successfully ✓\\nThe product was removed from products.json. GitHub Pages will update shortly.';
-    render();
-  }catch(e){st.className='status err';st.textContent='Delete failed: '+e.message}
-}
-async function publishProduct(){
-  const st = $('status');
-  st.className = 'status';
-  st.textContent = 'Publishing…';
-
-  try {
-    if(!connected) await connect();
-    if(!connected) throw new Error('Connect to GitHub first.');
-
-    const files = [...$('photo').files];
-
-    const name = $('name').value.trim();
-    const price = $('price').value.trim();
-    const category = $('category').value;
-    const desc = $('description').value.trim();
-    const stock = $('stock').value;
-
-    if(!name || !price || !files.length){
-      throw new Error('Enter product name, price and choose at least one photo.');
-    }
-
-    if(files.length > 5){
-      throw new Error('Maximum 5 photos allowed for one product.');
-    }
-
-    for(const file of files){
-      if(file.size > 8 * 1024 * 1024){
-        throw new Error(file.name + ' is larger than 8 MB.');
-      }
-    }
-
-    const imagePaths = [];
-
-    for(const file of files){
-
-      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
-
-      const filename =
-        safeFileName(name) + '-' +
-        Date.now() + '-' +
-        Math.random().toString(36).substring(2,7) +
-        '.' + ext;
-
-      const path = 'products/' + filename;
-
-      const bytes = new Uint8Array(await file.arrayBuffer());
-
-      let binary = '';
-      const chunk = 0x8000;
-
-      for(let i=0; i<bytes.length; i+=chunk){
-        binary += String.fromCharCode(
-          ...bytes.subarray(i, i+chunk)
-        );
-      }
-
-      await api(
-        '/repos/' +
-        encodeURIComponent($('owner').value.trim()) +
-        '/' +
-        encodeURIComponent($('repo').value.trim()) +
-        '/contents/' +
-        path,
-        {
-          method:'PUT',
-          body:JSON.stringify({
-            message:'Add product image: ' + name,
-            content:btoa(binary),
-            branch:'main'
-          })
-        }
-      );
-
-      imagePaths.push(path);
-    }
-
-    const product = {
-      name:name,
-      price:price,
-      category:category,
-      images:imagePaths,
-      image:imagePaths[0],
-      description:desc,
-      stock:stock,
-      active:true
-    };
-
-    products.push(product);
-
-    const existing = await getFile('products.json');
-
-    const body = {
-      message:'Add product: ' + name,
-      content:encodeContent(
-        JSON.stringify(products,null,2)
-      ),
-      branch:'main'
-    };
-
-    if(existing){
-      body.sha = existing.sha;
-    }
-
-    await api(
-      '/repos/' +
-      encodeURIComponent($('owner').value.trim()) +
-      '/' +
-      encodeURIComponent($('repo').value.trim()) +
-      '/contents/products.json',
-      {
-        method:'PUT',
-        body:JSON.stringify(body)
-      }
-    );
-
-    st.className = 'status ok';
+    st.className =
+      'status err';
 
     st.textContent =
-      'Published successfully ✓\n' +
-      files.length + ' photo(s) uploaded to GitHub.\n' +
-      'GitHub Pages will update shortly.';
+      `Connection failed: ${e.message}`;
 
-    render();
+  }
 
-    $('name').value = '';
-    $('price').value = '';
-    $('description').value = '';
-    $('photo').value = '';
-    $('previews').innerHTML = '';
-    $('stock').value = 'in_stock';
+}
+
+
+async function getFile(path){
+
+  try{
+
+    return await api(
+      '/repos/' +
+      encodeURIComponent(
+        $('owner').value.trim()
+      ) +
+      '/' +
+      encodeURIComponent(
+        $('repo').value.trim()
+      ) +
+      '/contents/' +
+      path +
+      '?ref=main'
+    );
 
   }catch(e){
 
-    st.className = 'status err';
-    st.textContent = 'Publish failed: ' + e.message;
+    if(
+      e.message.includes('Not Found')
+    ){
+
+      return null;
+
+    }
+
+    throw e;
 
   }
+
 }
+
+
+function decodeContent(s){
+
+  return decodeURIComponent(
+    escape(
+      atob(
+        s.replace(/\n/g,'')
+      )
+    )
+  );
+
+}
+
+
+function encodeContent(s){
+
+  return btoa(
+    unescape(
+      encodeURIComponent(s)
+    )
+  );
+
+}
+
+
+async function loadProducts(){
+
+  const f =
+    await getFile('products.json');
+
+
+  products =
+    f
+      ? JSON.parse(
+          decodeContent(f.content)
+        )
+      : [];
+
+
+  products =
+    products.map(p => ({
+
+      ...p,
+
+      stock:
+        p.stock || 'in_stock',
+
+      brand:
+        p.brand || ''
+
+    }));
+
+
+  render();
+
+}
+
+
+function money(value){
+
+  return Number(
+    value || 0
+  ).toLocaleString('en-IN');
+
+}
+
+
+function render(){
+
+  $('products').innerHTML =
+    products.length
+
+    ?
+
+    products.map((p,i) => {
+
+      const mrp =
+        Number(p.mrp || 0);
+
+      const price =
+        Number(p.price || 0);
+
+      const save =
+        mrp > price
+          ? mrp - price
+          : 0;
+
+
+      return `
+
+      <div class="card">
+
+        <img
+          src="${esc(p.image || '')}"
+          onerror="this.style.opacity=.25"
+        >
+
+
+        <span class="tag">
+          ${esc(p.category || '')}
+        </span>
+
+
+        <div
+          class="card-brand"
+        >
+          ${esc(p.brand || '')}
+        </div>
+
+
+        <div style="margin-top:3px">
+          <b>
+            ${esc(p.name || '')}
+          </b>
+        </div>
+
+
+        <div class="price-box">
+
+          ${
+            mrp > 0
+            ?
+            `
+            <div class="mrp">
+              MRP
+              <span>
+                ₹${money(mrp)}
+              </span>
+            </div>
+            `
+            :
+            ''
+          }
+
+
+          <div class="offer-price">
+            ₹${money(price)}
+          </div>
+
+
+          ${
+            save > 0
+            ?
+            `
+            <div class="save">
+              💰 You Save ₹${money(save)}
+            </div>
+            `
+            :
+            ''
+          }
+
+        </div>
+
+
+        <span
+          class="stock ${
+            p.stock === 'in_stock'
+              ? 'in'
+              : p.stock === 'out_of_stock'
+                ? 'out'
+                : 'soon'
+          }"
+        >
+
+          ${
+            p.stock === 'in_stock'
+              ? '✅ In Stock'
+              : p.stock === 'out_of_stock'
+                ? '❌ Out of Stock'
+                : '🕒 Coming Soon'
+          }
+
+        </span>
+
+
+        <div
+          style="
+          display:flex;
+          gap:6px;
+          margin-top:10px
+          "
+        >
+
+          <button
+            class="btn blue"
+            onclick="editProduct(${i})"
+          >
+            ✏️ Edit
+          </button>
+
+
+          <button
+            class="btn danger"
+            onclick="deleteProduct(${i})"
+          >
+            🗑️ Delete
+          </button>
+
+        </div>
+
+      </div>
+
+      `;
+
+    }).join('')
+
+    :
+
+    '<div class="help">No products found.</div>';
+
+}
+
+
+function previewPhotos(e){
+
+  const files =
+    [...e.target.files];
+
+  const box =
+    $('previews');
+
+  box.innerHTML = '';
+
+
+  if(files.length > 5){
+
+    e.target.value = '';
+
+    alert(
+      'Maximum 5 photos allowed.'
+    );
+
+    return;
+
+  }
+
+
+  files.forEach(file => {
+
+    const img =
+      document.createElement('img');
+
+
+    img.src =
+      URL.createObjectURL(file);
+
+
+    img.style.width =
+      '120px';
+
+    img.style.height =
+      '120px';
+
+    img.style.objectFit =
+      'contain';
+
+    img.style.background =
+      '#f2f4f7';
+
+    img.style.borderRadius =
+      '10px';
+
+
+    box.appendChild(img);
+
+  });
+
+}
+
+
+function safeFileName(n){
+
+  const originalExt =
+    n.split('.').pop()
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g,'');
+
+
+  const base =
+    n.substring(
+      0,
+      n.lastIndexOf('.')
+    ) || n;
+
+
+  return (
+    base
+      .toLowerCase()
+      .replace(
+        /[^a-z0-9]+/g,
+        '-'
+      )
+      .replace(
+        /^-|-$/g,
+        ''
+      )
+    +
+    '.' +
+    originalExt
+  );
+
+}
+
+
+function editProduct(i){
+
+  const p =
+    products[i];
+
+
+  editIndex = i;
+
+
+  $('brand').value =
+    p.brand || '';
+
+
+  $('name').value =
+    p.name || '';
+
+
+  $('mrp').value =
+    p.mrp || '';
+
+
+  $('price').value =
+    p.price || '';
+
+
+  $('category').value =
+    p.category || 'Full Face';
+
+
+  $('description').value =
+    p.description || '';
+
+
+  $('stock').value =
+    p.stock || 'in_stock';
+
+
+  $('photo').value =
+    '';
+
+  $('previews').innerHTML =
+    '';
+
+
+  $('formTitle').textContent =
+    '✏️ Edit Product';
+
+
+  $('editNotice').style.display =
+    'block';
+
+
+  $('publishBtn').textContent =
+    '💾 Update Product';
+
+
+  $('publishBtn').className =
+    'btn blue';
+
+
+  $('cancelEditBtn').style.display =
+    'block';
+
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+
+}
+
+
+function cancelEdit(){
+
+  editIndex = -1;
+
+
+  $('formTitle').textContent =
+    '➕ Add Product';
+
+
+  $('editNotice').style.display =
+    'none';
+
+
+  $('publishBtn').textContent =
+    '🚀 Publish Product to GitHub';
+
+
+  $('publishBtn').className =
+    'btn green';
+
+
+  $('cancelEditBtn').style.display =
+    'none';
+
+
+  clearForm();
+
+}
+
+
+function clearForm(){
+
+  $('brand').value =
+    '';
+
+  $('name').value =
+    '';
+
+  $('mrp').value =
+    '';
+
+  $('price').value =
+    '';
+
+  $('description').value =
+    '';
+
+  $('photo').value =
+    '';
+
+  $('previews').innerHTML =
+    '';
+
+  $('stock').value =
+    'in_stock';
+
+}
+
+
+async function updateProductsFile(message){
+
+  const existing =
+    await getFile(
+      'products.json'
+    );
+
+
+  const body = {
+
+    message:
+      message,
+
+    content:
+      encodeContent(
+        JSON.stringify(
+          products,
+          null,
+          2
+        )
+      ),
+
+    branch:'main'
+
+  };
+
+
+  if(existing){
+
+    body.sha =
+      existing.sha;
+
+  }
+
+
+  await api(
+
+    '/repos/' +
+    encodeURIComponent(
+      $('owner').value.trim()
+    ) +
+    '/' +
+    encodeURIComponent(
+      $('repo').value.trim()
+    ) +
+    '/contents/products.json',
+
+    {
+
+      method:'PUT',
+
+      body:
+        JSON.stringify(body)
+
+    }
+
+  );
+
+}
+
+
+async function uploadPhotos(
+  files,
+  name
+){
+
+  const imagePaths = [];
+
+
+  for(const file of files){
+
+    if(
+      file.size >
+      8 * 1024 * 1024
+    ){
+
+      throw new Error(
+        file.name +
+        ' is larger than 8 MB.'
+      );
+
+    }
+
+
+    const ext =
+      (
+        file.name
+          .split('.')
+          .pop() ||
+        'jpg'
+      )
+      .toLowerCase();
+
+
+    const filename =
+
+      safeFileName(name)
+      .replace(/\.[^.]+$/,'')
+      +
+      '-' +
+      Date.now()
+      +
+      '-' +
+      Math.random()
+        .toString(36)
+        .substring(2,7)
+      +
+      '.' +
+      ext;
+
+
+    const path =
+      'products/' +
+      filename;
+
+
+    const bytes =
+      new Uint8Array(
+        await file.arrayBuffer()
+      );
+
+
+    let binary = '';
+
+    const chunk =
+      0x8000;
+
+
+    for(
+      let i=0;
+      i<bytes.length;
+      i+=chunk
+    ){
+
+      binary +=
+        String.fromCharCode(
+          ...bytes.subarray(
+            i,
+            i+chunk
+          )
+        );
+
+    }
+
+
+    await api(
+
+      '/repos/' +
+      encodeURIComponent(
+        $('owner').value.trim()
+      ) +
+      '/' +
+      encodeURIComponent(
+        $('repo').value.trim()
+      ) +
+      '/contents/' +
+      path,
+
+      {
+
+        method:'PUT',
+
+        body:
+          JSON.stringify({
+
+            message:
+              'Add product image: ' +
+              name,
+
+            content:
+              btoa(binary),
+
+            branch:'main'
+
+          })
+
+      }
+
+    );
+
+
+    imagePaths.push(path);
+
+  }
+
+
+  return imagePaths;
+
+}
+
+
+async function publishProduct(){
+
+  const st =
+    $('status');
+
+
+  st.className =
+    'status';
+
+  st.textContent =
+    editIndex >= 0
+      ? 'Updating product…'
+      : 'Publishing…';
+
+
+  try{
+
+    if(!connected){
+
+      await connect();
+
+    }
+
+
+    if(!connected){
+
+      throw new Error(
+        'Connect to GitHub first.'
+      );
+
+    }
+
+
+    const files =
+      [...$('photo').files];
+
+
+    const brand =
+      $('brand').value.trim();
+
+
+    const name =
+      $('name').value.trim();
+
+
+    const mrp =
+      $('mrp').value.trim();
+
+
+    const price =
+      $('price').value.trim();
+
+
+    const category =
+      $('category').value;
+
+
+    const desc =
+      $('description').value.trim();
+
+
+    const stock =
+      $('stock').value;
+
+
+    /* VALIDATION */
+
+    if(!brand){
+
+      throw new Error(
+        'Enter Brand / Company name.'
+      );
+
+    }
+
+
+    if(!name){
+
+      throw new Error(
+        'Enter Product / Model name.'
+      );
+
+    }
+
+
+    if(!mrp){
+
+      throw new Error(
+        'Enter MRP.'
+      );
+
+    }
+
+
+    if(!price){
+
+      throw new Error(
+        'Enter Offer Price.'
+      );
+
+    }
+
+
+    if(
+      Number(mrp) < 0 ||
+      Number(price) < 0
+    ){
+
+      throw new Error(
+        'Price cannot be negative.'
+      );
+
+    }
+
+
+    if(
+      editIndex < 0 &&
+      !files.length
+    ){
+
+      throw new Error(
+        'Choose at least one product photo.'
+      );
+
+    }
+
+
+    if(files.length > 5){
+
+      throw new Error(
+        'Maximum 5 photos allowed.'
+      );
+
+    }
+
+
+    /* UPLOAD NEW PHOTOS */
+
+    let imagePaths = [];
+
+
+    if(files.length){
+
+      imagePaths =
+        await uploadPhotos(
+          files,
+          name
+        );
+
+    }
+
+
+    /* EDIT EXISTING PRODUCT */
+
+    if(editIndex >= 0){
+
+      const oldProduct =
+        products[editIndex];
+
+
+      products[editIndex] = {
+
+        ...oldProduct,
+
+        brand:
+          brand,
+
+        name:
+          name,
+
+        mrp:
+          mrp,
+
+        price:
+          price,
+
+        category:
+          category,
+
+        description:
+          desc,
+
+        stock:
+          stock,
+
+        active:
+          true
+
+      };
+
+
+      if(imagePaths.length){
+
+        products[editIndex].images =
+          imagePaths;
+
+        products[editIndex].image =
+          imagePaths[0];
+
+      }
+
+
+      await updateProductsFile(
+        'Update product: ' +
+        name
+      );
+
+
+      st.className =
+        'status ok';
+
+
+      st.textContent =
+        'Product updated successfully ✓\n' +
+        'MRP, Offer Price and product details updated.\n' +
+        'GitHub Pages will update shortly.';
+
+
+    }
+
+
+    /* ADD NEW PRODUCT */
+
+    else{
+
+      const product = {
+
+        brand:
+          brand,
+
+        name:
+          name,
+
+        mrp:
+          mrp,
+
+        price:
+          price,
+
+        category:
+          category,
+
+        images:
+          imagePaths,
+
+        image:
+          imagePaths[0],
+
+        description:
+          desc,
+
+        stock:
+          stock,
+
+        active:
+          true
+
+      };
+
+
+      /*
+       IMPORTANT:
+       Existing products remain untouched.
+       New product is only added to the end.
+      */
+
+      products.push(
+        product
+      );
+
+
+      await updateProductsFile(
+        'Add product: ' +
+        name
+      );
+
+
+      st.className =
+        'status ok';
+
+
+      st.textContent =
+        'Published successfully ✓\n' +
+        files.length +
+        ' photo(s) uploaded to GitHub.\n' +
+        'GitHub Pages will update shortly.';
+
+    }
+
+
+    render();
+
+
+    cancelEdit();
+
+
+  }catch(e){
+
+    st.className =
+      'status err';
+
+    st.textContent =
+      (
+        editIndex >= 0
+          ? 'Update failed: '
+          : 'Publish failed: '
+      ) +
+      e.message;
+
+  }
+
+}
+
+
+async function deleteProduct(i){
+
+  const p =
+    products[i];
+
+
+  if(
+    !confirm(
+      'Delete ' +
+      p.name +
+      ' from the website?'
+    )
+  ){
+
+    return;
+
+  }
+
+
+  const st =
+    $('status');
+
+
+  st.className =
+    'status';
+
+  st.textContent =
+    'Deleting…';
+
+
+  try{
+
+    if(!connected){
+
+      await connect();
+
+    }
+
+
+    if(!connected){
+
+      throw new Error(
+        'Connect to GitHub first.'
+      );
+
+    }
+
+
+    /*
+      Remove ONLY the selected product.
+      All other products stay safe.
+    */
+
+    products.splice(
+      i,
+      1
+    );
+
+
+    await updateProductsFile(
+      'Delete product: ' +
+      p.name
+    );
+
+
+    st.className =
+      'status ok';
+
+
+    st.textContent =
+      'Deleted successfully ✓\n' +
+      'Only the selected product was removed.';
+
+
+    render();
+
+
+  }catch(e){
+
+    st.className =
+      'status err';
+
+    st.textContent =
+      'Delete failed: ' +
+      e.message;
+
+  }
+
+}
+
 </script>
-</body></html>
+
+</body>
+</html>
