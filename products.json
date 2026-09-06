@@ -14,7 +14,8 @@
     "image": "products/axor-apex-white-and-red.axor apex white and red-1787663138394-vgor2.jpg",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Studd Helios",
@@ -31,24 +32,26 @@
     "image": "products/studd-helios.studd helios-1787664149662-ae3r9.webp",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
-    "name": "Studds Helios Batman red and black",
-    "price": "3799",
-    "mrp": "3649",
+    "name": "Helios Batman red and black",
+    "price": "3649",
+    "mrp": "3997",
     "category": "Full Face",
     "images": [
-      "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666396771-i9iy5.jpg",
-      "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666400100-sdoc2.webp",
-      "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666402337-gdwxp.webp",
-      "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666404542-dmwxy.webp",
-      "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666406827-ulxgf.webp"
+      "products/helios-batman-red-and-black-1788683085602-ihbf8.jpeg",
+      "products/helios-batman-red-and-black-1788683088113-akxex.jpeg",
+      "products/helios-batman-red-and-black-1788683089830-4mxeq.jpeg",
+      "products/helios-batman-red-and-black-1788683091269-js7vz.jpeg",
+      "products/helios-batman-red-and-black-1788683092940-nd6ug.jpeg"
     ],
-    "image": "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666396771-i9iy5.jpg",
+    "image": "products/helios-batman-red-and-black-1788683085602-ihbf8.jpeg",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": "STUDDS"
   },
   {
     "name": "Studds Helios plain black",
@@ -65,7 +68,8 @@
     "image": "products/studds-helios-plain-black.studds helios plain black-1787666457643-cgx89.webp",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Studds Helios blue and white",
@@ -82,7 +86,8 @@
     "image": "products/studds-helios-blue-and-white.studds helios blue and white-1787666536134-gzzj5.webp",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Studds Helios white and black",
@@ -99,7 +104,8 @@
     "image": "products/studds-helios-white-and-black.studds helios white and black-1787666609042-5095f.webp",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Studds Helios black and neon",
@@ -115,7 +121,8 @@
     "image": "products/studds-helios-black-and-neon.studds helios black and neon-1787666938078-7rcuy.webp",
     "description": "ISI certified full face helmet",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor Apex blue Eagle",
@@ -132,7 +139,8 @@
     "image": "products/axor-apex-blue-eagle.axor apex blue eagle-1787667015594-15m9y.png",
     "description": "Size [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor Apex red and black",
@@ -149,7 +157,8 @@
     "image": "products/axor-apex-red-and-black.axor apex red and black-1787667100050-zmu0z.jpg",
     "description": "Size [S,M,L, XL, XXL",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor Apex gold head",
@@ -166,7 +175,8 @@
     "image": "products/axor-apex-gold-head.axor apex gold head-1787667171458-or17q.png",
     "description": "Size [ S,M,L,XL, XXl]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor dual spoiler white and blue",
@@ -183,7 +193,8 @@
     "image": "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667260234-6riw6.jpg",
     "description": "",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor dual spoiler Gry and red",
@@ -200,7 +211,8 @@
     "image": "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667373380-810pg.jpg",
     "description": "",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Axor Apex gold snek",
@@ -217,7 +229,8 @@
     "image": "products/axor-apex-gold-snek.axor apex gold snek-1787667862793-pnhb5.webp",
     "description": "",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16  BLACK WITH WHITE BLUE",
@@ -234,7 +247,8 @@
     "image": "products/steelbird-ign-16-black-with-white-blue.steelbird ign 16  black with white blue-1787724720422-s56cd.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16 NAVY BLUE WITH WHITE GREY",
@@ -251,7 +265,8 @@
     "image": "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724791164-hxp10.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16 TITANIUM GREY WITH ORANGE RED",
@@ -268,7 +283,8 @@
     "image": "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724867331-0lkli.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16  WARM GREY WITH RED ORANGE",
@@ -285,7 +301,8 @@
     "image": "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724912853-turc4.png",
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16  METAL BLUE WITH RED ORANGE",
@@ -302,7 +319,8 @@
     "image": "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725042378-ak3ap.png",
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "Steelbird IGN 16",
@@ -319,7 +337,8 @@
     "image": "products/steelbird-ign-16.steelbird ign 16-1787726225797-cusrw.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK Stellar G L 153",
@@ -336,7 +355,8 @@
     "image": "products/smk-stellar-g-l-153.smk stellar g l 153-1788074236768-94w1s.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 257C",
@@ -353,7 +373,8 @@
     "image": "products/smk-stellar-gl-257c.smk stellar gl 257c-1788074352805-dgj7l.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 657",
@@ -370,7 +391,8 @@
     "image": "products/smk-stellar-gl-657.smk stellar gl 657-1788074448026-grn4e.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 257",
@@ -387,7 +409,8 @@
     "image": "products/smk-stellar-gl-257.smk stellar gl 257-1788074799284-z061z.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR MA 264",
@@ -404,7 +427,8 @@
     "image": "products/smk-stellar-ma-264.smk stellar ma 264-1788074926840-jwe5h.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 213",
@@ -421,7 +445,8 @@
     "image": "products/smk-stellar-gl-213.smk stellar gl 213-1788075182210-9rrxd.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 236",
@@ -438,7 +463,8 @@
     "image": "products/smk-stellar-gl-236.smk stellar gl 236-1788075286121-0y9f8.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 257C",
@@ -455,7 +481,8 @@
     "image": "products/smk-stellar-gl-257c.smk stellar gl 257c-1788075364664-86cmj.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR GL 256",
@@ -472,7 +499,8 @@
     "image": "products/smk-stellar-gl-256.smk stellar gl 256-1788075461962-46j23.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK STELLAR MA 266",
@@ -489,7 +517,8 @@
     "image": "products/smk-stellar-ma-266.smk stellar ma 266-1788075559272-jzzhe.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK TYPHOON RIVAL MA 266",
@@ -506,7 +535,8 @@
     "image": "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076039171-990bj.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK TYPHOON RIVAL GL 254C",
@@ -523,7 +553,8 @@
     "image": "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076353153-alroi.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "SMK TYPHOON RIVAL GL 256",
@@ -540,7 +571,8 @@
     "image": "products/smk-typhoon-rival-gl-256.smk typhoon rival gl 256-1788076423361-blq80.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER BLACK AND BLUE GLASSY",
@@ -557,7 +589,8 @@
     "image": "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077360458-pw2dd.webp",
     "description": "Sizes [M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER BLACK AND GREEN",
@@ -574,7 +607,8 @@
     "image": "products/studds-trooper-black-and-green.studds trooper black and green-1788077613238-9d8qq.webp",
     "description": "Sizes [S,M,L, XL ]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER BLACK AND ORENGE",
@@ -591,7 +625,8 @@
     "image": "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077833101-z2guj.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER BLACK AND WHITE",
@@ -608,7 +643,8 @@
     "image": "products/studds-trooper-black-and-white.studds trooper black and white-1788077997705-e3070.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER BLACK AND NEON YELLOW",
@@ -625,7 +661,8 @@
     "image": "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078091883-db6lc.webp",
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "STUDDS TROOPER GLOSSY BLACK",
@@ -642,7 +679,8 @@
     "image": "products/studds-trooper-glossy-black.studds trooper glossy black-1788078371099-e1mif.webp",
     "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR KYLO WHITE RED",
@@ -659,7 +697,8 @@
     "image": "products/axor-kylo-white-red.axor kylo white red-1788079090513-96io4.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR KYLO GRAY BLUE",
@@ -676,7 +715,8 @@
     "image": "products/axor-kylo-gray-blue.axor kylo gray blue-1788079194513-ir1rb.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR KYLO GREEN NEON YELLOW",
@@ -693,7 +733,8 @@
     "image": "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079292687-qbi5u.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR KYLO GLOSSY BLACK",
@@ -710,7 +751,8 @@
     "image": "products/axor-kylo-glossy-black.axor kylo glossy black-1788079403177-evjvh.png",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR DUAL SPOILER GLOSSY BLACK",
@@ -727,7 +769,8 @@
     "image": "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082252618-v6nbz.jpg",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   },
   {
     "name": "AXOR DUAL SPOILER BLACK AND GREEN",
@@ -744,6 +787,7 @@
     "image": "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082578316-qtls1.webp",
     "description": "Sizes [S,M,L, XL]",
     "stock": "in_stock",
-    "active": true
+    "active": true,
+    "brand": ""
   }
 ]
