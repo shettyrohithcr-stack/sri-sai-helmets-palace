@@ -837,6 +837,17 @@ setInterval(function () {
     text-align:center;
 }
 
+.mrp-line{
+    font-size:13px;
+    color:#777;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+.mrp-line span{
+    text-decoration:line-through;
+}
+
 .offer-label{
     font-size:10px;
     font-weight:800;
@@ -852,6 +863,13 @@ setInterval(function () {
     line-height:1.2;
 }
 
+.save-line{
+    margin-top:4px;
+    font-size:12px;
+    font-weight:800;
+    color:#168a35;
+}
+
 .offer-text{
     font-size:10px;
     font-weight:700;
@@ -860,6 +878,13 @@ setInterval(function () {
     letter-spacing:.5px;
 }
 
+@media(max-width:450px){
+
+    .offer-price{
+        font-size:19px;
+    }
+
+}
 /* ================= WHATSAPP BUTTON ================= */
 
 .product-order{
@@ -1135,17 +1160,37 @@ function displayProducts(products){
 
 
            <div class="product-price-box">
-    <div class="offer-label">SPECIAL OFFER</div>
+
+    <div class="mrp-line">
+        MRP
+        <span>₹${Number(product.mrp || 0).toLocaleString("en-IN")}</span>
+    </div>
+
+    <div class="offer-label">
+        SPECIAL OFFER
+    </div>
 
     <div class="offer-price">
-        ₹${Number(product.price).toLocaleString("en-IN")}
+        ₹${Number(product.price || 0).toLocaleString("en-IN")}
     </div>
+
+    ${
+        Number(product.mrp || 0) > Number(product.price || 0)
+        ? `
+        <div class="save-line">
+            💰 You Save ₹${(
+                Number(product.mrp) - Number(product.price)
+            ).toLocaleString("en-IN")}
+        </div>
+        `
+        : ""
+    }
 
     <div class="offer-text">
         OFFER PRICE
     </div>
-</div>
 
+</div>
 
            <div class="product-actions">
 
