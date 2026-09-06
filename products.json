@@ -3,7 +3,7 @@
     "name": "Axor Apex white and red",
     "price": "4699",
     "mrp": "5493",
-    "category": "Open Face",
+    "category": "Full Face",
     "images": [
       "products/axor-apex-white-and-red.axor apex white and red-1787663138394-vgor2.jpg",
       "products/axor-apex-white-and-red.axor apex white and red-1787663141393-lwl3x.jpg",
@@ -18,9 +18,9 @@
   },
   {
     "name": "Studd Helios",
-"price": "3498",
-"mrp": "3649",
-"category": "Full Face",
+    "price": "3498",
+    "mrp": "3649",
+    "category": "Full Face",
     "images": [
       "products/studd-helios.studd helios-1787664149662-ae3r9.webp",
       "products/studd-helios.studd helios-1787664153089-r8ec9.webp",
@@ -36,6 +36,7 @@
   {
     "name": "Studds Helios Batman red and black",
     "price": "3799",
+    "mrp": "3649",
     "category": "Full Face",
     "images": [
       "products/studds-helios-batman-red-and-black.studds helios batman red and black-1787666396771-i9iy5.jpg",
@@ -52,6 +53,7 @@
   {
     "name": "Studds Helios plain black",
     "price": "3099",
+    "mrp": "3649",
     "category": "Full Face",
     "images": [
       "products/studds-helios-plain-black.studds helios plain black-1787666457643-cgx89.webp",
@@ -68,6 +70,7 @@
   {
     "name": "Studds Helios blue and white",
     "price": "3692",
+    "mrp": "3649",
     "category": "Full Face",
     "images": [
       "products/studds-helios-blue-and-white.studds helios blue and white-1787666536134-gzzj5.webp",
@@ -84,6 +87,7 @@
   {
     "name": "Studds Helios white and black",
     "price": "3348",
+    "mrp": "3649",
     "category": "Full Face",
     "images": [
       "products/studds-helios-white-and-black.studds helios white and black-1787666609042-5095f.webp",
@@ -100,6 +104,7 @@
   {
     "name": "Studds Helios black and neon",
     "price": "3286",
+    "mrp": "3649",
     "category": "Full Face",
     "images": [
       "products/studds-helios-black-and-neon.studds helios black and neon-1787666938078-7rcuy.webp",
@@ -115,6 +120,7 @@
   {
     "name": "Axor Apex blue Eagle",
     "price": "4999",
+    "mrp": "5493",
     "category": "Full Face",
     "images": [
       "products/axor-apex-blue-eagle.axor apex blue eagle-1787667015594-15m9y.png",
@@ -131,7 +137,8 @@
   {
     "name": "Axor Apex red and black",
     "price": "4899",
-    "category": "Open Face",
+    "mrp": "5493",
+    "category": "Full Face",
     "images": [
       "products/axor-apex-red-and-black.axor apex red and black-1787667100050-zmu0z.jpg",
       "products/axor-apex-red-and-black.axor apex red and black-1787667102536-a08nw.jpg",
@@ -147,7 +154,8 @@
   {
     "name": "Axor Apex gold head",
     "price": "4786",
-    "category": "Open Face",
+    "mrp": "5493",
+    "category": "Full Face",
     "images": [
       "products/axor-apex-gold-head.axor apex gold head-1787667171458-or17q.png",
       "products/axor-apex-gold-head.axor apex gold head-1787667175588-91yrp.png",
@@ -163,6 +171,7 @@
   {
     "name": "Axor dual spoiler white and blue",
     "price": "7452",
+    "mrp": "7999",
     "category": "Full Face",
     "images": [
       "products/axor-dual-spoiler-white-and-blue.axor dual spoiler white and blue-1787667260234-6riw6.jpg",
@@ -179,6 +188,7 @@
   {
     "name": "Axor dual spoiler Gry and red",
     "price": "7289",
+    "mrp": "7999",
     "category": "Full Face",
     "images": [
       "products/axor-dual-spoiler-gry-and-red.axor dual spoiler gry and red-1787667373380-810pg.jpg",
@@ -195,6 +205,7 @@
   {
     "name": "Axor Apex gold snek",
     "price": "4789",
+    "mrp": "5493",
     "category": "Full Face",
     "images": [
       "products/axor-apex-gold-snek.axor apex gold snek-1787667862793-pnhb5.webp",
@@ -211,6 +222,7 @@
   {
     "name": "Steelbird IGN 16  BLACK WITH WHITE BLUE",
     "price": "5759",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16-black-with-white-blue.steelbird ign 16  black with white blue-1787724720422-s56cd.png",
@@ -227,6 +239,7 @@
   {
     "name": "Steelbird IGN 16 NAVY BLUE WITH WHITE GREY",
     "price": "5659",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16-navy-blue-with-white-grey.steelbird ign 16 navy blue with white grey-1787724791164-hxp10.png",
@@ -243,6 +256,7 @@
   {
     "name": "Steelbird IGN 16 TITANIUM GREY WITH ORANGE RED",
     "price": "5242",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16-titanium-grey-with-orange-red.steelbird ign 16 titanium grey with orange red-1787724867331-0lkli.png",
@@ -259,6 +273,7 @@
   {
     "name": "Steelbird IGN 16  WARM GREY WITH RED ORANGE",
     "price": "5489",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16-warm-grey-with-red-orange.steelbird ign 16  warm grey with red orange-1787724912853-turc4.png",
@@ -275,6 +290,7 @@
   {
     "name": "Steelbird IGN 16  METAL BLUE WITH RED ORANGE",
     "price": "5226",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16-metal-blue-with-red-orange.steelbird ign 16  metal blue with red orange-1787725042378-ak3ap.png",
@@ -291,6 +307,7 @@
   {
     "name": "Steelbird IGN 16",
     "price": "5599",
+    "mrp": "5999",
     "category": "Full Face",
     "images": [
       "products/steelbird-ign-16.steelbird ign 16-1787726225797-cusrw.png",
@@ -307,6 +324,7 @@
   {
     "name": "SMK Stellar G L 153",
     "price": "4299",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-g-l-153.smk stellar g l 153-1788074236768-94w1s.webp",
@@ -323,6 +341,7 @@
   {
     "name": "SMK STELLAR GL 257C",
     "price": "4099",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-257c.smk stellar gl 257c-1788074352805-dgj7l.webp",
@@ -339,6 +358,7 @@
   {
     "name": "SMK STELLAR GL 657",
     "price": "4259",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-657.smk stellar gl 657-1788074448026-grn4e.webp",
@@ -355,6 +375,7 @@
   {
     "name": "SMK STELLAR GL 257",
     "price": "3999",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-257.smk stellar gl 257-1788074799284-z061z.webp",
@@ -371,6 +392,7 @@
   {
     "name": "SMK STELLAR MA 264",
     "price": "4042",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-ma-264.smk stellar ma 264-1788074926840-jwe5h.webp",
@@ -387,6 +409,7 @@
   {
     "name": "SMK STELLAR GL 213",
     "price": "4089",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-213.smk stellar gl 213-1788075182210-9rrxd.webp",
@@ -403,6 +426,7 @@
   {
     "name": "SMK STELLAR GL 236",
     "price": "4286",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-236.smk stellar gl 236-1788075286121-0y9f8.webp",
@@ -419,6 +443,7 @@
   {
     "name": "SMK STELLAR GL 257C",
     "price": "4369",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-257c.smk stellar gl 257c-1788075364664-86cmj.webp",
@@ -435,6 +460,7 @@
   {
     "name": "SMK STELLAR GL 256",
     "price": "3986",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-gl-256.smk stellar gl 256-1788075461962-46j23.webp",
@@ -451,6 +477,7 @@
   {
     "name": "SMK STELLAR MA 266",
     "price": "3946",
+    "mrp": "4889",
     "category": "Full Face",
     "images": [
       "products/smk-stellar-ma-266.smk stellar ma 266-1788075559272-jzzhe.webp",
@@ -467,6 +494,7 @@
   {
     "name": "SMK TYPHOON RIVAL MA 266",
     "price": "4865",
+    "mrp": "5889",
     "category": "Full Face",
     "images": [
       "products/smk-typhoon-rival-ma-266.smk typhoon rival ma 266-1788076039171-990bj.webp",
@@ -483,6 +511,7 @@
   {
     "name": "SMK TYPHOON RIVAL GL 254C",
     "price": "4765",
+    "mrp": "5889",
     "category": "Full Face",
     "images": [
       "products/smk-typhoon-rival-gl-254c.smk typhoon rival gl 254c-1788076353153-alroi.webp",
@@ -499,6 +528,7 @@
   {
     "name": "SMK TYPHOON RIVAL GL 256",
     "price": "4689",
+    "mrp": "5889",
     "category": "Full Face",
     "images": [
       "products/smk-typhoon-rival-gl-256.smk typhoon rival gl 256-1788076423361-blq80.webp",
@@ -515,7 +545,8 @@
   {
     "name": "STUDDS TROOPER BLACK AND BLUE GLASSY",
     "price": "2066",
-    "category": "Full Face",
+    "mrp": "2493",
+    "category": "Modular",
     "images": [
       "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077360458-pw2dd.webp",
       "products/studds-trooper-black-and-blue-glassy.studds trooper black and blue glassy-1788077362720-sjbff.webp",
@@ -531,7 +562,8 @@
   {
     "name": "STUDDS TROOPER BLACK AND GREEN",
     "price": "2089",
-    "category": "Full Face",
+    "mrp": "2493",
+    "category": "Modular",
     "images": [
       "products/studds-trooper-black-and-green.studds trooper black and green-1788077613238-9d8qq.webp",
       "products/studds-trooper-black-and-green.studds trooper black and green-1788077616365-7wun0.webp",
@@ -547,7 +579,8 @@
   {
     "name": "STUDDS TROOPER BLACK AND ORENGE",
     "price": "2159",
-    "category": "Full Face",
+    "mrp": "2493",
+    "category": "Modular",
     "images": [
       "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077833101-z2guj.webp",
       "products/studds-trooper-black-and-orenge.studds trooper black and orenge-1788077835040-g20zo.webp",
@@ -563,6 +596,7 @@
   {
     "name": "STUDDS TROOPER BLACK AND WHITE",
     "price": "2196",
+    "mrp": "2493",
     "category": "Modular",
     "images": [
       "products/studds-trooper-black-and-white.studds trooper black and white-1788077997705-e3070.webp",
@@ -579,6 +613,7 @@
   {
     "name": "STUDDS TROOPER BLACK AND NEON YELLOW",
     "price": "2296",
+    "mrp": "2493",
     "category": "Modular",
     "images": [
       "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078091883-db6lc.webp",
@@ -588,13 +623,14 @@
       "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078100240-ts7xg.webp"
     ],
     "image": "products/studds-trooper-black-and-neon-yellow.studds trooper black and neon yellow-1788078091883-db6lc.webp",
-    "description": "Sizes [S,M,L, XL]",
+    "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
   },
   {
     "name": "STUDDS TROOPER GLOSSY BLACK",
     "price": "1999",
+    "mrp": "2493",
     "category": "Modular",
     "images": [
       "products/studds-trooper-glossy-black.studds trooper glossy black-1788078371099-e1mif.webp",
@@ -604,13 +640,14 @@
       "products/studds-trooper-glossy-black.studds trooper glossy black-1788078379258-n24s4.webp"
     ],
     "image": "products/studds-trooper-glossy-black.studds trooper glossy black-1788078371099-e1mif.webp",
-    "description": "Sizes [S,M,L, XL]",
+    "description": "Sizes [S,M,L, XL, XXL]",
     "stock": "in_stock",
     "active": true
   },
   {
     "name": "AXOR KYLO WHITE RED",
     "price": "3156",
+    "mrp": "4299",
     "category": "Open Face",
     "images": [
       "products/axor-kylo-white-red.axor kylo white red-1788079090513-96io4.png",
@@ -627,6 +664,7 @@
   {
     "name": "AXOR KYLO GRAY BLUE",
     "price": "2999",
+    "mrp": "4299",
     "category": "Open Face",
     "images": [
       "products/axor-kylo-gray-blue.axor kylo gray blue-1788079194513-ir1rb.png",
@@ -643,6 +681,7 @@
   {
     "name": "AXOR KYLO GREEN NEON YELLOW",
     "price": "3256",
+    "mrp": "4299",
     "category": "Open Face",
     "images": [
       "products/axor-kylo-green-neon-yellow.axor kylo green neon yellow-1788079292687-qbi5u.png",
@@ -659,6 +698,7 @@
   {
     "name": "AXOR KYLO GLOSSY BLACK",
     "price": "2959",
+    "mrp": "4299",
     "category": "Open Face",
     "images": [
       "products/axor-kylo-glossy-black.axor kylo glossy black-1788079403177-evjvh.png",
@@ -675,6 +715,7 @@
   {
     "name": "AXOR DUAL SPOILER GLOSSY BLACK",
     "price": "6999",
+    "mrp": "7999",
     "category": "Full Face",
     "images": [
       "products/axor-dual-spoiler-glossy-black.axor dual spoiler glossy black-1788082252618-v6nbz.jpg",
@@ -691,6 +732,7 @@
   {
     "name": "AXOR DUAL SPOILER BLACK AND GREEN",
     "price": "7369",
+    "mrp": "7999",
     "category": "Full Face",
     "images": [
       "products/axor-dual-spoiler-black-and-green.axor dual spoiler black and green-1788082578316-qtls1.webp",
