@@ -2593,163 +2593,639 @@ function checkoutWhatsApp(){
 updateCart();
 
 </script>
-    <!-- CUSTOMER REVIEWS -->
-<section id="reviews" style="padding:50px 20px;max-width:1100px;margin:auto;">
-  <h2 style="text-align:center;">⭐ CUSTOMER REVIEWS</h2>
+<!-- ================= CUSTOMER REVIEWS ================= -->
 
-  <div style="max-width:600px;margin:25px auto;">
-    <input id="reviewName" type="text" placeholder="Your Name"
-      style="width:100%;padding:14px;margin-bottom:12px;">
+<section id="reviews" class="reviews-section">
 
-    <div id="reviewStars" style="font-size:30px;margin-bottom:12px;">
+  <h2 class="reviews-title">⭐ CUSTOMER REVIEWS</h2>
+
+  <div class="review-form">
+
+    <input
+      id="reviewName"
+      type="text"
+      placeholder="Your Name"
+      autocomplete="name"
+    >
+
+    <div id="reviewStars" class="review-stars">
+
       <button type="button" onclick="setRating(1)">☆</button>
       <button type="button" onclick="setRating(2)">☆</button>
       <button type="button" onclick="setRating(3)">☆</button>
       <button type="button" onclick="setRating(4)">☆</button>
       <button type="button" onclick="setRating(5)">☆</button>
+
     </div>
 
-    <textarea id="reviewMessage" placeholder="Write your review..."
-      style="width:100%;height:120px;padding:14px;"></textarea>
+    <textarea
+      id="reviewMessage"
+      placeholder="Write your review..."
+    ></textarea>
 
-    <button type="button" onclick="submitReview()"
-      style="margin-top:12px;padding:14px 25px;">
+    <button
+      id="submitReviewBtn"
+      type="button"
+      onclick="submitReview()"
+    >
       SUBMIT REVIEW
     </button>
 
-    <p id="reviewStatus"></p>
+    <p id="reviewStatus" class="review-status"></p>
+
   </div>
 
   <div id="reviewsList"></div>
+
 </section>
-    <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import {
-    getFirestore,
-    collection,
-    addDoc,
-    getDocs,
-    query,
-    orderBy,
-    serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDyUlga1sJgO8Pd3kg_nZW2AEqon7Sec_Q",
-    authDomain: "sri-sai-stock-management.firebaseapp.com",
-    projectId: "sri-sai-stock-management",
-    storageBucket: "sri-sai-stock-management.firebasestorage.app",
-    messagingSenderId: "1011875932840",
-    appId: "1:1011875932840:web:1b5088d074b00f43bd309d",
-    measurementId: "G-8CE3Y14VRS"
-  };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+<style>
 
-  let selectedRating = 0;
+/* ================= CUSTOMER REVIEWS ================= */
 
-  window.setRating = function(rating) {
-    selectedRating = rating;
+.reviews-section{
+  padding:50px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    const buttons = document.querySelectorAll("#reviewStars button");
+.reviews-title{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:24px;
+  font-weight:800;
+}
 
-    buttons.forEach((button, index) => {
-      button.textContent = index < rating ? "★" : "☆";
-        button.style.color = index < rating ? "gold" : "#777";
-    });
-  };
+.review-form{
+  max-width:600px;
+  margin:25px auto 35px;
+}
 
-  window.submitReview = async function() {
-    const name = document.getElementById("reviewName").value.trim();
-    const message = document.getElementById("reviewMessage").value.trim();
-    const status = document.getElementById("reviewStatus");
+.review-form input,
+.review-form textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+  outline:none;
+}
 
-    if (!name) {
-      status.textContent = "Please enter your name.";
-      return;
-    }
+.review-form input:focus,
+.review-form textarea:focus{
+  border-color:#075fd1;
+}
 
-    if (selectedRating === 0) {
-      status.textContent = "Please select a star rating.";
-      return;
-    }
 
-    if (!message) {
-      status.textContent = "Please write your review.";
-      return;
-    }
+/* ⭐ STAR BUTTONS */
 
-    try {
-      status.textContent = "Submitting review...";
+.review-stars{
+  display:flex;
+  gap:3px;
+  margin:12px 0;
+}
 
-      await addDoc(collection(db, "reviews"), {
-        name: name,
-        rating: selectedRating,
-        message: message,
-        createdAt: serverTimestamp()
-      });
+.review-stars button{
+  border:0;
+  background:transparent;
+  padding:0 3px;
+  font-size:32px;
+  line-height:1;
+  color:#777;
+  cursor:pointer;
+}
 
-      document.getElementById("reviewName").value = "";
-      document.getElementById("reviewMessage").value = "";
-      setRating(0);
+.review-stars button.active{
+  color:#f5b400;
+}
 
-      status.textContent = "Thank you! Your review has been submitted. ⭐";
 
-      loadReviews();
+/* TEXTAREA */
 
-    } catch (error) {
-      console.error(error);
-      status.textContent = "Review submit failed. Please try again.";
-    }
-  };
+.review-form textarea{
+  height:120px;
+  resize:vertical;
+}
 
-  async function loadReviews() {
-    const list = document.getElementById("reviewsList");
 
-    try {
-      const q = query(
-        collection(db, "reviews"),
-        orderBy("createdAt", "desc")
-      );
+/* SUBMIT */
 
-      const snapshot = await getDocs(q);
+#submitReviewBtn{
+  margin-top:12px;
+  padding:14px 25px;
+  border:0;
+  border-radius:7px;
+  background:#075fd1;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
 
-      list.innerHTML = "";
+#submitReviewBtn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
 
-      snapshot.forEach((doc) => {
-        const review = doc.data();
+.review-status{
+  min-height:22px;
+  margin-top:10px;
+}
 
-        if (review.name === "Setup") return;
 
-        const card = document.createElement("div");
+/* REVIEW CARD */
 
-        card.style.cssText =
-          "background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px;margin:15px 0;box-shadow:0 2px 8px rgba(0,0,0,.08);";
+.review-card{
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:20px;
+  margin:15px 0;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
 
-        const name = document.createElement("h3");
-        name.textContent = review.name;
+.review-card h3{
+  margin:0 0 5px;
+  font-size:20px;
+}
 
-        const stars = document.createElement("div");
-        stars.textContent = "★".repeat(review.rating || 0);
-        stars.style.fontSize = "22px";
 
-        const message = document.createElement("p");
-        message.textContent = review.message;
+/* ⭐ DISPLAY STARS = GOLD */
 
-        card.appendChild(name);
-        card.appendChild(stars);
-        card.appendChild(message);
+.review-card .review-display-stars{
+  font-size:22px;
+  letter-spacing:1px;
+  color:#f5b400;
+  margin-bottom:6px;
+}
 
-        list.appendChild(card);
-      });
+.review-card p{
+  margin:0;
+  line-height:1.5;
+}
 
-    } catch (error) {
-      console.error("Error loading reviews:", error);
-    }
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .reviews-section{
+    padding:35px 12px;
   }
 
-  loadReviews();
+  .review-stars button{
+    font-size:30px;
+  }
+
+}
+
+</style>
+
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+/* ================= FIREBASE ================= */
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyDyUlga1sJgO8Pd3kg_nZW2AEqon7Sec_Q",
+
+  authDomain:
+    "sri-sai-stock-management.firebaseapp.com",
+
+  projectId:
+    "sri-sai-stock-management",
+
+  storageBucket:
+    "sri-sai-stock-management.firebasestorage.app",
+
+  messagingSenderId:
+    "1011875932840",
+
+  appId:
+    "1:1011875932840:web:1b5088d074b00f43bd309d",
+
+  measurementId:
+    "G-8CE3Y14VRS"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+let selectedRating = 0;
+
+let submittingReview = false;
+
+
+/* ================= NORMALIZE NAME ================= */
+
+function normalizeName(name){
+
+  return name
+    .trim()
+    .replace(/\s+/g," ")
+    .toLowerCase();
+
+}
+
+
+/* ================= STAR RATING ================= */
+
+window.setRating = function(rating){
+
+  selectedRating = rating;
+
+  const buttons =
+    document.querySelectorAll(
+      "#reviewStars button"
+    );
+
+  buttons.forEach((button,index)=>{
+
+    const active = index < rating;
+
+    button.textContent =
+      active ? "★" : "☆";
+
+    button.classList.toggle(
+      "active",
+      active
+    );
+
+  });
+
+};
+
+
+/* ================= SUBMIT REVIEW ================= */
+
+window.submitReview = async function(){
+
+  if(submittingReview) return;
+
+
+  const nameInput =
+    document.getElementById("reviewName");
+
+  const messageInput =
+    document.getElementById("reviewMessage");
+
+  const status =
+    document.getElementById("reviewStatus");
+
+  const submitBtn =
+    document.getElementById("submitReviewBtn");
+
+
+  const name =
+    nameInput.value.trim();
+
+  const message =
+    messageInput.value.trim();
+
+  const normalizedName =
+    normalizeName(name);
+
+
+  /* NAME CHECK */
+
+  if(!name){
+
+    status.textContent =
+      "Please enter your name.";
+
+    return;
+
+  }
+
+
+  /* STAR CHECK */
+
+  if(selectedRating === 0){
+
+    status.textContent =
+      "Please select a star rating.";
+
+    return;
+
+  }
+
+
+  /* MESSAGE CHECK */
+
+  if(!message){
+
+    status.textContent =
+      "Please write your review.";
+
+    return;
+
+  }
+
+
+  try{
+
+    submittingReview = true;
+
+    submitBtn.disabled = true;
+
+    status.textContent =
+      "Checking your review...";
+
+
+    /* CHECK EXISTING REVIEWS */
+
+    const existingSnapshot =
+      await getDocs(
+        collection(db,"reviews")
+      );
+
+
+    let alreadyReviewed = false;
+
+
+    existingSnapshot.forEach(doc=>{
+
+      const review = doc.data();
+
+      if(
+        review.name &&
+        normalizeName(review.name)
+        === normalizedName
+      ){
+
+        alreadyReviewed = true;
+
+      }
+
+    });
+
+
+    /* DUPLICATE NAME */
+
+    if(alreadyReviewed){
+
+      status.textContent =
+        "This name already has a review. Only one review per person is allowed.";
+
+      return;
+
+    }
+
+
+    /* SAVE REVIEW */
+
+    status.textContent =
+      "Submitting review...";
+
+
+    await addDoc(
+      collection(db,"reviews"),
+      {
+
+        name:name,
+
+        rating:selectedRating,
+
+        message:message,
+
+        createdAt:
+          serverTimestamp()
+
+      }
+    );
+
+
+    /* CLEAR FORM */
+
+    nameInput.value = "";
+
+    messageInput.value = "";
+
+    window.setRating(0);
+
+
+    status.textContent =
+      "Thank you! Your review has been submitted. ⭐";
+
+
+    await loadReviews();
+
+
+  }catch(error){
+
+    console.error(error);
+
+    status.textContent =
+      "Review submit failed. Please try again.";
+
+  }finally{
+
+    submittingReview = false;
+
+    submitBtn.disabled = false;
+
+  }
+
+};
+
+
+/* ================= LOAD REVIEWS ================= */
+
+async function loadReviews(){
+
+  const list =
+    document.getElementById(
+      "reviewsList"
+    );
+
+
+  try{
+
+    const q = query(
+
+      collection(db,"reviews"),
+
+      orderBy(
+        "createdAt",
+        "desc"
+      )
+
+    );
+
+
+    const snapshot =
+      await getDocs(q);
+
+
+    list.innerHTML = "";
+
+
+    /*
+      IMPORTANT:
+      OLD DUPLICATE REVIEWS EXISTING
+      IN FIREBASE WILL ALSO SHOW ONLY ONCE.
+    */
+
+    const shownNames =
+      new Set();
+
+
+    snapshot.forEach(doc=>{
+
+      const review =
+        doc.data();
+
+
+      /* IGNORE EMPTY / SETUP */
+
+      if(
+        !review.name ||
+        review.name === "Setup"
+      ){
+
+        return;
+
+      }
+
+
+      const normalizedName =
+        normalizeName(
+          review.name
+        );
+
+
+      /* ONLY ONE REVIEW PER NAME */
+
+      if(
+        shownNames.has(
+          normalizedName
+        )
+      ){
+
+        return;
+
+      }
+
+
+      shownNames.add(
+        normalizedName
+      );
+
+
+      /* REVIEW CARD */
+
+      const card =
+        document.createElement(
+          "div"
+        );
+
+      card.className =
+        "review-card";
+
+
+      /* NAME */
+
+      const name =
+        document.createElement(
+          "h3"
+        );
+
+      name.textContent =
+        review.name;
+
+
+      /* STARS */
+
+      const stars =
+        document.createElement(
+          "div"
+        );
+
+      stars.className =
+        "review-display-stars";
+
+
+      const rating =
+        Math.max(
+          0,
+          Math.min(
+            5,
+            Number(
+              review.rating
+            ) || 0
+          )
+        );
+
+
+      stars.textContent =
+        "★".repeat(rating)
+        +
+        "☆".repeat(
+          5-rating
+        );
+
+
+      /* MESSAGE */
+
+      const message =
+        document.createElement(
+          "p"
+        );
+
+      message.textContent =
+        review.message || "";
+
+
+      /* ADD */
+
+      card.appendChild(name);
+
+      card.appendChild(stars);
+
+      card.appendChild(message);
+
+      list.appendChild(card);
+
+    });
+
+
+  }catch(error){
+
+    console.error(
+      "Error loading reviews:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ================= START ================= */
+
+window.addEventListener(
+  "load",
+  loadReviews
+);
+
 </script>
 </body>
 </html>
